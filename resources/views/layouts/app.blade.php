@@ -49,7 +49,7 @@
   {{-- Selectize --}}
   <script src="{{ asset('plugins/selectize/selectize.min.js') }}"></script>
 
-  <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}"></script>
   {{-- App bundled styles & scripts --}}
   {{-- @vite('resources/js/app.js') --}}
 </body>
