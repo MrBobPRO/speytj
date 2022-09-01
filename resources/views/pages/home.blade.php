@@ -7,7 +7,7 @@
     <div class="banner__body-inner main-container">
       <div class="banner__text">
         <div class="banner__title"><span>SPEY</span></div>
-        <p class="banner__desc"> — мы специализируемся на разработке, производстве и поставке высококачественных лекарственных препаратов</p>
+        <p class="banner__desc"> — мы специализируемся на разработке, производстве и поставке высококачественных лекарственных препаратов. <br>Мы изучаем перспективные направления в медицине, чтобы предлагать больше возможностей своим потребителям.</p>
         <a href="#" class="banner__link button button--more">
           <i>Все препараты</i> <span class="material-icons">east</span>
         </a>
