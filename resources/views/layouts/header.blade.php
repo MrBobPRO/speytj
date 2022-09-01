@@ -17,7 +17,6 @@
     <a class="logo header__logo" href="{{ route('home') }}">
       <img class="logo__image" src="{{ asset('img/main/logo.png') }}" alt="Spey logo">
     </a>
-
   </div>
 
   @include('menu.collapse')

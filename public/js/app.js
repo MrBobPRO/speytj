@@ -82,3 +82,15 @@ document.querySelectorAll('.tab-button').forEach((item) => {
     }
   });
 });
+
+
+// products carousels
+let productsCarousel = $('.products-carousel');
+productsCarousel.owlCarousel({
+  loop: true,
+  margin: 40,
+  nav: true,
+  navText: ['<span class="material-icons">west</span>', '<span class="material-icons">east</span>'],
+  items: 4,
+  dots: false,
+});
