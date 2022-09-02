@@ -7,23 +7,19 @@
 
     {{-- About links start --}}
     <div class="footer__block">
-      <h5 class="footer__title"><a href="#">О Нас</a></h5>
+      <h5 class="footer__title"><a href="{{ route('about.index') }}">О Нас</a></h5>
 
       <ul class="footer__list">
         <li>
-          <a href="#" class="footer__link">История становления</a>
+          <a href="{{ route('about.history') }}" class="footer__link">История становления</a>
         </li>
 
         <li>
-          <a href="#" class="footer__link">Наши ценности</a>
+          <a href="{{ route('about.wealth') }}" class="footer__link">Наши ценности</a>
         </li>
 
         <li>
-          <a href="#" class="footer__link">Развитие</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer__link">Карьера</a>
+          <a href="{{ route('about.career') }}" class="footer__link">Карьера</a>
         </li>
       </ul>
     </div>  {{-- About links end --}}
@@ -49,7 +45,7 @@
 
     {{-- Contacts start --}}
     <div class="footer__block">
-      <h5 class="footer__title"><a href="#">Контакты</a></h5>
+      <h5 class="footer__title">Контакты</h5>
 
       <ul class="footer__list">
         <li>

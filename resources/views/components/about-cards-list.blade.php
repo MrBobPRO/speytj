@@ -4,9 +4,9 @@
     <div class="about-card__text-container">
       <h4 class="about-card__title">История становления</h4>
       <p class="about-card__text">
-        Spey – это международная компания, деятельность которой направлена на улучшение жизни людей путем предоставления инновационной и востребованной продукции в сфере здравоохранения.
+        В 2011 году с открытием местных компаний на Филиппинах, во Вьетнаме, Камбодже и Мьянме компания расширила свою деятельность в странах Юго-Восточной Азии, а в 2014 году Spey также укрепила свою деятельность в Европе.
       </p>
-      <a href="#" class="about-card__link button button--more">
+      <a href="{{ route('about.history') }}" class="about-card__link button button--more">
         <i>Подробнее</i> <span class="material-icons">east</span>
       </a>
     </div>
@@ -17,35 +17,22 @@
     <div class="about-card__text-container">
       <h4 class="about-card__title">Наши ценности</h4>
       <p class="about-card__text">
-        Наши ценности выражают то, во что мы верим, как представители компании, и отражают наши лучшие качества. Spey всегда руководствуется ими в работе.
+        Представляя препараты на международном фармацевтическом рынке сотрудники компании руководствуются прежде всего такими понятиями как профессионализм, ответственность, безопасность и качество.
       </p>
-      <a href="#" class="about-card__link button button--more">
+      <a href="{{ route('about.wealth') }}" class="about-card__link button button--more">
         <i>Подробнее</i> <span class="material-icons">east</span>
       </a>
     </div>
   </div>
 
   <div class="about-card">
-    <img class="about-card__image" src="{{ asset('img/about/development.png') }}" alt="development">
-    <div class="about-card__text-container">
-      <h4 class="about-card__title">Развитие</h4>
-      <p class="about-card__text">
-        Представительства компании открыты в шести странах Азии. Благодаря чему появилась возможность предложить более широкий спектр высокоэффективных и доступных продуктов потребителям и нашим партнерам.
-      </p>
-      <a href="#" class="about-card__link button button--more">
-        <i>Подробнее</i> <span class="material-icons">east</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="about-card">
-    <img class="about-card__image" src="{{ asset('img/about/development.png') }}" alt="career">
+    <img class="about-card__image" src="{{ asset('img/about/career.png') }}" alt="career">
     <div class="about-card__text-container">
       <h4 class="about-card__title">Карьера</h4>
       <p class="about-card__text">
-        Сотрудничество с представителями мировых компаний, использование современных информационных технологий, помогает нам расти и добиваться желаемых результатов.
+        Сотрудничество с представителями мировых компаний, использование современных информационных технологий, помогает нам расти и добиваться желаемых результатов. Обмениваемся опытом с коллегами, решаем сложные задачи и познаём новые технологии.
       </p>
-      <a href="#" class="about-card__link button button--more">
+      <a href="{{ route('about.career') }}" class="about-card__link button button--more">
         <i>Подробнее</i> <span class="material-icons">east</span>
       </a>
     </div>

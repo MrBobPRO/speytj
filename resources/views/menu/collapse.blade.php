@@ -21,11 +21,10 @@
         <div class="tab-buttons-container">
           <div class="tab-buttons-container__inner main-container">
             <button class="tab-button @if($route == 'home') tab-button--active @endif" data-target-id="main">Главная</button>
-            <button class="tab-button" data-target-id="about">О Нас</button>
-            <button class="tab-button" data-target-id="products">Продукты</button>
-            <button class="tab-button" data-target-id="science">Наука и развитие</button>
-            <button class="tab-button" data-target-id="for-patients">Для пациентов</button>
-            <button class="tab-button" data-target-id="contacts">Контакты</button>
+            <button class="tab-button @if(strpos($route, 'about') !== false) tab-button--active @endif" data-target-id="about">О Нас</button>
+            <button class="tab-button @if(strpos($route, 'products') !== false) tab-button--active @endif" data-target-id="products">Продукты</button>
+            <button class="tab-button @if(strpos($route, 'science') !== false) tab-button--active @endif" data-target-id="science">Наука и развитие</button>
+            <button class="tab-button @if(strpos($route, 'for-patients') !== false) tab-button--active @endif" data-target-id="for-patients">Для пациентов</button>
           </div>
         </div>
 
@@ -36,7 +35,6 @@
             @include('menu.content-products')
             @include('menu.content-science')
             @include('menu.content-for-patients')
-            @include('menu.content-contacts')
           </div>
         </div>
       </div>

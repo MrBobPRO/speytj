@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'home'])->name('home');
+
+Route::prefix('about')->controller(AboutController::class)->name('about.')->group(function () {
+  Route::get('/', 'index')->name('index');
+  Route::get('/history', 'history')->name('history');
+  Route::get('/wealth', 'wealth')->name('wealth');
+  Route::get('/career', 'career')->name('career');
+});
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/', [MainController::class, 'dashboard'])->name('dashboard.index');

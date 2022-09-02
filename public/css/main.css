@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.6;
   color: var(--text-color);
 }
 
@@ -82,6 +82,30 @@ img {
   font-size: 32px;
 }
 
+.input, .textarea {
+  border-radius: 6px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  padding: 8px 12px;
+  outline: none;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #9f9f9f;
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--main-color);
+}
+
+.form-group {
+  display: flex;
+  gap: 16px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
 
 /* ------------ Animations ------------ */
 @keyframes fadeEffect {
@@ -158,6 +182,25 @@ img {
 
 .button--more:hover span {
   transform: translateX(8px);
+}
+
+.button--main {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  width: max-content;
+  padding: 14px 36px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed';
+  transition: 0.3s;
+  border: none;
+}
+
+.button--main:hover {
+  background-color: var(--main-color);
+  color: white;
 }
 
 /* ------------ /end Buttons ------------ */
@@ -428,14 +471,40 @@ img {
 
 /* ------------ Breadcrumbs ------------ */
 .breadcrumbs {
-  margin: 0;
+  margin: 0 0 0 40px;
   padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 500;
 }
 
 .breadcrumbs:empty {
   display: none;
 }
 
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-color);
+}
+
+.breadcrumbs li::before {
+  font-family: 'Material Icons';
+  content: '\e037';
+  color: var(--main-color);
+}
+
+.breadcrumbs li:first-child::before {
+  content: none;
+}
+
+.breadcrumbs a {
+  text-decoration: underline;
+  color: var(--text-color);
+}
 /* ------------ /end Breadcrumbs ------------ */
 
 
@@ -471,7 +540,7 @@ img {
   color: var(--secondary-color);
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .footer__title a {
   color: inherit;
@@ -482,7 +551,7 @@ img {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 .footer__link {
   color: white;
@@ -554,13 +623,13 @@ img {
 
 .banner__text {
   display: block;
-  max-width: 570px;
+  max-width: 520px;
 }
 
 .banner__title {
   background: white;
   color: var(--main-color);
-  padding: 2px 16px;
+  padding: 6px 16px;
   display: inline-flex;
   transform: skewX(340deg);
   font-weight: 700;
@@ -569,7 +638,9 @@ img {
   margin-right: 4px;
 }
 
-.banner__title span {
+.banner__title h1 {
+  margin: 0;
+  font-size: inherit;
   transform: skewX(20deg);
 }
 
@@ -601,11 +672,6 @@ img {
   margin-bottom: 40px
 }
 
-.home-about-cards-section .about-card:nth-child(4) {
-  display: none;
-}
-
-
 
 /* Career */
 .popular-products {
@@ -623,6 +689,33 @@ img {
   margin-bottom: 40px;
 }
 
+
+/* Contacts */
+.contacts-section__inner {
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 72px;
+}
+.contacts-section__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.contacts-section__divider {
+  display: flex;
+  gap: 40px;
+}
+.feedback-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.feedback-form__button {
+  margin: 12px 0 0 auto;
+}
+.map {
+  width: 50%;
+}
 /* ------------ /end Home page ------------ */
 
 
@@ -676,7 +769,6 @@ img {
 .about-card__text {
   margin-bottom: 20px;
   overflow: hidden;
-  line-height: 1.6;
 }
 
 .about-card__link {
@@ -777,7 +869,6 @@ img {
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 20px;
-  line-height: 1.6;
 }
 
 /* ------------ /end Product Card ------------ */
@@ -818,3 +909,67 @@ img {
 }
 
 /* ------------ /end carousel-container ------------ */
+
+
+/* ------------ About pages ------------ */
+/* Index page */
+.about-index-page__inner {
+  padding-top: 60px;
+  padding-bottom: 72px;
+  flex-direction: column;
+}
+.about-index-page__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* History page */
+.history-page__inner {
+  flex-direction: column;
+}
+.history-page__banner-txt-container {
+  background: white;
+  position: relative;
+  margin: -140px auto 20px;
+  padding: 40px;
+  max-width: 690px;
+}
+.history-page__banner-txt {
+  margin: 0;
+}
+.history-page__divider-inner {
+  position: relative;
+}
+.history-page__divider-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+.history-page__divider-txt {
+  background: white;
+  max-width: 564px;
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  padding: 40px 44px;
+}
+.history-page__txt-inner {
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* Career */
+.career-page__banner {
+  display: flex;
+}
+.career-page__text {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  flex-direction: column;
+}
+.career-page__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+/* ------------ /end About pages ------------ */

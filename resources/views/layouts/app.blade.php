@@ -49,6 +49,11 @@
   {{-- Selectize --}}
   <script src="{{ asset('plugins/selectize/selectize.min.js') }}"></script>
 
+  {{-- Google Maps --}}
+  @if ($route == 'home')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAneCOkP0fjY3gOXV9DYFTdA59yWXDvNLw&amp;callback=initMap" async="" defer=""></script>
+  @endif
+
   <script src="{{ asset('js/app.js') }}"></script>
   {{-- App bundled styles & scripts --}}
   {{-- @vite('resources/js/app.js') --}}
