@@ -17,15 +17,15 @@
 @section('main')
 <div class="history-page">
   <div class="history-page__inner">
-    <div class="history-page__banner">
-      <img src="{{ asset('img/about/history-banner.jpg') }}" alt="Spey history" class="history-page__banner-image">
-      <div class="history-page__banner-txt-container">
-        <h1 class="history-page__banner-title main-title">История становления</h1>
-        <p class="history-page__banner-txt">Компания <strong>Spey</strong> - это стабильная, современная, социально-ответственная компания, несущая обществу инновационные методы лечения и профилактики болезней. Деятельность нашей компании направлена на поддержание и сохранение здоровья, а также улучшение качества жизни людей.</p>
+    <section class="main-banner history-page__banner">
+      <img class="main-banner__image" src="{{ asset('img/about/history-banner.jpg') }}" alt="Spey history">
+      <div class="main-banner__txt-container">
+        <h1 class="main-banner__title main-title">История становления</h1>
+        <p class="main-banner__txt">Компания <strong>Spey</strong> - это стабильная, современная, социально-ответственная компания, несущая обществу инновационные методы лечения и профилактики болезней. Деятельность нашей компании направлена на поддержание и сохранение здоровья, а также улучшение качества жизни людей.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="history-page__divider">
+    <section class="history-page__divider">
       <div class="history-page__divider-inner main-container">
         <img src="{{ asset('img/about/history-banner2.jpg') }}" alt="Spey history" class="history-page__divider-image">
         <div class="history-page__divider-txt">
@@ -33,9 +33,9 @@
           зарегистрированными торговыми марками в странах Европы, Средней и Юго-Восточной Азии.
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="history-page__txt">
+    <section class="history-page__txt">
       <div class="history-page__txt-inner main-container">
         <p>Наша компания специализируется на разработке, производстве и поставке высококачественных лекарственных препаратов. Мы изучаем перспективные направления в медицине, чтобы предлагать больше возможностей своим потребителям.</p>
 
@@ -49,7 +49,7 @@
 
         <p><strong>Открытость и адаптация к изменениям</strong> — это важнейшие условия успеха бизнеса. Поэтому мы постоянно развиваемся, совершенствуем применяемые бизнес-процессы, внедряя как собственные наработки, так и всемирно признанные.</p>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 @endsection

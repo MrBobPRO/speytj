@@ -103,10 +103,6 @@ img {
   gap: 16px;
 }
 
-.mb-0 {
-  margin-bottom: 0;
-}
-
 /* ------------ Animations ------------ */
 @keyframes fadeEffect {
   from {
@@ -135,6 +131,23 @@ img {
 }
 
 /* ------------ /end Animations ------------ */
+
+
+/* ------------ Main Banner ------------ */
+.main-banner__image {
+  display: flex;
+}
+.main-banner__txt-container {
+  background: white;
+  position: relative;
+  margin: -140px auto 20px;
+  padding: 40px;
+  max-width: 690px;
+}
+.main-banner__txt {
+  margin: 0;
+}
+/* ------------ /end Main Banner ------------ */
 
 
 /* ------------ Logo ------------ */
@@ -190,9 +203,8 @@ img {
   width: max-content;
   padding: 14px 36px;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
-  text-transform: uppercase;
   font-family: 'Roboto Condensed';
   transition: 0.3s;
   border: none;
@@ -200,7 +212,7 @@ img {
 
 .button--main:hover {
   background-color: var(--main-color);
-  color: white;
+  color: var(--secondary-color);
 }
 
 /* ------------ /end Buttons ------------ */
@@ -600,12 +612,13 @@ img {
 /* ------------ /end Collapse ------------ */
 
 
-/* ------------ Banner ------------ */
-.banner {
+/* ------------ Home page ------------ */
+/* Banner */
+.home-banner {
   position: relative;
 }
 
-.banner__body {
+.home-banner__body {
   position: absolute;
   top: 0;
   left: 0;
@@ -616,51 +629,48 @@ img {
   justify-content: center;
 }
 
-.banner__body-inner {
+.home-banner__body-inner {
   color: white;
   flex-direction: column;
 }
 
-.banner__text {
+.home-banner__text {
   display: block;
   max-width: 520px;
 }
 
-.banner__title {
-  background: white;
+.home-banner__title {
+  background: var(--secondary-color);
   color: var(--main-color);
-  padding: 6px 16px;
+  padding: 5px 14px;
   display: inline-flex;
   transform: skewX(340deg);
-  font-weight: 700;
+  font-weight: bold;
   font-size: 26px;
   font-style: italic;
   margin-right: 4px;
+  font-family: 'Roboto Condensed';
 }
 
-.banner__title h1 {
+.home-banner__title h1 {
   margin: 0;
   font-size: inherit;
   transform: skewX(20deg);
 }
 
-.banner__desc {
+.home-banner__desc {
   display: inline;
   font-size: 18px;
   line-height: 2;
 }
 
-.banner__link {
+.home-banner__link {
   margin-top: 40px;
   margin-left: auto;
   margin-right: 10px;
 }
 
-/* ------------ /end Banner ------------ */
-
-
-/* ------------ Home page ------------ */
-
+/* About cards */
 .about-cards-section__inner {
   padding-top: 40px;
   padding-bottom: 80px;
@@ -719,65 +729,65 @@ img {
 /* ------------ /end Home page ------------ */
 
 
-/* ------------ About Cards list ------------ */
-.about-cards-list {
+/* ------------ Main Cards list ------------ */
+.main-cards-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.about-card {
+.main-card {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
 
-.about-card:nth-child(even) {
+.main-card:nth-child(even) {
   flex-direction: row;
 }
 
-.about-card__image {
+.main-card__image {
   width: 50%;
   height: 300px;
   object-fit: cover;
   clip-path: polygon(12% 0, 100% 0, 100% 100%, 30% 100%);
 }
 
-.about-card:nth-child(even) .about-card__image {
+.main-card:nth-child(even) .main-card__image {
   clip-path: polygon(0 0, 88% 0%, 70% 100%, 0% 100%);
 }
 
-.about-card__text-container {
+.main-card__text-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   padding-left: 120px;
 }
 
-.about-card:nth-child(even) .about-card__text-container {
+.main-card:nth-child(even) .main-card__text-container {
   padding-left: 0;
   padding-right: 120px;
 }
 
-.about-card__title {
+.main-card__title {
   font-family: 'Roboto Condensed';
   color: black;
   margin-bottom: 12px;
   font-size: 20px;
 }
 
-.about-card__text {
+.main-card__text {
   margin-bottom: 20px;
   overflow: hidden;
 }
 
-.about-card__link {
+.main-card__link {
   color: var(--secondary-color);
   font-style: italic;
   font-weight: bold;
   margin-left: auto;
 }
-/* ------------ /end About Cards List ------------ */
+/* ------------ /end Main Cards List ------------ */
 
 
 /* ------------ Product Card ------------ */
@@ -787,7 +797,7 @@ img {
   position: relative;
   display: block;
   height: 100%;
-  border-radius: 36px;
+  border-radius: 34px;
   overflow: hidden;
   text-decoration: none;
 }
@@ -798,9 +808,8 @@ img {
   left: 0;
   right: 0;
   z-index: 1;
-  border-radius: 36px 0 0 0;
-  background-color: var(--main-color);
-  color: white;
+  border-radius: 34px 0 0 0;
+  background-color: var(--secondary-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
 }
@@ -814,12 +823,11 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px;
-  border-radius: 36px 0 0 0;
-  background-color: var(--main-color);
+  padding: 14px;
+  border-radius: 34px 0 0 0;
+  background-color: var(--secondary-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
-  color: white;
 }
 
 .product-card:hover .product-card__header {
@@ -836,7 +844,7 @@ img {
 }
 
 .product-card__arc path {
-  fill: var(--main-color);
+  fill: var(--secondary-color);
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
@@ -845,19 +853,20 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: var(--secondary-color);
   font-weight: bold;
   font-size: 14px;
 }
 
 .product-card__title {
   margin-bottom: 0;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed';
+  color: var(--text-color);
 }
 
 .product-card__desc {
@@ -867,8 +876,10 @@ img {
   overflow: hidden;
   padding: 0 20px;
   font-size: 15px;
-  font-weight: 300;
   margin-bottom: 20px;
+  color: var(--text-color);
+  position: relative;
+  margin-top: -4px;
 }
 
 /* ------------ /end Product Card ------------ */
@@ -927,16 +938,6 @@ img {
 .history-page__inner {
   flex-direction: column;
 }
-.history-page__banner-txt-container {
-  background: white;
-  position: relative;
-  margin: -140px auto 20px;
-  padding: 40px;
-  max-width: 690px;
-}
-.history-page__banner-txt {
-  margin: 0;
-}
 .history-page__divider-inner {
   position: relative;
 }
@@ -959,13 +960,89 @@ img {
   padding-bottom: 60px;
 }
 
-/* Career */
-.career-page__banner {
-  display: flex;
+/* Wealth */
+.wealth-page__banner .main-banner__txt-container {
+  max-width: 720px;
 }
-.career-page__text {
-  padding-top: 40px;
-  padding-bottom: 60px;
+.wealth__cards-inner {
+  padding-bottom: 32px;
+}
+.wealth__cards-list {
+  display: flex;
+  gap: 32px;
+}
+.wealth-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wealth-card__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: var(--main-color);
+  bottom: 0;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+.wealth-card:hover .wealth-card__overlay {
+  transform: translateY(0);
+  padding: 32px 0;
+  background-color: #1e2a78db;
+}
+.wealth-card__title {
+  padding: 14px 32px;
+  transform: translateY(-100%);
+  transition: 0.3s;
+  background-color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-color);
+  font-family: 'Roboto Condensed';
+  margin-bottom: 0;
+}
+.wealth-card:hover .wealth-card__title {
+  transform: translateY(0);
+  background: transparent;
+  color: var(--secondary-color);
+}
+.wealth-card__txt {
+  margin: 0;
+  padding: 0 32px;
+}
+
+.wealth-page__txt-inner {
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.principles {
+  background-color: aliceblue;
+}
+
+.principles__inner {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  flex-direction: column;
+}
+
+.princilpes__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.principles-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Career */
+.career-page__txt {
+  padding-bottom: 80px;
   flex-direction: column;
 }
 .career-page__title {
@@ -973,3 +1050,57 @@ img {
   text-align: center;
 }
 /* ------------ /end About pages ------------ */
+
+
+/* ------------ Accordion ------------ */
+.accordion__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.125);
+  border-collapse: collapse;
+  padding: 16px 40px;
+  background-color: white;
+  font-weight: bold;
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+}
+.accordion__item--active .accordion__button {
+  background: var(--secondary-color);
+  color: var(--main-color);
+}
+.accordion__button-icon {
+  transition: 0.3s;
+  pointer-events: none;
+}
+.accordion__item--active .accordion__button-icon {
+  transform: rotate(180deg);
+}
+.accordion__collapse {
+  height: 0px;
+  background: white;
+  -moz-transition: height .3s;
+  -ms-transition: height .3s;
+  -o-transition: height .3s;
+  -webkit-transition: height .3s;
+  transition: height .3s;
+  overflow: hidden;
+}
+.accordion__item--active .accordion__collapse {
+  height: 100%;
+}
+.accordion__collapse-body {
+  border: 1px solid rgba(0,0,0,.125);
+  padding: 20px 40px;
+  font-weight: 300;
+}
+
+.accordion__button-icon {
+  color: var(--main-color);
+}
+
+.accordion__item--active .accordion__button span {
+  transform: rotate(180deg);
+}
+/* ------------ /end Accordion ------------ */

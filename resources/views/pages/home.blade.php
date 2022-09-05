@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('main')
-<section class="banner">
-  <img class="banner__image" src="{{ asset('img/home/banner.png') }}" alt="spey banner">
-  <div class="banner__body">
-    <div class="banner__body-inner main-container">
-      <div class="banner__text">
-        <div class="banner__title"><h1>SPEY</h1></div>
-        <p class="banner__desc"> – это международная компания, деятельность которой направлена на улучшение жизни людей путем предоставления инновационной и востребованной продукции в сфере здравоохранения.</p>
-        <a href="#" class="banner__link button button--more">
+<section class="home-banner">
+  <img class="home-banner__image" src="{{ asset('img/home/banner.png') }}" alt="spey banner">
+  <div class="home-banner__body">
+    <div class="home-banner__body-inner main-container">
+      <div class="home-banner__text">
+        <div class="home-banner__title"><h1>SPEY</h1></div>
+        <p class="home-banner__desc"> – это международная компания, деятельность которой направлена на улучшение жизни людей путем предоставления инновационной и востребованной продукции в сфере здравоохранения.</p>
+        <a href="#" class="home-banner__link button button--more">
           <i>Все препараты</i> <span class="material-icons">east</span>
         </a>
       </div>

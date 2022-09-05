@@ -125,3 +125,37 @@ if (document.querySelector('.map')) {
     }
   }
 }
+
+
+// Accordion
+// resize active items
+document.querySelectorAll('.accordion__item--active').forEach((item) => {
+  let collapse = item.querySelector('.accordion__collapse');
+  collapse.style.height = collapse.scrollHeight + "px";
+});
+
+document.querySelectorAll('.accordion__button').forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    let button = evt.target;
+    let accordion = button.closest('.accordion');
+    let item = button.closest('.accordion__item');
+    let collapse = item.querySelector('.accordion__collapse');
+
+    // close active collapse if it isn`t current target
+    let activeItem = accordion.querySelector('.accordion__item--active');
+    if (activeItem && activeItem !== item) {
+      activeItem.classList.remove('accordion__item--active');
+      activeItem.querySelector('.accordion__collapse').style.height = null;
+    }
+
+    // close active collapse if it is current target
+    if (collapse.clientHeight) {
+      collapse.style.height = 0;
+      item.classList.remove('accordion__item--active');
+      // else show collapse body if its hidden
+    } else {
+      collapse.style.height = collapse.scrollHeight + "px";
+      item.classList.add('accordion__item--active');
+    }
+  });
+});
