@@ -26,7 +26,7 @@
 
     {{-- Products links start --}}
     <div class="footer__block">
-      <h5 class="footer__title"><a href="#">Продукты</a></h5>
+      <h5 class="footer__title"><a href="{{ route('products.index') }}">Продукты</a></h5>
 
       <ul class="footer__list">
         <li>
