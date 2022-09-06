@@ -25,7 +25,7 @@
       <div class="products-page__categories-inner main-container">
         <div class="products-page__categories-list">
           <a class="products-page__category" href="{{ route('products.index') }}">
-            <img class="products-page__category-image" src="{{ asset('img/products-page/all-products.jpg') }}" alt="All products">
+            <img class="products-page__category-image" src="{{ asset('img/products-page/all-products.png') }}" alt="All products">
             <h2 class="products-page__category-title">Все продукты</h2>
           </a>
 
@@ -41,6 +41,23 @@
         </div>
       </div>
     </section>
+
+    <section class="new-products">
+      <div class="new-products__inner main-container">
+        <h2 class="new-products__title main-title">Новые препараты</h2>
+
+        <div class="carousel-container">
+          <div class="products-carousel owl-carousel">
+            @foreach ($newProducts as $product)
+              <div class="owl-carousel__item">
+                <x-product-card :product="$product" />
+              </div>
+            @endforeach
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </div>
 

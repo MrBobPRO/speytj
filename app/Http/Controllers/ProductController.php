@@ -10,8 +10,9 @@ class ProductController extends Controller
   public function index()
   {
     $products = Product::orderBy('title')->paginate(16);
+    $newProducts = Product::latest()->take(8)->get();
 
-    return view('products.index', compact('products'));
+    return view('products.index', compact('products', 'newProducts'));
   }
 
   public function show($slug)

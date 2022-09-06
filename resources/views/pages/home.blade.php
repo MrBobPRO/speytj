@@ -61,7 +61,10 @@
           <textarea class="textarea feedback-form__textarea" name="body" rows="8" placeholder="Текст*"></textarea>
         </div>
 
-        <button class="button button--main feedback-form__button">Отправить</button>
+        <button class="button button--more feedback-form__button">
+          <i>Отправить</i>
+          <span class="material-icons">east</span>
+        </button>
       </form>
 
       <div class="map"></div>

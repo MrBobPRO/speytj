@@ -179,10 +179,15 @@ img {
 }
 
 .button--more {
-  font-size: 16px;
   width: max-content;
   font-style: italic;
   color: var(--secondary-color);
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .button--more i {
@@ -646,7 +651,7 @@ img {
 .home-banner__title {
   background: var(--secondary-color);
   color: var(--main-color);
-  padding: 5px 14px;
+  padding: 5px 12px;
   display: inline-flex;
   transform: skewX(342deg);
   font-weight: bold;
@@ -672,6 +677,7 @@ img {
   margin-top: 40px;
   margin-left: auto;
   margin-right: 10px;
+  font-weight: 400;
 }
 
 /* About cards */
@@ -708,7 +714,7 @@ img {
 .contacts-section__inner {
   flex-direction: column;
   padding-top: 60px;
-  padding-bottom: 72px;
+  padding-bottom: 80px;
 }
 .contacts-section__title {
   text-align: center;
@@ -723,9 +729,21 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  background-color: aliceblue;
+  padding: 28px;
+  border-radius: 12px;
 }
+.feedback-form .input, .feedback-form .textarea {
+  border-color: white;
+}
+
+.feedback-form .input:focus, .feedback-form .textarea:focus {
+  border-color: var(--main-color);
+}
+
 .feedback-form__button {
   margin: 12px 0 0 auto;
+  color: black;
 }
 .map {
   width: 50%;
@@ -796,12 +814,12 @@ img {
 
 /* ------------ Product Card ------------ */
 .product-card {
-  padding-bottom: 72px;
+  padding-bottom: 64px;
   background-color: white;
   position: relative;
   display: block;
   height: 100%;
-  border-radius: 34px;
+  border-radius: 32px;
   overflow: hidden;
   text-decoration: none;
 }
@@ -812,7 +830,7 @@ img {
   left: 0;
   right: 0;
   z-index: 1;
-  border-radius: 34px 0 0 0;
+  border-radius: 32px 0 0 0;
   background-color: var(--secondary-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
@@ -827,8 +845,8 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 14px;
-  border-radius: 34px 0 0 0;
+  padding: 12px;
+  border-radius: 32px 0 0 0;
   background-color: var(--secondary-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
@@ -1112,17 +1130,20 @@ img {
 
 /* ------------ Products Page ------------ */
 /* Index page */
+.products-page__banner .main-banner__txt-container {
+  max-width: 630px;
+}
 .products-page__categories-inner {
   padding-bottom: 80px;
 }
 .products-page__categories-list {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 .products-page__category {
   position: relative;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 10%);
+  box-shadow: 0px 0px 6px 1px rgb(0 0 0 / 10%);
   overflow: hidden;
   padding-bottom: 48px;
 }
@@ -1159,5 +1180,17 @@ img {
   color: var(--main-color);
   font-family: 'Roboto Condensed';
   margin-bottom: 0;
+}
+.new-products {
+  background-color: aliceblue;
+}
+.new-products__inner {
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.new-products__title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 /* ------------ /end Products Page ------------ */

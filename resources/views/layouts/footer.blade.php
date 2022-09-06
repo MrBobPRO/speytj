@@ -1,9 +1,5 @@
 <footer class="footer">
   <div class="footer__inner main-container">
-    {{-- Logo Start --}}
-    <a class="logo footer__logo" href="{{ route('home') }}">
-      <img class="logo__image" src="{{ asset('img/main/logo-light.png') }}" alt="Spey white logo">
-    </a>  {{-- Logo end --}}
 
     {{-- About links start --}}
     <div class="footer__block">
@@ -42,6 +38,21 @@
         </li>
       </ul>
     </div>  {{-- Products links start --}}
+
+    {{-- For patients links start --}}
+    <div class="footer__block">
+      <h5 class="footer__title"><a href="{{ route('about.index') }}">Для пациентов</a></h5>
+
+      <ul class="footer__list">
+        <li>
+          <a href="{{ route('about.history') }}" class="footer__link">Статьи</a>
+        </li>
+
+        <li>
+          <a href="{{ route('about.wealth') }}" class="footer__link">Видео</a>
+        </li>
+      </ul>
+    </div>  {{-- For patients links end --}}
 
     {{-- Contacts start --}}
     <div class="footer__block">
