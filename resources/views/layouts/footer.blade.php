@@ -26,15 +26,15 @@
 
       <ul class="footer__list">
         <li>
-          <a href="#" class="footer__link">Все продукты</a>
+          <a href="{{ route('products.all') }}" class="footer__link">Все продукты</a>
         </li>
 
         <li>
-          <a href="#" class="footer__link">Нозология</a>
+          <a href="{{ route('products.all') }}" class="footer__link">Нозология</a>
         </li>
 
         <li>
-          <a href="#" class="footer__link">ATX классификация</a>
+          <a href="{{ route('products.all') }} class="footer__link">ATX классификация</a>
         </li>
       </ul>
     </div>  {{-- Products links start --}}

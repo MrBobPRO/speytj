@@ -27,6 +27,7 @@ Route::prefix('about')->controller(AboutController::class)->name('about.')->grou
 
 Route::prefix('products')->controller(ProductController::class)->name('products.')->group(function () {
   Route::get('/', 'index')->name('index');
+  Route::get('/all', 'all')->name('all');
   Route::get('/show', 'show')->name('show');
 });
 

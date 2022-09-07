@@ -24,12 +24,12 @@
     <section class="products-page__categories">
       <div class="products-page__categories-inner main-container">
         <div class="products-page__categories-list">
-          <a class="popup-card" href="#">
+          <a class="popup-card" href="{{ route('products.all') }}">
             <img class="popup-card__image" src="{{ asset('img/products-page/all-products.png') }}" alt="All products">
             <div class="popup-card__overlay">
               <h2 class="popup-card__title">Все продукты</h2>
               <p class="popup-card__txt">
-                Портфолио наших препаратов включает в себе 56 препарата
+                Портфолио наших препаратов включает в себе {{ $productsCount }} препаратов
               </p>
             </div>
           </a>

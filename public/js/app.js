@@ -4,7 +4,7 @@ $(document).ready(function () {
     // options
   });
 
-  $('.selectize-singular-linked').selectize({
+  $('.selectize--linked').selectize({
     onChange(value) {
       window.location = value;
     }
