@@ -1313,9 +1313,14 @@ img {
   padding: 0;
   margin: 0;
 }
+.filter-by-letter__link {
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
+}
 .filter-by-letter__link--active {
   font-weight: bold;
   color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 /* ------------ /end Products Page ------------ */

@@ -38,7 +38,7 @@
             <ul class="filter-by-letter__list">
               @foreach ($letters as $letter)
                 <li>
-                  <a href="{{ route('products.all') }}?letter={{ $letter }}" class="filter-by-letter__link">{{ $letter }}</a>
+                  <a href="{{ route('products.all') }}@if($activeLetter != $letter)?letter={{ $letter }}@endif" class="filter-by-letter__link @if($activeLetter == $letter) filter-by-letter__link--active @endif">{{ $letter }}</a>
                 </li>
               @endforeach
             </ul>

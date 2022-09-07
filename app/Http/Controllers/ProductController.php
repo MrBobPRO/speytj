@@ -15,9 +15,9 @@ class ProductController extends Controller
     return view('products.index', compact('newProducts', 'productsCount'));
   }
 
-  public function all()
+  public function all(Request $request)
   {
-    $products = Product::orderBy('title')->paginate(6);
+    $products = Product::query();
     $allProducts = Product::orderBy('title')->select('title', 'slug')->get();
 
     // get all letters
@@ -27,10 +27,18 @@ class ProductController extends Controller
         array_push($letters, mb_substr($prod->title, 0, 1));
     }
 
-    // remove duplicates letters
+    // remove duplicate letters
     $letters = array_unique($letters);
 
-    return view('products.all', compact('products', 'allProducts', 'letters'));
+    // get Active letter
+    $activeLetter = $request->letter;
+    if($activeLetter) {
+        $products = $products->where('title', 'LIKE', $activeLetter . '%');
+    }
+
+    $products = $products->orderBy('title')->paginate(16);
+
+    return view('products.all', compact('products', 'allProducts', 'letters', 'activeLetter'));
   }
 
   public function show($slug)
