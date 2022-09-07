@@ -30,31 +30,31 @@
     <section class="wealth__cards">
       <div class="wealth__cards-inner main-container">
         <div class="wealth__cards-list">
-          <div class="wealth-card">
-            <img class="wealth-card__image" src="{{ asset('img/about/wealth-card2.png') }}" alt="health">
-            <div class="wealth-card__overlay">
-              <h2 class="wealth-card__title">Жизнь</h2>
-              <p class="wealth-card__txt">
+          <div class="popup-card">
+            <img class="popup-card__image" src="{{ asset('img/about/wealth-card2.png') }}" alt="health">
+            <div class="popup-card__overlay">
+              <h2 class="popup-card__title">Жизнь</h2>
+              <p class="popup-card__txt">
                 Мы признаём жизнь как смысл бытия. Мы чувствуем свою ответственность за сохранение жизни человека.
               </p>
             </div>
           </div>
 
-          <div class="wealth-card">
-            <img class="wealth-card__image" src="{{ asset('img/about/wealth-card3.png') }}" alt="health">
-            <div class="wealth-card__overlay">
-              <h2 class="wealth-card__title">Здоровье</h2>
-              <p class="wealth-card__txt">
+          <div class="popup-card">
+            <img class="popup-card__image" src="{{ asset('img/about/wealth-card3.png') }}" alt="health">
+            <div class="popup-card__overlay">
+              <h2 class="popup-card__title">Здоровье</h2>
+              <p class="popup-card__txt">
                 Мы признаём здоровье как атрибут жизни. Наша деятельность направлена на обеспечение здоровья людей.
               </p>
             </div>
           </div>
 
-          <div class="wealth-card">
-            <img class="wealth-card__image" src="{{ asset('img/about/wealth-card4.png') }}" alt="health">
-            <div class="wealth-card__overlay">
-              <h2 class="wealth-card__title">Творчество</h2>
-              <p class="wealth-card__txt">
+          <div class="popup-card">
+            <img class="popup-card__image" src="{{ asset('img/about/wealth-card4.png') }}" alt="health">
+            <div class="popup-card__overlay">
+              <h2 class="popup-card__title">Творчество</h2>
+              <p class="popup-card__txt">
                 Мы создаём инновационные продукты для улучшения здоровья людей, тем самым, совершенствуя жизнь на планете.
               </p>
             </div>
