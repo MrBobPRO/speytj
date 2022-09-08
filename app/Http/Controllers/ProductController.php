@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Atx;
+use App\Models\Nosology;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -48,5 +50,25 @@ class ProductController extends Controller
     $product = Product::where('slug', $slug)->firstOrFail();
 
     return view('products.show', compact('product'));
+  }
+
+  public function nosology($slug)
+  {
+    $activeCategory = Nosology::where('slug', $slug)->firstOrFail();
+    $products = $activeCategory->products()->paginate(16);
+
+    $categories = Nosology::orderBy('title')->get();
+
+    return view('products.nosology', compact('activeCategory', 'products', 'categories'));
+  }
+
+  public function atx($slug)
+  {
+    $activeCategory = Atx::where('slug', $slug)->firstOrFail();
+    $products = $activeCategory->products()->paginate(16);
+
+    $categories = Atx::orderBy('title')->get();
+
+    return view('products.atx', compact('activeCategory', 'products', 'categories'));
   }
 }

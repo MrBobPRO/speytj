@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Atx;
+use App\Models\Nosology;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -27,6 +29,14 @@ class AppServiceProvider extends ServiceProvider
     {
       View::composer(['*'], function ($view) {
         $view->with('route', Route::currentRouteName());
+      });
+
+      View::composer(['layouts.header', 'layouts.footer', 'products.index'], function ($view) {
+        $defaultNosology = Nosology::orderBy('title')->first()->slug;
+        $defaultAtx = Atx::orderBy('title')->first()->slug;
+
+        $view->with('defaultNosology', $defaultNosology)
+          ->with('defaultAtx', $defaultAtx);
       });
     }
 }

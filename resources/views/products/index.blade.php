@@ -34,7 +34,7 @@
             </div>
           </a>
 
-          <a class="popup-card" href="#">
+          <a class="popup-card" href="{{ route('products.nosology', $defaultNosology) }}">
             <img class="popup-card__image" src="{{ asset('img/products-page/nosology.png') }}" alt="Nosology">
             <div class="popup-card__overlay">
               <h2 class="popup-card__title">Нозология</h2>
@@ -44,7 +44,7 @@
             </div>
           </a>
 
-          <a class="popup-card" href="#">
+          <a class="popup-card" href="{{ route('products.atx', $defaultAtx) }}">
             <img class="popup-card__image" src="{{ asset('img/products-page/atx.png') }}" alt="ATX">
             <div class="popup-card__overlay">
               <h2 class="popup-card__title">АТХ классификация</h2>

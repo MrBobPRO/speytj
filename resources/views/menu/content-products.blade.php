@@ -17,15 +17,15 @@
 
   <ul class="menu-tab-content__sublinks-container">
     <li>
-      <a class="menu-tab-content__sublink" href="{{ route('home') }}">Все продукты</a>
+      <a class="menu-tab-content__sublink" href="{{ route('products.all') }}">Все продукты</a>
     </li>
 
     <li>
-      <a class="menu-tab-content__sublink" href="{{ route('home') }}">Нозология</a>
+      <a class="menu-tab-content__sublink" href="{{ route('products.nosology', $defaultNosology) }}">Нозология</a>
     </li>
 
     <li>
-      <a class="menu-tab-content__sublink" href="{{ route('home') }}">ATX классификация</a>
+      <a class="menu-tab-content__sublink" href="{{ route('products.atx', $defaultAtx) }}">ATX классификация</a>
     </li>
   </ul>
 </div>

@@ -365,7 +365,6 @@ img {
   color: white;
   background-color: transparent;
   border: 1px solid transparent;
-  font-family: 'Roboto Condensed';
 }
 
 .menu__tab .tab-button--active {
@@ -398,7 +397,6 @@ img {
   color: white;
   font-weight: 400;
   margin: 0;
-  font-family: 'Roboto Condensed';
 }
 
 .menu__tab-desc {
@@ -434,7 +432,6 @@ img {
   color: #666;
   font-weight: 400;
   margin-bottom: 24px;
-  font-family: 'Roboto Condensed';
   font-weight: bold;
 }
 
@@ -850,7 +847,7 @@ img {
 /* ------------ Product List ------------ */
 .products-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 40px;
 }
 
@@ -1287,27 +1284,31 @@ img {
 
 .all-products-title {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 }
 
 .products-filter {
-  margin-bottom: 20px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .products-filter__search {
-  display: flex;
-  justify-content: center;
+  max-width: 400px;
+  width: 100%;
 }
 
 .products-selectize-container {
-  width: 520px;
+  width: 100%
 }
 
 .filter-by-letter {
   display: flex;
   gap: 20px;
   align-items: center;
-  margin: 20px 0;
+  flex-grow: 1;
+  padding-top: 4px;
 }
 
 .filter-by-letter__title {
@@ -1318,7 +1319,7 @@ img {
 .filter-by-letter__list {
   display: flex;
   list-style: none;
-  gap: 18px;
+  gap: 16px;
   padding: 0;
   margin: 0;
 }
@@ -1326,11 +1327,61 @@ img {
   padding-bottom: 4px;
   border-bottom: 3px solid transparent;
   font-weight: 300;
+  font-size: 15px;
 }
 .filter-by-letter__link--active {
   font-weight: bold;
   color: var(--main-color);
   border-color: var(--main-color);
+}
+
+/* Nosology, ATX */
+.nosology-section__inner, .atx-section__inner {
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.nosology-title, .atx-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nosology-section__divider, .atx-section__divider {
+  display: flex;
+  gap: 40px;
+}
+.nosology-section__inner .products-list-container, .atx-section__inner .products-list-container {
+  flex-grow: 1;
+}
+.classifications-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  gap: 4px;
+  font-size: 15px;
+  max-width: 286px;
+  width: 100%;
+}
+.classifications-list__link {
+  display: flex;
+  padding: 11px 12px;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, font-weight 0s;
+  border-radius: 4px;
+  line-height: 1.2;
+}
+.classifications-list__link--active {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-weight: 500;
+}
+.classifications-list__link:not(.classifications-list__link--active):hover {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-weight: 500;
 }
 
 /* ------------ /end Products Page ------------ */
@@ -1379,12 +1430,12 @@ img {
 .selectize-input {
   padding: 16px 20px;
   box-shadow: none;
-  background-color: aliceblue;
-  border-color: aliceblue;
+  background-color: var(--bg-color);
+  border-color: var(--bg-color);
   border-radius: 20px;
 }
 .selectize-input, .selectize-control.single .selectize-input.input-active {
-  background: aliceblue;
+  background: var(--bg-color);
 }
 .selectize-input.focus {
   box-shadow: none;

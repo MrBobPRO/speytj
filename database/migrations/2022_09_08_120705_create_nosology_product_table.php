@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('atxes', function (Blueprint $table) {
-            $table->id();
-            $table->string('title')->unique();
-            $table->string('slug')->unique();
+        Schema::create('nosology_product', function (Blueprint $table) {
+          $table->integer('nosology_id');
+          $table->integer('product_id');
+          $table->primary(['nosology_id', 'product_id']);
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('atxes');
+        Schema::dropIfExists('nosology_product');
     }
 };
