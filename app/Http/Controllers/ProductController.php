@@ -36,7 +36,9 @@ class ProductController extends Controller
         $products = $products->where('title', 'LIKE', $activeLetter . '%');
     }
 
-    $products = $products->orderBy('title')->paginate(16);
+    $products = $products->orderBy('title')
+      ->paginate(16)
+      ->appends($request->except(['page', 'token']));
 
     return view('products.all', compact('products', 'allProducts', 'letters', 'activeLetter'));
   }

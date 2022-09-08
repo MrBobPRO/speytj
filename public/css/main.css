@@ -33,6 +33,11 @@ a {
 p {
   font-size: 16px;
   margin: 0 0 1em;
+  font-weight: 300;
+}
+
+p b, p strong {
+  font-weight: bold;
 }
 
 h1,
@@ -571,7 +576,7 @@ img {
 .footer__title {
   color: var(--secondary-color);
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 16px;
 }
 
@@ -590,6 +595,7 @@ img {
 
 .footer__link {
   color: white;
+  font-weight: 300;
 }
 
 .footer__socials-list {
@@ -619,6 +625,7 @@ img {
   color: white;
   text-align: center;
   padding: 28px;
+  font-weight: 300;
 }
 
 /* ------------ /end Footer ------------ */
@@ -670,21 +677,19 @@ img {
 
 .home-banner__title {
   background: var(--secondary-color);
-  color: var(--main-color);
-  padding: 5px 12px;
+  padding: 6px 12px 5px;
   display: inline-flex;
   transform: skewX(342deg);
-  font-weight: bold;
-  font-size: 26px;
-  font-style: italic;
   margin-right: 4px;
-  font-family: 'Roboto Condensed';
 }
 
 .home-banner__title h1 {
   margin: 0;
-  font-size: inherit;
   transform: skewX(18deg);
+  font-weight: bold;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--main-color);
 }
 
 .home-banner__desc {
@@ -829,6 +834,7 @@ img {
 .main-card__text {
   margin-bottom: 20px;
   overflow: hidden;
+  font-weight: 300;
 }
 
 .main-card__link {
@@ -926,8 +932,7 @@ img {
 
 .product-card__title {
   margin-bottom: 0;
-  font-weight: bold;
-  font-family: 'Roboto Condensed';
+  font-weight: 500;
   color: var(--text-color);
 }
 
@@ -942,6 +947,7 @@ img {
   color: var(--text-color);
   position: relative;
   margin-top: -4px;
+  font-weight: 300;
 }
 
 /* ------------ /end Product List ------------ */
@@ -1019,6 +1025,7 @@ img {
   bottom: 20px;
   left: 60px;
   padding: 40px 44px;
+  font-weight: 300;
 }
 
 .history-page__txt-inner {
@@ -1128,6 +1135,7 @@ img {
 .popup-card__txt {
   margin: 0;
   padding: 0 32px;
+  font-weight: 300;
 }
 
 /* ------------ end/ Popup card ------------ */
@@ -1305,6 +1313,7 @@ img {
 .filter-by-letter__title {
   margin: 0;
   font-size: 18px;
+  font-weight: 500;
 }
 .filter-by-letter__list {
   display: flex;
@@ -1316,6 +1325,7 @@ img {
 .filter-by-letter__link {
   padding-bottom: 4px;
   border-bottom: 3px solid transparent;
+  font-weight: 300;
 }
 .filter-by-letter__link--active {
   font-weight: bold;
@@ -1358,6 +1368,10 @@ img {
   color: white;
 }
 
+.pagination-dots {
+  padding: 8px 12px;
+}
+
 /* ------------ /end Pagination ------------ */
 
 
@@ -1387,5 +1401,6 @@ img {
 .selectize-dropdown .option {
   padding: 6px 20px;
   font-size: 15px;
+  font-weight: 300;
 }
 /* ------------ /end Selectize ------------ */
