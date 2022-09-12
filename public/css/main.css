@@ -36,7 +36,8 @@ p {
   font-weight: 300;
 }
 
-p b, p strong {
+p b,
+p strong {
   font-weight: bold;
 }
 
@@ -432,7 +433,6 @@ img {
   color: #666;
   font-weight: 400;
   margin-bottom: 24px;
-  font-weight: bold;
 }
 
 .top-products__list {
@@ -733,7 +733,7 @@ img {
 
 
 /* Contacts */
-.contacts-section__inner {
+/* .contacts-section__inner {
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 80px;
@@ -776,7 +776,7 @@ img {
 
 .map {
   width: 50%;
-}
+} */
 
 /* ------------ /end Home page ------------ */
 
@@ -930,7 +930,7 @@ img {
 .product-card__title {
   margin-bottom: 0;
   font-weight: 500;
-  color: var(--text-color);
+  color: black;
 }
 
 .product-card__desc {
@@ -941,7 +941,7 @@ img {
   padding: 0 20px;
   font-size: 15px;
   margin-bottom: 20px;
-  color: var(--text-color);
+  color: black;
   position: relative;
   margin-top: -4px;
   font-weight: 300;
@@ -1316,6 +1316,7 @@ img {
   font-size: 18px;
   font-weight: 500;
 }
+
 .filter-by-letter__list {
   display: flex;
   list-style: none;
@@ -1323,12 +1324,14 @@ img {
   padding: 0;
   margin: 0;
 }
+
 .filter-by-letter__link {
   padding-bottom: 4px;
   border-bottom: 3px solid transparent;
   font-weight: 300;
   font-size: 15px;
 }
+
 .filter-by-letter__link--active {
   font-weight: bold;
   color: var(--main-color);
@@ -1336,23 +1339,30 @@ img {
 }
 
 /* Nosology, ATX */
-.nosology-section__inner, .atx-section__inner {
+.nosology-section__inner,
+.atx-section__inner {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 80px;
 }
-.nosology-title, .atx-title {
+
+.nosology-title,
+.atx-title {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.nosology-section__divider, .atx-section__divider {
+.nosology-section__divider,
+.atx-section__divider {
   display: flex;
   gap: 40px;
 }
-.nosology-section__inner .products-list-container, .atx-section__inner .products-list-container {
+
+.nosology-section__inner .products-list-container,
+.atx-section__inner .products-list-container {
   flex-grow: 1;
 }
+
 .classifications-list {
   display: flex;
   flex-direction: column;
@@ -1365,6 +1375,7 @@ img {
   max-width: 286px;
   width: 100%;
 }
+
 .classifications-list__link {
   display: flex;
   padding: 11px 12px;
@@ -1373,15 +1384,100 @@ img {
   border-radius: 4px;
   line-height: 1.2;
 }
+
 .classifications-list__link--active {
   background-color: var(--secondary-color);
   color: var(--main-color);
   font-weight: 500;
 }
+
 .classifications-list__link:not(.classifications-list__link--active):hover {
   background-color: var(--secondary-color);
   color: var(--main-color);
   font-weight: 500;
+}
+
+/* Show page */
+.product-section {
+  background-color: aliceblue;
+}
+
+.product-section__inner {
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.product-section__left {
+  background-color: white;
+  flex-basis: 48%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.product-section__image {
+  width: 72%;
+  margin: 0 auto;
+}
+
+.product-section__right {
+  background-color: white;
+  flex-basis: 52%;
+}
+
+.product-section__title {
+  padding: 14px 20px;
+  color: var(--main-color);
+  margin: 0;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+}
+
+.product-section__txt {
+  padding: 20px;
+}
+
+.product-section__txt p {
+  font-weight: 400;
+}
+
+.product-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid #ced4da;
+  padding: 40px 40px;
+}
+
+.product-properties__item {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.product-properties__key {
+  margin: 0;
+  flex-basis: 40%;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--main-color);
+  line-height: 1.6;
+}
+
+.product-properties__value {
+  flex-basis: 60%;
+}
+
+.product-properties__value h1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.product-properties__value a:hover {
+  text-decoration: underline;
 }
 
 /* ------------ /end Products Page ------------ */
@@ -1434,24 +1530,32 @@ img {
   border-color: var(--bg-color);
   border-radius: 20px;
 }
-.selectize-input, .selectize-control.single .selectize-input.input-active {
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
   background: var(--bg-color);
 }
+
 .selectize-input.focus {
   box-shadow: none;
 }
+
 .selectize-input.dropdown-active {
   border-radius: 20px;
 }
+
 .selectize-input>input {
   font-size: 15px;
 }
+
 .selectize-dropdown-content {
   max-height: 210px;
 }
+
 .selectize-dropdown .option {
   padding: 6px 20px;
   font-size: 15px;
   font-weight: 300;
 }
+
 /* ------------ /end Selectize ------------ */

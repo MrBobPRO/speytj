@@ -49,10 +49,13 @@
   {{-- Selectize --}}
   <script src="{{ asset('plugins/selectize/selectize.min.js') }}"></script>
 
+  {{-- Yandex share buttons --}}
+  <script src="https://yastatic.net/share2/share.js"></script>
+
   {{-- Google Maps --}}
-  @if ($route == 'home')
+  {{-- @if ($route == 'home')
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAneCOkP0fjY3gOXV9DYFTdA59yWXDvNLw&amp;callback=initMap" async="" defer=""></script>
-  @endif
+  @endif --}}
 
   <script src="{{ asset('js/app.js') }}"></script>
   {{-- App bundled styles & scripts --}}

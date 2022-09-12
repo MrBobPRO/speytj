@@ -40,7 +40,7 @@
   </div>
 </section>
 
-<section class="contacts-section">
+{{-- <section class="contacts-section">
   <div class="contacts-section__inner main-container">
     <h2 class="contacts-section__title main-title">Свяжитесь с нами</h2>
 
@@ -70,6 +70,6 @@
       <div class="map"></div>
     </div>
   </div>
-</section>
+</section> --}}
 
 @endsection
