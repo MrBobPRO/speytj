@@ -84,6 +84,15 @@ document.querySelectorAll('.tab-button').forEach((item) => {
 });
 
 
+// Menu Tab links
+let menuTab = document.querySelector('.menu__tab');
+menuTab.querySelectorAll('.tab-button').forEach((item) => {
+  item.addEventListener('dblclick', (evt) => {
+    window.location.href = item.dataset.link;
+  })
+})
+
+
 // products carousels
 let productsCarousel = $('.products-carousel');
 productsCarousel.owlCarousel({

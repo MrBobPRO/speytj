@@ -530,6 +530,15 @@ img {
   content: none;
 }
 
+.breadcrumbs li:last-child {
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .breadcrumbs a {
   text-decoration: underline;
   color: var(--text-color);
@@ -1481,6 +1490,23 @@ img {
 }
 
 /* ------------ /end Products Page ------------ */
+
+
+/* ------------ Science Page ------------ */
+.science-categories__inner {
+  padding-bottom: 60px;
+}
+.science-categories__list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.science-categories__list .popup-card {
+  width: calc(33.33% - 22px);
+  flex-grow: 1;
+}
+/* ------------ /end Science Page ------------ */
 
 
 /* ------------ Pagination ------------ */

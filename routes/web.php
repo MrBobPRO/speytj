@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ScienceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,11 @@ Route::prefix('products')->controller(ProductController::class)->name('products.
   Route::get('/{slug}', 'show')->name('show');
   Route::get('/nosology/{slug}', 'nosology')->name('nosology');
   Route::get('/atx/{slug}', 'atx')->name('atx');
+});
+
+Route::prefix('science')->controller(ScienceController::class)->name('science.')->group(function () {
+  Route::get('/', 'index')->name('index');
+  Route::get('/posts/{slug}', 'posts.show')->name('posts.show');
 });
 
 

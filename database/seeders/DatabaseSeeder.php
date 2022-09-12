@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
           NosologySeeder::class,
           AtxSeeder::class,
           ProductSeeder::class,
+          CategorySeeder::class,
         ]);
     }
 }
