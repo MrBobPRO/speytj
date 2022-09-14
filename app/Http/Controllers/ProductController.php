@@ -22,6 +22,10 @@ class ProductController extends Controller
     $products = Product::query();
     $allProducts = Product::orderBy('title')->select('title', 'slug')->get();
 
+    $allProductsCount = $allProducts->count();
+    $rxProductsCount = Product::where('prescription', true)->count();
+    $otcProductsCount = Product::where('prescription', false)->count();
+
     // get all letters
     $letters = [];
 
@@ -40,9 +44,10 @@ class ProductController extends Controller
 
     $products = $products->orderBy('title')
       ->paginate(16)
+      ->fragment('all-products')
       ->appends($request->except(['page', 'token']));
 
-    return view('products.all', compact('products', 'allProducts', 'letters', 'activeLetter'));
+    return view('products.all', compact('products', 'allProducts', 'letters', 'activeLetter', 'allProductsCount', 'rxProductsCount', 'otcProductsCount'));
   }
 
   public function show($slug)

@@ -5,9 +5,7 @@
 
   <div class="product-card__overlay">
     <div class="product-card__header">
-      <svg class="product-card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
       <div class="product-card__prescription">{{ $product->prescription ? 'RX' : 'OTC' }}</div>
-
       <h4 class="product-card__title">{{ $product->title }}</h4>
     </div>
 

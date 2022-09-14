@@ -740,53 +740,6 @@ img {
   margin-bottom: 40px;
 }
 
-
-/* Contacts */
-/* .contacts-section__inner {
-  flex-direction: column;
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
-
-.contacts-section__title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.contacts-section__divider {
-  display: flex;
-  gap: 40px;
-}
-
-.feedback-form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  background-color: var(--bg-color);
-  padding: 28px;
-  border-radius: 12px;
-}
-
-.feedback-form .input,
-.feedback-form .textarea {
-  border-color: white;
-}
-
-.feedback-form .input:focus,
-.feedback-form .textarea:focus {
-  border-color: var(--main-color);
-}
-
-.feedback-form__button {
-  margin: 12px 0 0 auto;
-  color: black;
-}
-
-.map {
-  width: 50%;
-} */
-
 /* ------------ /end Home page ------------ */
 
 
@@ -882,7 +835,7 @@ img {
   left: 0;
   right: 0;
   z-index: 1;
-  border-radius: 32px 0 0 0;
+  border-radius: 32px 0;
   background-color: var(--secondary-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
@@ -898,7 +851,7 @@ img {
   align-items: center;
   gap: 16px;
   padding: 12px;
-  border-radius: 32px 0 0 0;
+  border-radius: 32px 0;
   background-color: var(--secondary-color);
   transform: translateY(-100%);
   transition: .2s ease-in-out;
@@ -906,20 +859,6 @@ img {
 
 .product-card:hover .product-card__header {
   transform: translateY(0);
-}
-
-.product-card__arc {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-  z-index: 1;
-}
-
-.product-card__arc path {
-  fill: var(--secondary-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
 .product-card__prescription {
@@ -938,8 +877,9 @@ img {
 
 .product-card__title {
   margin-bottom: 0;
-  font-weight: 500;
+  font-weight: 400;
   color: black;
+  font-size: 16px;
 }
 
 .product-card__desc {
@@ -1285,6 +1225,44 @@ img {
 }
 
 /* All */
+.products-counter {
+  position: relative;
+  margin: -58px auto 20px;
+  display: flex;
+  width: max-content;
+  gap: 32px;
+}
+.products-counter__item {
+  display: flex;
+  box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 10%);
+  border-radius: 60px;
+  overflow: hidden;
+}
+.products-counter__number {
+  padding: 32px 0;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+.products-counter__txt {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: white;
+  line-height: 1.5;
+  width: 224px;
+  text-transform: uppercase;
+}
+
 .all-products-section__inner {
   padding-top: 40px;
   padding-bottom: 80px;
@@ -1298,26 +1276,12 @@ img {
 
 .products-filter {
   margin-bottom: 32px;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.products-filter__search {
-  max-width: 400px;
-  width: 100%;
-}
-
-.products-selectize-container {
-  width: 100%
 }
 
 .filter-by-letter {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   align-items: center;
-  flex-grow: 1;
-  padding-top: 4px;
 }
 
 .filter-by-letter__title {
@@ -1329,7 +1293,7 @@ img {
 .filter-by-letter__list {
   display: flex;
   list-style: none;
-  gap: 16px;
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
@@ -1495,6 +1459,7 @@ img {
 /* ------------ Science Page ------------ */
 .science-categories__inner {
   padding-bottom: 60px;
+  padding-top: 12px;
 }
 .science-categories__list {
   display: flex;
@@ -1505,6 +1470,17 @@ img {
 .science-categories__list .popup-card {
   width: calc(33.33% - 22px);
   flex-grow: 1;
+}
+
+.latest-posts {
+  background-color: var(--bg-color);
+}
+.latest-posts__inner {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.latest-posts__title {
+  text-align: center;
 }
 /* ------------ /end Science Page ------------ */
 

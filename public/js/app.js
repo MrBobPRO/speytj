@@ -105,37 +105,6 @@ productsCarousel.owlCarousel({
 });
 
 
-// Google Maps
-// let map;
-// if (document.querySelector('.map')) {
-//   function initMap() {
-//     map = new google.maps.Map(document.querySelector('.map'), {
-//       center: { lat: 38.578065, lng: 68.750778 },
-//       zoom: 16,
-//       mapTypeControl: false,
-//       streetViewControl: false
-//     });
-
-//     marker = new google.maps.Marker({
-//       map: map,
-//       draggable: false,
-//       animation: google.maps.Animation.BOUNCE,
-//       position: { lat: 38.578065, lng: 68.750778 },
-//       icon: '/img/main/marker.png'
-//     });
-//     marker.addListener('click', toggleBounce);
-//   }
-
-//   function toggleBounce() {
-//     if (marker.getAnimation() !== null) {
-//       marker.setAnimation(null);
-//     } else {
-//       marker.setAnimation(google.maps.Animation.BOUNCE);
-//     }
-//   }
-// }
-
-
 // Accordion
 // resize active items
 document.querySelectorAll('.accordion__item--active').forEach((item) => {
@@ -168,3 +137,32 @@ document.querySelectorAll('.accordion__button').forEach((item) => {
     }
   });
 });
+
+
+// Counter
+if ($('.counter-box').length) {
+  $('.counter-box').appear(function () {
+    var $t = $(this),
+      n = $t.find(".counter-number").attr("data-stop"),
+      r = parseInt($t.find(".counter-number").attr("data-speed"), 10);
+    if (!$t.hasClass("counted")) {
+      $t.addClass("counted");
+      $({
+        countNum: $t.find(".counter-number").text()
+      }).animate({
+        countNum: n
+      }, {
+        duration: r,
+        easing: "linear",
+        step: function () {
+          $t.find(".counter-number").text(Math.floor(this.countNum));
+        },
+        complete: function () {
+          $t.find(".counter-number").text(this.countNum);
+        }
+      });
+    }
+  }, {
+    accY: 0
+  });
+}

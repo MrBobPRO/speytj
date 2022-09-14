@@ -28,7 +28,8 @@
   <link rel="stylesheet" href="{{ asset('plugins/selectize/selectize.css') }}">
 
   {{-- Normalize CSS --}}
-  <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
+
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
 
@@ -52,10 +53,8 @@
   {{-- Yandex share buttons --}}
   <script src="https://yastatic.net/share2/share.js"></script>
 
-  {{-- Google Maps --}}
-  {{-- @if ($route == 'home')
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAneCOkP0fjY3gOXV9DYFTdA59yWXDvNLw&amp;callback=initMap" async="" defer=""></script>
-  @endif --}}
+  {{-- Appear JQ --}}
+  <script src="{{ asset('plugins/appear.js') }}"></script>
 
   <script src="{{ asset('js/app.js') }}"></script>
   {{-- App bundled styles & scripts --}}

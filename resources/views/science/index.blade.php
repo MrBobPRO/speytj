@@ -14,7 +14,7 @@
 <div class="science-page">
   <div class="science-page__inner">
     <section class="science-page__banner main-banner">
-      <img class="main-banner__image" src="{{ asset('img/science/banner.jpg') }}" alt="Spey products">
+      <img class="main-banner__image" src="{{ asset('img/science/banner.png') }}" alt="Spey products">
       <div class="main-banner__txt-container">
         <h1 class="main-banner__title main-title">Наука и развитие</h1>
         <p class="main-banner__txt">Здесь будет короткий текст про науку и развитию. Здесь будет короткий текст про науку и развитию. Здесь будет короткий текст про науку и развитию. Здесь будет короткий текст про науку и развитию.</p>
@@ -37,21 +37,13 @@
       </div>
     </section>
 
-    {{-- <section class="new-products">
-      <div class="new-products__inner main-container">
-        <h2 class="new-products__title main-title">Новые препараты</h2>
+    <section class="latest-posts latest-science-posts">
+      <div class="latest-posts__inner main-container">
+        <h2 class="latest-posts__title main-title">Последние посты</h2>
 
-        <div class="carousel-container">
-          <div class="products-carousel owl-carousel">
-            @foreach ($newProducts as $product)
-              <div class="owl-carousel__item">
-                <x-product-card :product="$product" />
-              </div>
-            @endforeach
-          </div>
-        </div>
+        
       </div>
-    </section> --}}
+    </section>
 
   </div>
 </div>

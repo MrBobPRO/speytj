@@ -40,36 +40,4 @@
   </div>
 </section>
 
-{{-- <section class="contacts-section">
-  <div class="contacts-section__inner main-container">
-    <h2 class="contacts-section__title main-title">Свяжитесь с нами</h2>
-
-    <div class="contacts-section__divider">
-      <form class="feedback-form" action="#" method="POST">
-        @csrf
-
-        <div class="form-group">
-          <input class="input feedback-form__input" type="text" name="name" placeholder="Имя*">
-          <input class="input feedback-form__input" type="text" name="email" placeholder="Почта*">
-        </div>
-
-        <div class="form-group">
-          <input class="input feedback-form__input" type="text" name="theme" placeholder="Тема">
-        </div>
-
-        <div class="form-group">
-          <textarea class="textarea feedback-form__textarea" name="body" rows="8" placeholder="Текст*"></textarea>
-        </div>
-
-        <button class="button button--more feedback-form__button">
-          <i>Отправить</i>
-          <span class="material-icons">east</span>
-        </button>
-      </form>
-
-      <div class="map"></div>
-    </div>
-  </div>
-</section> --}}
-
 @endsection
