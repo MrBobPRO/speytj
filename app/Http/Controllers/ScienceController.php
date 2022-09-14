@@ -15,4 +15,11 @@ class ScienceController extends Controller
 
     return view('science.index', compact('categories', 'latestPosts'));
   }
+
+  public function category($slug)
+  {
+    $category = Category::where('slug', $slug)->firstOrFail();
+
+    return view('science.index', compact('category'));
+  }
 }
