@@ -37,11 +37,11 @@
       </div>
     </section>
 
-    <section class="latest-posts latest-science-posts">
+    <section class="latest-posts latest-scientific-posts">
       <div class="latest-posts__inner main-container">
         <h2 class="latest-posts__title main-title">Последние посты</h2>
 
-        
+        <x-posts-list :posts="$latestPosts"/>
       </div>
     </section>
 

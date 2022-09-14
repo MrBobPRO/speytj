@@ -810,7 +810,7 @@ img {
 .products-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 40px;
+  gap: 32px;
 }
 
 .product-card {
@@ -822,11 +822,6 @@ img {
   border-radius: 32px;
   overflow: hidden;
   text-decoration: none;
-  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 8%);
-}
-
-.owl-carousel__item .product-card {
-  box-shadow: none;
 }
 
 .product-card__overlay {
@@ -1160,7 +1155,7 @@ img {
 
 .products-page__categories-list {
   display: flex;
-  gap: 40px;
+  gap: 32px;
 }
 
 .products-page__category {
@@ -1225,6 +1220,10 @@ img {
 }
 
 /* All */
+.all-products-page {
+  background-color: var(--bg-color);
+}
+
 .products-counter {
   position: relative;
   margin: -58px auto 20px;
@@ -1234,7 +1233,6 @@ img {
 }
 .products-counter__item {
   display: flex;
-  box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 10%);
   border-radius: 60px;
   overflow: hidden;
 }
@@ -1312,6 +1310,10 @@ img {
 }
 
 /* Nosology, ATX */
+.nosology-section, .atx-section {
+  background-color: var(--bg-color);
+}
+
 .nosology-section__inner,
 .atx-section__inner {
   flex-direction: column;
@@ -1328,7 +1330,7 @@ img {
 .nosology-section__divider,
 .atx-section__divider {
   display: flex;
-  gap: 40px;
+  gap: 32px;
 }
 
 .nosology-section__inner .products-list-container,
@@ -1352,7 +1354,7 @@ img {
 .classifications-list__link {
   display: flex;
   padding: 11px 12px;
-  background-color: var(--bg-color);
+  background-color: white;
   transition: background-color 0.3s, font-weight 0s;
   border-radius: 4px;
   line-height: 1.2;
@@ -1387,6 +1389,8 @@ img {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .product-section__image {
@@ -1397,6 +1401,8 @@ img {
 .product-section__right {
   background-color: white;
   flex-basis: 52%;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .product-section__title {
@@ -1462,27 +1468,70 @@ img {
   padding-top: 12px;
 }
 .science-categories__list {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
   width: 100%;
-}
-.science-categories__list .popup-card {
-  width: calc(33.33% - 22px);
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 32px;
 }
 
 .latest-posts {
   background-color: var(--bg-color);
 }
 .latest-posts__inner {
+  flex-direction: column;
   padding-top: 60px;
   padding-bottom: 80px;
 }
 .latest-posts__title {
   text-align: center;
+  margin-bottom: 40px;
 }
 /* ------------ /end Science Page ------------ */
+
+
+/* ------------ Posts list ------------ */
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.post-card {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.post-card__img-container {
+  overflow: hidden;
+}
+.post-card__image {
+  height: 180px;
+  object-fit: cover;
+  display: flex;
+  transition: 0.3s;
+}
+.post-card:hover .post-card__image {
+  transform: scale(1.1);
+}
+.post-card__body {
+  padding: 20px;
+}
+.post-card__date {
+  background: var(--secondary-color);
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: 'Roboto Condensed';
+}
+.post-card__title {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 12px 0 0;
+  line-height: 1.5;
+}
+/* ------------ /end Posts list ------------ */
 
 
 /* ------------ Pagination ------------ */

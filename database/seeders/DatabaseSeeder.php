@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
           AtxSeeder::class,
           ProductSeeder::class,
           CategorySeeder::class,
+          PostSeeder::class,
         ]);
     }
 }
