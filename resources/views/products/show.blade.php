@@ -63,7 +63,7 @@
 
             <div class="product-properties__item">
               <h3 class="product-properties__key">Инструкция</h3>
-              <div class="product-properties__value"><a href="{{ asset('instructions/' . $product->instruction) }}" target="_blank">Скачать</a></div>
+              <div class="product-properties__value"><a href="{{ asset('instructions/' . $product->instruction) }}" target="_blank">Скачать PDF</a></div>
             </div>
 
             @if($product->external_link)

@@ -20,7 +20,7 @@
     <div class="menu__tab">
       <div class="tab-buttons-container">
         <div class="tab-buttons-container__inner main-container">
-          <button class="tab-button @if($route == 'home') tab-button--active @endif" data-target-id="main" data-link="{{ route('home') }}">Главная</button>
+          <button class="tab-button @if($route == 'home' || $route == ('posts.show')) tab-button--active @endif" data-target-id="main" data-link="{{ route('home') }}">Главная</button>
           <button class="tab-button @if(strpos($route, 'about') !== false) tab-button--active @endif" data-target-id="about" data-link="{{ route('about.index') }}">О Нас</button>
           <button class="tab-button @if(strpos($route, 'products') !== false) tab-button--active @endif" data-target-id="products"
             data-link="{{ route('products.index') }}">Продукты</button>

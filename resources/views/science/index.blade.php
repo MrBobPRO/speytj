@@ -26,7 +26,7 @@
 
         <div class="science-categories__list">
           @foreach ($categories as $cat)
-          <a class="popup-card" href="#">
+          <a class="popup-card" href="{{ route('science.categories.show', $cat->slug) }}">
             <img class="popup-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
             <div class="popup-card__overlay">
               <h2 class="popup-card__title">{{ $cat->title }}</h2>

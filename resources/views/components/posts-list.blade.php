@@ -5,6 +5,9 @@
     @foreach ($posts as $post)
       <x-post-card :post="$post"/>
     @endforeach
-</div>
-
+  </div>
+  
+  @unless ($posts->count())
+    <p>Посты находятся в стадии редактирования...</p>
+  @endunless
 </div>

@@ -258,4 +258,9 @@ class Helper
 
     return $filename;
   }
+
+  public static function getPreviousRouteName()
+  {
+    return app('router')->getRoutes()->match(app('request')->create(url()->previous()))->getName();
+  }
 }

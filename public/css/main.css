@@ -1462,7 +1462,7 @@ img {
 /* ------------ /end Products Page ------------ */
 
 
-/* ------------ Science Page ------------ */
+/* ------------ Science & For Patients Page ------------ */
 .science-categories__inner {
   padding-bottom: 60px;
   padding-top: 12px;
@@ -1474,7 +1474,7 @@ img {
   gap: 32px;
 }
 
-.latest-posts {
+.latest-scientific-posts, .latest-for-patients-posts {
   background-color: var(--bg-color);
 }
 .latest-posts__inner {
@@ -1486,7 +1486,23 @@ img {
   text-align: center;
   margin-bottom: 40px;
 }
-/* ------------ /end Science Page ------------ */
+/* ------------ /end Science & For Patients Page ------------ */
+
+
+/* ------------ Category Page ------------ */
+.category-page {
+  background-color: aliceblue;
+}
+.category-posts__inner {
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.category-posts__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+/* ------------ /end Category Page ------------ */
 
 
 /* ------------ Posts list ------------ */
@@ -1497,12 +1513,19 @@ img {
 }
 
 .post-card {
-  background: white;
+  background-color: white;
   border-radius: 6px;
   overflow: hidden;
+  transition: 0.3s;
 }
+
+.home-latest-posts .post-card {
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 8%);
+}
+
 .post-card__img-container {
   overflow: hidden;
+  position: relative;
 }
 .post-card__image {
   height: 180px;
@@ -1513,25 +1536,55 @@ img {
 .post-card:hover .post-card__image {
   transform: scale(1.1);
 }
-.post-card__body {
-  padding: 20px;
-}
 .post-card__date {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background: var(--secondary-color);
   color: var(--main-color);
   font-weight: bold;
   font-size: 13px;
   padding: 4px 12px;
-  border-radius: 6px;
   font-family: 'Roboto Condensed';
+}
+.post-card__body {
+  padding: 20px;
 }
 .post-card__title {
   font-weight: 400;
   font-size: 16px;
-  margin: 12px 0 0;
+  margin: 0;
   line-height: 1.5;
 }
 /* ------------ /end Posts list ------------ */
+
+
+/* ------------ Post show page ------------ */
+.post-page__inner {
+  padding-bottom: 60px;
+}
+.post__desc {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 32px;
+  margin: 32px 0;
+}
+.post__date {
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+}
+.post__pdf {
+  text-decoration: underline;
+  font-family: 'Roboto Condensed';
+}
+.post__body {
+  font-weight: 300;
+}
+
+.post__desc > .ya-share2 {
+  margin-top: 16px;
+}
+/* ------------ /end Post show page ------------ */
 
 
 /* ------------ Pagination ------------ */

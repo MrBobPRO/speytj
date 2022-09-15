@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ScienceController;
 use Illuminate\Support\Facades\Route;
@@ -36,7 +37,11 @@ Route::prefix('products')->controller(ProductController::class)->name('products.
 
 Route::prefix('science')->controller(ScienceController::class)->name('science.')->group(function () {
   Route::get('/', 'index')->name('index');
-  Route::get('/posts/{slug}', 'posts.show')->name('posts.show');
+  Route::get('/categories/{slug}', 'showCategory')->name('categories.show');
+});
+
+Route::prefix('posts')->controller(PostController::class)->name('posts.')->group(function () {
+  Route::get('/{slug}', 'show')->name('show');
 });
 
 
