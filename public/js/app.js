@@ -166,3 +166,30 @@ if ($('.counter-box').length) {
     accY: 0
   });
 }
+
+
+// Plyr
+let videos = document.querySelectorAll('.plyr');
+
+videos.forEach((item) => {
+  new Plyr(item, {
+    captions: {
+      active: true,
+      language: 'en'
+    },
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'airplay', 'fullscreen']
+  });
+});
+
+// pause other videos while playing new one
+videos.forEach((item) => {
+  item.addEventListener('play', (evt) => {
+    let targ = evt.target;
+
+    videos.forEach(vid => {
+      if (vid !== targ) {
+        vid.pause();
+      }
+    });
+  })
+});

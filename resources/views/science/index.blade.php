@@ -12,40 +12,31 @@
 
 @section('main')
 <div class="science-page">
-  <div class="science-page__inner">
-    <section class="science-page__banner main-banner">
-      <img class="main-banner__image" src="{{ asset('img/science/banner.png') }}" alt="Spey products">
-      <div class="main-banner__txt-container">
-        <h1 class="main-banner__title main-title">Наука и развитие</h1>
-        <p class="main-banner__txt">Здесь будет короткий текст про науку и развитию. Здесь будет короткий текст про науку и развитию. Здесь будет короткий текст про науку и развитию. Здесь будет короткий текст про науку и развитию.</p>
+  <section class="science-categories">
+    <div class="science-categories__inner main-container">
+
+      <h1 class="science-categories__title main-title">Категории</h1>
+
+      <div class="science-categories__list">
+        @foreach ($categories as $cat)
+        <a class="popup-card" href="{{ route('science.categories.show', $cat->slug) }}">
+          <img class="popup-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
+          <div class="popup-card__overlay">
+            <h2 class="popup-card__title">{{ $cat->title }}</h2>
+          </div>
+        </a>
+        @endforeach
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="science-categories">
-      <div class="science-categories__inner main-container">
+  <section class="latest-posts latest-scientific-posts">
+    <div class="latest-posts__inner main-container">
+      <h2 class="latest-posts__title main-title">Новые посты</h2>
 
-        <div class="science-categories__list">
-          @foreach ($categories as $cat)
-          <a class="popup-card" href="{{ route('science.categories.show', $cat->slug) }}">
-            <img class="popup-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
-            <div class="popup-card__overlay">
-              <h2 class="popup-card__title">{{ $cat->title }}</h2>
-            </div>
-          </a>
-          @endforeach
-        </div>
-      </div>
-    </section>
-
-    <section class="latest-posts latest-scientific-posts">
-      <div class="latest-posts__inner main-container">
-        <h2 class="latest-posts__title main-title">Последние посты</h2>
-
-        <x-posts-list :posts="$latestPosts"/>
-      </div>
-    </section>
-
-  </div>
+      <x-posts-list :posts="$latestPosts" />
+    </div>
+  </section>
 </div>
 
 @endsection

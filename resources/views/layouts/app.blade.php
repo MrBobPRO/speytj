@@ -17,6 +17,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+  {{-- Normalize CSS --}}
+  <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
+
   {{-- Material Icons --}}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
 
@@ -27,8 +30,8 @@
   {{-- Selectize --}}
   <link rel="stylesheet" href="{{ asset('plugins/selectize/selectize.css') }}">
 
-  {{-- Normalize CSS --}}
-  <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
+  {{-- Plyr --}}
+  <link rel="stylesheet" href="{{ asset('plugins/plyr/plyr.css') }}">
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 </head>
@@ -55,6 +58,9 @@
 
   {{-- Appear JQ --}}
   <script src="{{ asset('plugins/appear.js') }}"></script>
+
+  {{-- Plyr --}}
+  <script src="{{ asset('plugins/plyr/plyr.polyfilled.js') }}"></script>
 
   <script src="{{ asset('js/app.js') }}"></script>
   {{-- App bundled styles & scripts --}}

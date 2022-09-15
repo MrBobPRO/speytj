@@ -6,19 +6,26 @@
 </li>
 
 @switch($previousRoute)
-    @case('home')
-      <li>
-        Последние посты
-      </li>
-      @break
+  @case('home')
+    <li>
+      Последние посты
+    </li>
+    @break
 
-    @case('science.index')
-    @case('science.categories.show')
-      <li>
-        <a href="{{ route('home') }}">Наука и развитие</a>
-      </li>
-      @break
+  @case('science.index')
+  @case('science.categories.show')
+    <li>
+      <a href="{{ route('science.index') }}">Наука и развитие</a>
+    </li>
+    @break
 
+  @case('for-patients.index')
+  @case('for-patients.posts')
+  @case('for-patients.categories.show')
+    <li>
+      <a href="{{ route('for-patients.index') }}">Для пациентов</a>
+    </li>
+    @break
 @endswitch
 
 <li>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ForPatientsController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
@@ -38,6 +39,14 @@ Route::prefix('products')->controller(ProductController::class)->name('products.
 Route::prefix('science')->controller(ScienceController::class)->name('science.')->group(function () {
   Route::get('/', 'index')->name('index');
   Route::get('/categories/{slug}', 'showCategory')->name('categories.show');
+});
+
+Route::prefix('for-patients')->controller(ForPatientsController::class)->name('for-patients.')->group(function () {
+  Route::get('/', 'index')->name('index');
+  Route::get('/videos', 'videos')->name('videos');
+
+  Route::get('/posts', 'posts')->name('posts');
+  Route::get('/posts/categories/{slug}', 'showCategory')->name('categories.show');
 });
 
 Route::prefix('posts')->controller(PostController::class)->name('posts.')->group(function () {

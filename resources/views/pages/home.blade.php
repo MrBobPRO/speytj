@@ -42,7 +42,7 @@
 
 <section class="latest-posts home-latest-posts">
   <div class="latest-posts__inner main-container">
-    <h2 class="latest-posts__title main-title">Последние посты</h2>
+    <h2 class="latest-posts__title main-title">Новые посты</h2>
 
     <x-posts-list :posts="$latestPosts"/>
   </div>

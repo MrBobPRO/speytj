@@ -17,6 +17,7 @@ body {
   --fortinary-color: #f9ff21;
   --text-color: #303548;
   --bg-color: aliceblue;
+  --plyr-color-main: var(--secondary-color);
 }
 
 *,
@@ -1231,11 +1232,13 @@ img {
   width: max-content;
   gap: 32px;
 }
+
 .products-counter__item {
   display: flex;
   border-radius: 60px;
   overflow: hidden;
 }
+
 .products-counter__number {
   padding: 32px 0;
   background-color: var(--secondary-color);
@@ -1248,6 +1251,7 @@ img {
   justify-content: center;
   min-width: 100px;
 }
+
 .products-counter__txt {
   margin: 0;
   display: flex;
@@ -1310,7 +1314,8 @@ img {
 }
 
 /* Nosology, ATX */
-.nosology-section, .atx-section {
+.nosology-section,
+.atx-section {
   background-color: var(--bg-color);
 }
 
@@ -1374,7 +1379,7 @@ img {
 
 /* Show page */
 .product-section {
-  background-color: aliceblue;
+  background-color: var(--bg-color);
 }
 
 .product-section__inner {
@@ -1463,45 +1468,126 @@ img {
 
 
 /* ------------ Science & For Patients Page ------------ */
-.science-categories__inner {
-  padding-bottom: 60px;
-  padding-top: 12px;
+/* Science index page & For patients posts page */
+.science-categories__inner, .for-patients-categories__inner {
+  flex-direction: column;
+  padding-bottom: 72px;
+  padding-top: 40px;
 }
-.science-categories__list {
+
+.science-categories__title, .for-patients-categories__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.science-categories__list, .for-patients-categories__list {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 32px;
 }
 
-.latest-scientific-posts, .latest-for-patients-posts {
+.latest-scientific-posts,
+.latest-for-patients-posts {
   background-color: var(--bg-color);
 }
+
 .latest-posts__inner {
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 80px;
 }
+
 .latest-posts__title {
   text-align: center;
   margin-bottom: 40px;
 }
-/* ------------ /end Science & For Patients Page ------------ */
+
+/* For patients index page */
+.for-patients-page__videos {
+  background-color: var(--bg-color);
+}
+.for-patients-page__videos-inner, .for-patients-page__posts-inner {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  flex-direction: column;
+}
+.for-patients-page__videos-title, .for-patients-page__posts-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.for-patients-page__posts .post-card {
+  box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 8%);
+}
+
+.for-patients-page__videos-more, .for-patients-page__posts-more {
+  margin: 40px 0 0 auto;
+  color: black;
+}
+
+/* ------------ /end Science & For Patients posts Page ------------ */
+
+
+/* ------------ Videos List ------------ */
+.videos-page {
+  background-color: var(--bg-color);
+}
+.videos-page__inner {
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+.vides-page__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.videos-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 32px;
+}
+.video-card {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.video-card__body {
+  padding: 20px;
+}
+.video-card__date {
+  color: var(--main-color);
+  font-size: 15px;
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+}
+.video-card__title {
+  margin: 4px 0 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+.plyr__control--overlaid svg {
+  color: var(--main-color);
+}
+/* ------------ /end Videos List ------------ */
 
 
 /* ------------ Category Page ------------ */
 .category-page {
-  background-color: aliceblue;
+  background-color: var(--bg-color);
 }
+
 .category-posts__inner {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 80px;
 }
+
 .category-posts__title {
   margin-bottom: 40px;
   text-align: center;
 }
+
 /* ------------ /end Category Page ------------ */
 
 
@@ -1527,15 +1613,18 @@ img {
   overflow: hidden;
   position: relative;
 }
+
 .post-card__image {
   height: 180px;
   object-fit: cover;
   display: flex;
   transition: 0.3s;
 }
+
 .post-card:hover .post-card__image {
   transform: scale(1.1);
 }
+
 .post-card__date {
   position: absolute;
   bottom: 0;
@@ -1547,15 +1636,18 @@ img {
   padding: 4px 12px;
   font-family: 'Roboto Condensed';
 }
+
 .post-card__body {
   padding: 20px;
 }
+
 .post-card__title {
   font-weight: 400;
   font-size: 16px;
   margin: 0;
   line-height: 1.5;
 }
+
 /* ------------ /end Posts list ------------ */
 
 
@@ -1563,27 +1655,32 @@ img {
 .post-page__inner {
   padding-bottom: 60px;
 }
+
 .post__desc {
   border-left: 4px solid var(--secondary-color);
   padding-left: 32px;
   margin: 32px 0;
 }
+
 .post__date {
   font-size: 13px;
   color: black;
   font-weight: bold;
 }
+
 .post__pdf {
   text-decoration: underline;
   font-family: 'Roboto Condensed';
 }
+
 .post__body {
   font-weight: 300;
 }
 
-.post__desc > .ya-share2 {
+.post__desc>.ya-share2 {
   margin-top: 16px;
 }
+
 /* ------------ /end Post show page ------------ */
 
 
@@ -1616,7 +1713,9 @@ img {
 .pagination-link--active {
   background-color: var(--main-color);
   border-color: var(--main-color);
-  color: white;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-family: 'Roboto Condensed';
 }
 
 .pagination-dots {

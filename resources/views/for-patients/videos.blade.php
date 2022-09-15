@@ -1,0 +1,26 @@
+@extends('layouts.app')
+
+@section('breadcrumbs')
+<li>
+  <a href="{{ route('home') }}">Главная</a>
+</li>
+
+<li>
+  <a href="{{ route('for-patients.index') }}">Для пациентов</a>
+</li>
+
+<li>
+  Видео
+</li>
+@endsection
+
+
+@section('main')
+<div class="videos-page">
+  <div class="videos-page__inner main-container">
+    <h1 class="vides-page__title main-title">Видео</h1>
+
+    <x-videos-list :videos="$videos" />
+  </div>
+</div>
+@endsection
