@@ -41,15 +41,15 @@
 
     {{-- For patients links start --}}
     <div class="footer__block">
-      <h5 class="footer__title"><a href="{{ route('about.index') }}">Для пациентов</a></h5>
+      <h5 class="footer__title"><a href="{{ route('for-patients.index') }}">Для пациентов</a></h5>
 
       <ul class="footer__list">
         <li>
-          <a href="{{ route('about.history') }}" class="footer__link">Статьи</a>
+          <a href="{{ route('for-patients.posts') }}" class="footer__link">Статьи</a>
         </li>
 
         <li>
-          <a href="{{ route('about.wealth') }}" class="footer__link">Видео</a>
+          <a href="{{ route('for-patients.videos') }}" class="footer__link">Видео</a>
         </li>
       </ul>
     </div>  {{-- For patients links end --}}
@@ -60,21 +60,21 @@
 
       <ul class="footer__list">
         <li>
-          <a href="#" class="footer__link">Телефон: +992 987654321</a>
+          <a href="tel:+992372368956" class="footer__link">Тел: +992 (37) 236-89-56</a>
         </li>
 
         <li>
-          <a href="#" class="footer__link">Эл. почта: info@spey.tj</a>
+          <a href="mailto:info@spey.tj" class="footer__link">Эл. почта: info@spey.tj</a>
         </li>
       </ul>
 
       <ul class="footer__socials-list">
         <li>
-          <a href="#" class="footer__socials-link"><svg><use href="#facebook-svg"></use></svg></a>
+          <a href="https://www.facebook.com/spey.tj" class="footer__socials-link" target="_blank"><svg><use href="#facebook-svg"></use></svg></a>
         </li>
 
         <li>
-          <a href="#" class="footer__socials-link"><svg><use href="#instagram-svg"></use></svg></a>
+          <a href="https://www.instagram.com/spey.tj" class="footer__socials-link" target="_blank"><svg><use href="#instagram-svg"></use></svg></a>
         </li>
       </ul>
 

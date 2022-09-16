@@ -6,7 +6,7 @@
       </button>
 
       <form class="menu__search-form" action="#" method="POST">
-        <input class="menu__search-input" type="text" placeholder="Поиск..." required>
+        <input class="menu__search-input" type="text" placeholder="Поиск..." required minlength="3">
         <button class="menu__search-submit"><span class="material-icons">search</span></button>
       </form>
 
@@ -43,7 +43,9 @@
     </div>
 
     <div class="menu__search">
-      <div class="menu__search-inner main-container"></div>
+      <div class="menu__search-inner main-container">
+        <div class="menu__search-results-container"></div>
+      </div>
     </div>
   </div>
 </div>

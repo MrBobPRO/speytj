@@ -37,6 +37,8 @@ p {
   font-weight: 300;
 }
 
+b,
+strong,
 p b,
 p strong {
   font-weight: bold;
@@ -286,7 +288,7 @@ img {
   height: 0%;
   background-color: #212121;
   overflow-y: hidden;
-  transition: 0.3s ease;
+  transition: 0.25s ease;
   display: flex;
   flex-direction: column;
 }
@@ -493,10 +495,53 @@ img {
   display: none;
 }
 
+.menu__search-inner {
+  max-width: 920px;
+}
+
 .menu__search--visible {
   display: block;
 }
 
+.menu__search-results-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #CCC;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu__search-results-item {
+  border-bottom: 1px solid #ffffff40;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.menu__search-results-image-container {
+  display: flex;
+  min-width: 200px;
+  width: 200px;
+}
+.menu__search-results-image {
+  border: 1px solid #ffffff40;
+}
+.menu__search-results-body {
+
+}
+.menu__search-results-title {
+  color: white;
+  font-weight: 500;
+}
+.menu__search-results-txt {
+
+}
+.menu__search-results-link {
+  font-weight: 400;
+  margin-top: 12px;
+  font-size: 16px;
+}
 /* ------------ /end Menu Collapse ------------ */
 
 /* ------------ Breadcrumbs ------------ */
@@ -538,6 +583,11 @@ img {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+.breadcrumbs li:last-child::before {
+  display: inline-flex;
+  transform: translateY(2px);
 }
 
 .breadcrumbs a {
@@ -811,7 +861,7 @@ img {
 .products-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 32px;
+  gap: 40px;
 }
 
 .product-card {
@@ -1335,7 +1385,7 @@ img {
 .nosology-section__divider,
 .atx-section__divider {
   display: flex;
-  gap: 32px;
+  gap: 40px;
 }
 
 .nosology-section__inner .products-list-container,

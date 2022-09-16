@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class, 'home'])->name('home');
+Route::post('/search', [MainController::class, 'search'])->name('search');
 
 Route::prefix('about')->controller(AboutController::class)->name('about.')->group(function () {
   Route::get('/', 'index')->name('index');

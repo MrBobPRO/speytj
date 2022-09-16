@@ -50,6 +50,7 @@ document.querySelector('.header__toggles-search-button').addEventListener('click
   document.body.style.overflowY = 'hidden';
   menuSearch.classList.add('menu__search--visible');
   menu.classList.add('menu--visible');
+  menu.querySelector('.menu__search-input').focus();
 });
 
 document.querySelector('.menu__search-input').addEventListener('focus', () => {
@@ -89,8 +90,30 @@ let menuTab = document.querySelector('.menu__tab');
 menuTab.querySelectorAll('.tab-button').forEach((item) => {
   item.addEventListener('dblclick', (evt) => {
     window.location.href = item.dataset.link;
-  })
-})
+  });
+});
+
+
+// Ajax search
+let searchResultsContainer = document.querySelector('.menu__search-results-container');
+
+document.querySelector('.menu__search-form').addEventListener('submit', (evt) => {
+  evt.preventDefault();
+
+  $.ajax({
+    type: 'POST',
+    enctype: 'multipart/form-data',
+    url: '/search',
+    data: {keyword: document.querySelector('.menu__search-input').value},
+    success: function (response) {
+        searchResultsContainer.innerHTML = response;
+        // spinner.classList.remove('spinner--show');
+    },
+    error: function () {
+      console.log('Ajax search error!');
+    }
+  });
+});
 
 
 // products carousels
