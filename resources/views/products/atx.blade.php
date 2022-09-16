@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', $activeCategory->title)
+
 @section('breadcrumbs')
 <li>
   <a href="{{ route('home') }}">Главная</a>

@@ -1,5 +1,17 @@
 @extends('layouts.app')
 
+@section('title', $product->title)
+
+@section('meta-tags')
+@php $shareText = App\Support\Helper::generateShareText($product->description); @endphp
+
+<meta name="description" content="{{ $shareText }}">
+<meta property="og:description" content="{{ $shareText }}">
+<meta property="og:title" content="{{ $product->title }}" />
+<meta property="og:image" content="{{ asset('img/products/thumbs/' . $product->image) }}">
+<meta property="og:image:alt" content="{{ $product->title }}">
+@endsection
+
 @section('breadcrumbs')
 <li>
   <a href="{{ route('home') }}">Главная</a>

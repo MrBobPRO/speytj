@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@section('title', $post->title)
+
+@section('meta-tags')
+
+<meta name="description" content="{{ $post->title }}">
+<meta property="og:description" content="{{ $post->title }}">
+<meta property="og:title" content="{{ $post->title }}" />
+<meta property="og:image" content="{{ asset('img/posts/thumbs/' . $post->image) }}">
+<meta property="og:image:alt" content="{{ $post->title }}">
+@endsection
+
 @section('breadcrumbs')
 <li>
   <a href="{{ route('home') }}">Главная</a>

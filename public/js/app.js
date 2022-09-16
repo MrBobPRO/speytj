@@ -96,20 +96,25 @@ menuTab.querySelectorAll('.tab-button').forEach((item) => {
 
 // Ajax search
 let searchResultsContainer = document.querySelector('.menu__search-results-container');
+let spinnerContainer = menuSearch.querySelector('.spinner-container');
 
 document.querySelector('.menu__search-form').addEventListener('submit', (evt) => {
   evt.preventDefault();
+
+  let spinnerContainer = menuSearch.querySelector('.spinner-container');
+  spinnerContainer.classList.add('spinner-container--visible');
 
   $.ajax({
     type: 'POST',
     enctype: 'multipart/form-data',
     url: '/search',
-    data: {keyword: document.querySelector('.menu__search-input').value},
+    data: { keyword: document.querySelector('.menu__search-input').value },
     success: function (response) {
-        searchResultsContainer.innerHTML = response;
-        // spinner.classList.remove('spinner--show');
+      searchResultsContainer.innerHTML = response;
+      spinnerContainer.classList.remove('spinner-container--visible');
     },
     error: function () {
+      spinnerContainer.classList.remove('spinner-container--visible');
       console.log('Ajax search error!');
     }
   });

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
+use App\Models\Top;
 use App\Support\Helper;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -57,5 +58,20 @@ class ProductSeeder extends Seeder
       $p->atx()->attach(rand(1, 10));
       $p->atx()->attach(rand(11, 27));
     }
+
+    $top = new Top();
+    $top->product_id = 1;
+    $top->image = '1.png';
+    $top->save();
+
+    $top = new Top();
+    $top->product_id = 2;
+    $top->image = '2.png';
+    $top->save();
+
+    $top = new Top();
+    $top->product_id = 3;
+    $top->image = '3.png';
+    $top->save();
   }
 }

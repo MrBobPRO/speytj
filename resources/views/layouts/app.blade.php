@@ -12,6 +12,20 @@
 
   <title>@hasSection('title')@yield('title'){{ ' — Spey' }}@else{{ 'Spey' }}@endif</title>
 
+  <meta property="og:site_name" content="Spey">
+  <meta property="og:type" content="object">
+  <meta name="twitter:card" content="summary_large_image">
+
+  @hasSection ('meta-tags')
+    @yield('meta-tags')
+  @else
+    <meta name="description" content="Spey — это международная компания, деятельность которой направлена на улучшение жизни людей путем предоставления инновационной и востребованной продукции в сфере здравоохранения. Компания Spey ведет свою деятельность на международном фармацевтическом рынке уже более 15 лет.">
+    <meta property="og:title" content="Spey">
+    <meta property="og:description" content="Spey — это международная компания, деятельность которой направлена на улучшение жизни людей путем предоставления инновационной и востребованной продукции в сфере здравоохранения. Компания Spey ведет свою деятельность на международном фармацевтическом рынке уже более 15 лет.">
+    <meta property="og:image" content="{{ asset('img/main/logo-share.png') }}">
+    <meta property="og:image:alt" content="Spey logo">
+  @endif
+
   {{-- Google Roboto Fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

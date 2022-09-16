@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Карьера')
+
 @section('breadcrumbs')
 <li>
   <a href="{{ route('home') }}">Главная</a>

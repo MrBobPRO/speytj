@@ -44,6 +44,12 @@
 
     <div class="menu__search">
       <div class="menu__search-inner main-container">
+        <div class="spinner-container">
+          <div class="spinner">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+
         <div class="menu__search-results-container"></div>
       </div>
     </div>

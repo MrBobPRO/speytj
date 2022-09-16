@@ -519,29 +519,28 @@ img {
   display: flex;
   gap: 20px;
 }
+
 .menu__search-results-image-container {
   display: flex;
   min-width: 200px;
   width: 200px;
 }
+
 .menu__search-results-image {
   border: 1px solid #ffffff40;
 }
-.menu__search-results-body {
 
-}
 .menu__search-results-title {
   color: white;
   font-weight: 500;
 }
-.menu__search-results-txt {
 
-}
 .menu__search-results-link {
   font-weight: 400;
   margin-top: 12px;
   font-size: 16px;
 }
+
 /* ------------ /end Menu Collapse ------------ */
 
 /* ------------ Breadcrumbs ------------ */
@@ -1327,13 +1326,16 @@ img {
 }
 
 .products-filter {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .filter-by-letter {
   display: flex;
   gap: 24px;
   align-items: center;
+  background-color: white;
+  padding: 12px 32px;
+  border-radius: 32px;
 }
 
 .filter-by-letter__title {
@@ -1519,18 +1521,21 @@ img {
 
 /* ------------ Science & For Patients Page ------------ */
 /* Science index page & For patients posts page */
-.science-categories__inner, .for-patients-categories__inner {
+.science-categories__inner,
+.for-patients-categories__inner {
   flex-direction: column;
   padding-bottom: 72px;
   padding-top: 40px;
 }
 
-.science-categories__title, .for-patients-categories__title {
+.science-categories__title,
+.for-patients-categories__title {
   margin-bottom: 40px;
   text-align: center;
 }
 
-.science-categories__list, .for-patients-categories__list {
+.science-categories__list,
+.for-patients-categories__list {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -1557,20 +1562,26 @@ img {
 .for-patients-page__videos {
   background-color: var(--bg-color);
 }
-.for-patients-page__videos-inner, .for-patients-page__posts-inner {
+
+.for-patients-page__videos-inner,
+.for-patients-page__posts-inner {
   padding-top: 40px;
   padding-bottom: 60px;
   flex-direction: column;
 }
-.for-patients-page__videos-title, .for-patients-page__posts-title {
+
+.for-patients-page__videos-title,
+.for-patients-page__posts-title {
   text-align: center;
   margin-bottom: 40px;
 }
+
 .for-patients-page__posts .post-card {
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 8%);
 }
 
-.for-patients-page__videos-more, .for-patients-page__posts-more {
+.for-patients-page__videos-more,
+.for-patients-page__posts-more {
   margin: 40px 0 0 auto;
   color: black;
 }
@@ -1582,43 +1593,52 @@ img {
 .videos-page {
   background-color: var(--bg-color);
 }
+
 .videos-page__inner {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 80px;
 }
+
 .vides-page__title {
   text-align: center;
   margin-bottom: 40px;
 }
+
 .videos-list {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 32px;
 }
+
 .video-card {
   background-color: white;
   border-radius: 6px;
   overflow: hidden;
 }
+
 .video-card__body {
   padding: 20px;
 }
+
 .video-card__date {
   color: var(--main-color);
   font-size: 15px;
   font-family: 'Roboto Condensed';
   font-weight: bold;
 }
+
 .video-card__title {
   margin: 4px 0 0;
   font-size: 16px;
   font-weight: 300;
 }
+
 .plyr__control--overlaid svg {
   color: var(--main-color);
 }
+
 /* ------------ /end Videos List ------------ */
 
 
@@ -1812,3 +1832,59 @@ img {
 }
 
 /* ------------ /end Selectize ------------ */
+
+
+/* ------------ Spinner ------------ */
+.spinner-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 99;
+  padding-top: 160px;
+  transition: 0.3s;
+  visibility: hidden;
+  height: 100%;
+  background: #0000005c;
+  left: 0;
+  top: 0;
+}
+
+.spinner-container--visible {
+  visibility: visible;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: spinner-grow .75s linear infinite;
+  animation: spinner-grow .75s linear infinite;
+}
+
+
+@-webkit-keyframes spinner-grow {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes spinner-grow {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+/* ------------ /end Spinner ------------ */

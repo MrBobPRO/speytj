@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Наука и развитие')
+
 @section('breadcrumbs')
 <li>
   <a href="{{ route('home') }}">Главная</a>
