@@ -10,6 +10,9 @@
   <meta name="googlebot" content="noindex, nofollow" />
   <meta name="yandex" content="none" />
 
+  <link rel="manifest" href="{{ asset('manifest.json') }}">
+  <meta name="msapplication-config" content="{{ asset('msapplication-config.xml') }}">
+
   <title>@hasSection('title')@yield('title'){{ ' — Spey' }}@else{{ 'Spey' }}@endif</title>
 
   <meta property="og:site_name" content="Spey">
