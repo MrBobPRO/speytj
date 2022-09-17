@@ -13,6 +13,19 @@
   <link rel="manifest" href="{{ asset('manifest.json') }}">
   <meta name="msapplication-config" content="{{ asset('msapplication-config.xml') }}">
 
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('img/icons/android-icon-192x192.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/icons/favicon-32x32.png') }}">
+
+  {{-- COnfig Safari browser --}}
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('img/icons/apple-icon-120x120.png') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('img/icons/apple-icon-152x152.png') }}">
+  <link rel="apple-touch-icon" sizes="167x167" href="{{ asset('img/icons/apple-icon-167x167.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/icons/apple-icon-180x180.png') }}">
+
+  {{-- Hide Safari User Interface Components & Change status bar color --}}
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1e2a78">
+
   <title>@hasSection('title')@yield('title'){{ ' — Spey' }}@else{{ 'Spey' }}@endif</title>
 
   <meta property="og:site_name" content="Spey">

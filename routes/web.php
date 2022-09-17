@@ -54,7 +54,6 @@ Route::prefix('posts')->controller(PostController::class)->name('posts.')->group
   Route::get('/{slug}', 'show')->name('show');
 });
 
-
 Route::middleware('auth')->prefix('dashboard')->group(function () {
   Route::get('/', [MainController::class, 'dashboard'])->name('dashboard.index');
 });
