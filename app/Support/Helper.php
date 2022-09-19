@@ -263,4 +263,113 @@ class Helper
   {
     return app('router')->getRoutes()->match(app('request')->create(url()->previous()))->getName();
   }
+
+  public function copyDb()
+  {
+    // copying categories
+    Jatx::all()->each(function ($j) {
+      $c = new Atx();
+      $c->id = $j->id;
+      $c->title = $j->name;
+      $c->slug = Helper::generateUniqueSlug($j->name, Atx::class);
+      $c->save();
+    });
+
+    // copying categories
+    Josology::all()->each(function ($j) {
+      $c = new Nosology();
+      $c->id = $j->id;
+      $c->title = $j->name;
+      $c->slug = Helper::generateUniqueSlug($j->name, Nosology::class);
+      $c->save();
+    });
+
+
+    // Posts
+    Jost::orderBy('id')->each(function ($old) {
+      $new = new Post();
+      $new->id = $old->id;
+      $new->title = $old->title;
+      $new->slug = Helper::generateUniqueSlug($new->title, Post::class);
+
+      $extension = pathinfo($old->pdf, PATHINFO_EXTENSION);
+      $newPdfName = $new->slug > 60 ? mb_substr($new->slug, 0, 60) . '.' . $extension : $new->slug . '.' . $extension;
+      rename(public_path('pdf/josts/' . $old->pdf), public_path('pdf/posts/' . $newPdfName));
+      $new->pdf = $newPdfName;
+
+      $extension = pathinfo($old->image, PATHINFO_EXTENSION);
+      $newImageName = $new->slug > 60 ? mb_substr($new->slug, 0, 60) . '.' . $extension : $new->slug . '.' . $extension;
+      rename(public_path('img/josts/' . $old->image), public_path('img/posts/' . $newImageName));
+      $new->image = $newImageName;
+
+      $new->body = $old->text;
+      $new->scientific = true;
+      $new->for_patients = rand(0, 1);
+
+      $new->save();
+    });
+
+
+
+    // products
+    Jroduct::orderBy('id')->each(function ($old) {
+      $new = new Product();
+      $new->id = $old->id;
+      $new->title = $old->name;
+      $new->slug = Helper::generateUniqueSlug($new->title, Product::class);
+      $new->prescription = $old->rx;
+
+      $extension = pathinfo($old->image, PATHINFO_EXTENSION);
+      $newImageName = $new->slug > 60 ? mb_substr($new->slug, 0, 60) . '.' . $extension : $new->slug . '.' . $extension;
+      rename(public_path('img/jroducts/' . $old->image), public_path('img/products/' . $newImageName));
+      $new->image = $newImageName;
+
+      $extension = pathinfo($old->instruction, PATHINFO_EXTENSION);
+      $newPdfName = $new->slug > 60 ? mb_substr($new->slug, 0, 60) . '.' . $extension : $new->slug . '.' . $extension;
+      rename(public_path('pdf/jinstructions/' . $old->instruction), public_path('pdf/instructions/' . $newPdfName));
+      $new->instruction = $newPdfName;
+
+      $new->external_link = $old->salomat_url;
+      $new->popular = rand(0, 1);
+      $new->description = $old->description;
+      $new->composition = $old->composition;
+      $new->indication = $old->testimony;
+      $new->usage = $old->use;
+
+      $new->save();
+    });
+
+    // create thumbs
+    Product::orderBy('id')->each(function ($prod) {
+      Helper::createThumb('img/products', $prod->image, 380);
+    });
+
+
+    // deleting removed items relations
+    DB::table('atx_product')->get()->each(function ($item) {
+      $atx = Atx::find($item->atx_id);
+      $product = Product::find($item->product_id);
+
+      if (!$atx) {
+        DB::table('atx_product')->where('atx_id', $item->atx_id)->delete();
+      }
+
+      if (!$product) {
+        DB::table('atx_product')->where('product_id', $item->product_id)->delete();
+      }
+    });
+
+    DB::table('nosology_product')->get()->each(function ($item) {
+      $nos = Nosology::find($item->nosology_id);
+      $product = Product::find($item->product_id);
+
+      if (!$nos) {
+        DB::table('nosology_product')->where('nosology_id', $item->nosology_id)->delete();
+      }
+
+      if (!$product) {
+        DB::table('nosology_product')->where('product_id', $item->product_id)->delete();
+      }
+    });
+  }
 }
