@@ -15,6 +15,7 @@ yarn-error.log
 /.idea
 /.vscode
 
+.htaccess
 
 /public/pdf/instructions/*
 /public/pdf/posts/*
