@@ -86,6 +86,7 @@ class Helper
   {
     $cleaned = preg_replace('#<[^>]+>#', ' ', $string); // remove tags
     $cleaned = htmlspecialchars_decode($cleaned); // decode htmlspecialchars
+    $cleaned = str_replace('&nbsp;', ' ', $cleaned); // &nbsp to space
     $cleaned = preg_replace('!\s+!', ' ', $cleaned); // many spaces into one
     $cleaned = trim($cleaned); // remove whitespaces
 
@@ -110,6 +111,7 @@ class Helper
   {
     $cleaned = preg_replace('#<[^>]+>#', ' ', $string); //remove tags
     $cleaned = htmlspecialchars_decode($cleaned); // decode htmlspecialchars
+    $cleaned = str_replace('&nbsp;', ' ', $cleaned); // &nbsp to space
     $cleaned = preg_replace('!\s+!', ' ', $cleaned); // many spaces into one
     $cleaned = trim($cleaned); // remove whitespaces
     $cleaned = mb_strlen($cleaned) < 160 ? $cleaned : mb_substr($cleaned, 0, 156) . '...'; //cut length
