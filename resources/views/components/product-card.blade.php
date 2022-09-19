@@ -9,6 +9,6 @@
       <h4 class="product-card__title">{{ $product->title }}</h4>
     </div>
 
-    <p class="product-card__desc">{{ $product->description }}</p>
+    <p class="product-card__desc">{{ App\Support\Helper::cleanText($product->description) }}</p>
   </div>
 </a>

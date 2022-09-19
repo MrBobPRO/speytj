@@ -19,7 +19,7 @@
 @switch($previousRoute)
   @case('home')
     <li>
-      Последние посты
+      Новые посты
     </li>
     @break
 
