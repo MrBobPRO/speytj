@@ -60,7 +60,7 @@ class ProductController extends Controller
   public function nosology($slug)
   {
     $activeCategory = Nosology::where('slug', $slug)->firstOrFail();
-    $products = $activeCategory->products()->paginate(16);
+    $products = $activeCategory->products()->paginate(15);
 
     $categories = Nosology::orderBy('title')->get();
 
@@ -70,7 +70,7 @@ class ProductController extends Controller
   public function atx($slug)
   {
     $activeCategory = Atx::where('slug', $slug)->firstOrFail();
-    $products = $activeCategory->products()->paginate(16);
+    $products = $activeCategory->products()->paginate(15);
 
     $categories = Atx::orderBy('title')->get();
 
