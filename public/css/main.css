@@ -881,6 +881,7 @@ img {
   background-color: var(--secondary-color);
   transform: translateY(100%);
   transition: .2s ease-in-out;
+  border-top-left-radius: 32px
 }
 
 .product-card:hover .product-card__overlay {
