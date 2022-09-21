@@ -30,9 +30,10 @@
         <div class="nosology-section__divider">
           <ul class="classifications-list">
             @foreach ($categories as $category)
-              <li>
-                <a class="classifications-list__link @if($category->slug == $activeCategory->slug) classifications-list__link--active @endif" href="{{ route('products.nosology', $category->slug) }}">{{ $category->title }}</a>
-              </li>
+            <li>
+              <a class="classifications-list__link @if($category->slug == $activeCategory->slug) classifications-list__link--active @endif"
+                href="{{ route('nosology.show', $category->slug) }}">{{ $category->title }}</a>
+            </li>
             @endforeach
           </ul>
 

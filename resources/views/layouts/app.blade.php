@@ -92,7 +92,7 @@
   {{-- Plyr --}}
   <script src="{{ asset('plugins/plyr/plyr.polyfilled.js') }}"></script>
 
-  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
   {{-- App bundled styles & scripts --}}
   {{-- @vite('resources/js/app.js') --}}
 </body>

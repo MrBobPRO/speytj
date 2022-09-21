@@ -10,6 +10,7 @@ class Atx extends Model
     use HasFactory;
 
     public $timestamps = false;
+    public static $tag = 'atx';
 
     public function products()
     {

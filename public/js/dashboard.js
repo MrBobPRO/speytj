@@ -1,4 +1,4 @@
-import '../css/dashboard/main.css';
+// import '../css/dashboard/main.css';
 
 // Add headers for Ajax Request
 $.ajaxSetup({

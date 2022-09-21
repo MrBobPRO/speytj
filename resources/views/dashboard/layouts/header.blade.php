@@ -13,55 +13,34 @@
       <li>
         @switch($modelTag)
           @case('products') Продукты @break
-          @case('categories') Категории @break
-          @case('options') Тексты @break
-          @case('achievements') Достижения @break
-          @case('presence') Наше присутствие @break
-          @case('stars') Звёзды @break
-          @case('translations') Статик текст @break
-          @case('locales') Языки @break
+          @case('nosology') Нозология @break
+          @case('atx') АТХ классификация @break
         @endswitch
 
         {{-- First levels items count --}}
         @if( strpos($route, 'index')) ({{ count($totalItems) }}) @endif
       </li>
 
-      {{-- second level for CREATE --}}
+      {{-- second level on CREATE page --}}
       @if(strpos($route, 'create')) <li>Добавить</li> @endif
 
-      {{-- second level as Link for translations & edit pages --}}
+      {{-- second level on item EDIT page --}}
       @switch($route)
-        @case('products.translations') @case('products.edit')
-        @case('categories.translations') @case('categories.edit')
-        @case('achievements.translations') @case('achievements.edit')
-        @case('presence.translations') @case('presence.edit')
-        @case('stars.translations') @case('stars.edit')
-            <li><a href="{{ route($modelTag . '.translations', $item->id) }}">{{ $item->translateForDash('title') }}</a></li>
-            @break
-
-        @case('options.translations') @case('options.edit')
-            <li><a href="{{ route($modelTag . '.translations', $item->id) }}">{{ $item->title }}</a></li>
-            @break
-
-        @case('locales.edit')
-            <li><a href="{{ route($modelTag . '.edit', $item->id) }}">{{ $item->title }}</a></li>
-            @break
+        @case('products.edit')
+        @case('nosology.edit')
+        @case('atx.edit')
+          <li><a href="{{ route($modelTag . '.edit', $item->id) }}">{{ $item->title }}</a></li>
+          @break
       @endswitch
-
-      {{-- Third level as Locale for translations & edit pages --}}
-      @if(strpos($route, 'edit') && $route != 'locales.edit') <li>{{ $locale }}</li> @endif
     </ul> {{-- Title end --}}
 
     {{-- Actions start --}}
     <ul class="header__actions">
       {{-- Actions for index pages --}}
       @switch($route)
-        @case('dashboard.index')
-        @case('categories.dashboard.index')
-        @case('achievements.dashboard.index')
-        @case('presence.dashboard.index')
-        @case('stars.dashboard.index')
-        @case('locales.dashboard.index')
+        @case('products.dashboard.index')
+        @case('nosology.dashboard.index')
+        @case('atx.dashboard.index')
         <li>
           <a href="{{ route($modelTag . '.create') }}">
             <span class="material-icons">add</span> Добавить

@@ -56,7 +56,7 @@
               <h3 class="product-properties__key">Нозология</h3>
               <div class="product-properties__value">
                 @foreach ($product->nosology as $nos)
-                <a href="{{ route('products.nosology', $nos->slug) }}">{{ $nos->title }}</a>
+                <a href="{{ route('nosology.show', $nos->slug) }}">{{ $nos->title }}</a>
                 @endforeach
               </div>
             </div>
@@ -67,7 +67,7 @@
               <h3 class="product-properties__key">АТХ классификация</h3>
               <div class="product-properties__value">
                 @foreach ($product->atx as $at)
-                <a href="{{ route('products.atx', $at->slug) }}">{{ $at->title }}</a>
+                <a href="{{ route('atx.show', $at->slug) }}">{{ $at->title }}</a>
                 @endforeach
               </div>
             </div>
@@ -87,7 +87,9 @@
 
             <div class="product-properties__item">
               <h3 class="product-properties__key">Поделиться</h3>
-              <div class="product-properties__value"><div class="ya-share2" data-curtain data-services="vkontakte,telegram,twitter,viber,whatsapp"></div></div>
+              <div class="product-properties__value">
+                <div class="ya-share2" data-curtain data-services="vkontakte,telegram,twitter,viber,whatsapp"></div>
+              </div>
             </div>
           </div>
         </div>

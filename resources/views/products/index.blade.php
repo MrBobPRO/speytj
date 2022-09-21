@@ -19,7 +19,8 @@
       <img class="main-banner__image" src="{{ asset('img/products-page/banner.png') }}" alt="Spey products">
       <div class="main-banner__txt-container">
         <h1 class="main-banner__title main-title">Продукты</h1>
-        <p class="main-banner__txt">Широкий спектр современных препаратов на рынке фармацевтической индустрии позволяет Spey осуществлять свою деятельность во многих странах мира. Мы готовы делиться опытом и накопленными знаниями с медицинскими специалистами, чтобы решать и находить лучшие решения для возникающих проблем в здравоохранении.</p>
+        <p class="main-banner__txt">Широкий спектр современных препаратов на рынке фармацевтической индустрии позволяет Spey осуществлять свою деятельность во многих странах мира.
+          Мы готовы делиться опытом и накопленными знаниями с медицинскими специалистами, чтобы решать и находить лучшие решения для возникающих проблем в здравоохранении.</p>
       </div>
     </section>
 
@@ -36,7 +37,7 @@
             </div>
           </a>
 
-          <a class="popup-card" href="{{ route('products.nosology', $defaultNosology) }}">
+          <a class="popup-card" href="{{ route('nosology.show', $defaultNosology) }}">
             <img class="popup-card__image" src="{{ asset('img/products-page/nosology.png') }}" alt="Nosology">
             <div class="popup-card__overlay">
               <h2 class="popup-card__title">Нозология</h2>
@@ -46,7 +47,7 @@
             </div>
           </a>
 
-          <a class="popup-card" href="{{ route('products.atx', $defaultAtx) }}">
+          <a class="popup-card" href="{{ route('atx.show', $defaultAtx) }}">
             <img class="popup-card__image" src="{{ asset('img/products-page/atx.png') }}" alt="ATX">
             <div class="popup-card__overlay">
               <h2 class="popup-card__title">АТХ классификация</h2>
@@ -66,9 +67,9 @@
         <div class="carousel-container">
           <div class="products-carousel owl-carousel">
             @foreach ($newProducts as $product)
-              <div class="owl-carousel__item">
-                <x-product-card :product="$product" />
-              </div>
+            <div class="owl-carousel__item">
+              <x-product-card :product="$product" />
+            </div>
             @endforeach
           </div>
         </div>

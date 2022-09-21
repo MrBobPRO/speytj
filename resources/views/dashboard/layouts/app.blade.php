@@ -31,11 +31,10 @@
   {{-- Simditor v2.3.28 --}}
   <link rel="stylesheet" href="{{ asset('plugins/simditor/simditor.css') }}">
 
-  {{-- JSON Viewer --}}
-  <link rel="stylesheet" href="{{ asset('plugins/json-viewer/jquery.json-viewer.css') }}">
-
   {{-- Normalize CSS --}}
-  <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
+
+  <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
 </head>
 
 <body class="body">
@@ -64,12 +63,10 @@
   <script src="{{ asset('plugins/simditor/uploader.js') }}"></script>
   <script src="{{ asset('plugins/simditor/simditor.js') }}"></script>
 
-  {{-- JSON Viewer --}}
-  <script src="{{ asset('plugins/json-viewer/jquery.json-viewer.js') }}"></script>
-  <script src="{{ asset('plugins/json-viewer/jquery.json-editor.js') }}"></script>
+  <script src="{{ asset('js/dashboard.js') }}"></script>
 
   {{-- Dashboard bundled styles & scripts --}}
-  @vite('resources/js/dashboard.js')
+  {{-- @vite('resources/js/dashboard.js') --}}
 </body>
 
 </html>

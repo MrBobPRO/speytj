@@ -8,6 +8,10 @@
 
 namespace App\Support;
 
+use App\Models\Atx;
+use App\Models\Nosology;
+use App\Models\Product;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Image;
 
@@ -265,6 +269,36 @@ class Helper
   {
     return app('router')->getRoutes()->match(app('request')->create(url()->previous()))->getName();
   }
+
+
+  /**
+   * Return models tag for current route
+   * Shared with all dashboard views by AppServiceProvider
+   *
+   * used only in dashboard
+   *
+   * @return string
+   */
+  public static function getModelTag()
+  {
+    $route = Route::currentRouteName();
+    $modelTag = 'undefined';
+
+    if (strpos($route, 'products') !== false) {
+      return Product::$tag;
+    }
+
+    if (strpos($route, 'atx') !== false) {
+      return Atx::$tag;
+    }
+
+    if (strpos($route, 'nosology') !== false) {
+      return Nosology::$tag;
+    }
+
+    return $modelTag;
+  }
+
 
   public function copyDb()
   {

@@ -30,9 +30,10 @@
         <div class="atx-section__divider">
           <ul class="classifications-list">
             @foreach ($categories as $category)
-              <li>
-                <a class="classifications-list__link @if($category->slug == $activeCategory->slug) classifications-list__link--active @endif" href="{{ route('products.atx', $category->slug) }}">{{ $category->title }}</a>
-              </li>
+            <li>
+              <a class="classifications-list__link @if($category->slug == $activeCategory->slug) classifications-list__link--active @endif"
+                href="{{ route('atx.show', $category->slug) }}">{{ $category->title }}</a>
+            </li>
             @endforeach
           </ul>
 

@@ -11,7 +11,7 @@
   <meta name="googlebot" content="noindex, nofollow" />
   <meta name="yandex" content="none">
 
-  <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +48,7 @@
 
     .form-header {
       padding: 14px 28px;
-      background-color: #0190CC;
+      background-color: #1e2a78;
       font-size: 14px;
       font-weight: 400;
       color: white;
@@ -103,17 +103,18 @@
       font-family: "Roboto", sans-serif;
       font-size: 12px;
       line-height: 0;
-      color: white;
+      color: #1e2a78;
       text-transform: uppercase;
       cursor: pointer;
-      background-color: #F02137;
+      background-color: #ffd615;
       border: none;
       border-radius: 6px;
-      transition: 0.3s
+      transition: 0.3s;
+      font-weight: bold;
     }
 
     .submit:hover {
-      box-shadow: 0 0 12px #F02137;
+      box-shadow: 0 0 12px #ffd615;
     }
 
     .home-link {
@@ -142,7 +143,7 @@
       @csrf
 
       @if($errors->any())
-        <p class="error-message">Неверный логин или пароль!</p>
+      <p class="error-message">Неверный логин или пароль!</p>
       @endif
 
       <div class="form-group">

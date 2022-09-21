@@ -458,6 +458,7 @@ img {
 }
 
 .main-table td img {
+  width: calc(100% - 20px);
   border-radius: var(--theme-border-radius);
 }
 
@@ -492,26 +493,13 @@ img {
   padding: 32px;
 }
 
-.form-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 32px;
-  background-color: white;
-  border-radius: var(--theme-border-radius);
-}
-
-.form-title {
-  margin: 0;
-  font-size: 16px;
-  color: var(--danger-color);
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-size: 14px;
+  padding: 20px 32px;
+  background-color: #fff;
 }
 
 .form-label {

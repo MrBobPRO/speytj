@@ -10,6 +10,7 @@ class Nosology extends Model
     use HasFactory;
 
     public $timestamps = false;
+    public static $tag = 'nosology';
 
     public function products()
     {

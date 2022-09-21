@@ -18,7 +18,7 @@
           <a href="{{ route('about.career') }}" class="footer__link">Карьера</a>
         </li>
       </ul>
-    </div>  {{-- About links end --}}
+    </div> {{-- About links end --}}
 
     {{-- Products links start --}}
     <div class="footer__block">
@@ -30,14 +30,14 @@
         </li>
 
         <li>
-          <a href="{{ route('products.nosology', $defaultNosology) }}" class="footer__link">Нозология</a>
+          <a href="{{ route('nosology.show', $defaultNosology) }}" class="footer__link">Нозология</a>
         </li>
 
         <li>
-          <a href="{{ route('products.atx', $defaultAtx) }}" class="footer__link">ATX классификация</a>
+          <a href="{{ route('atx.show', $defaultAtx) }}" class="footer__link">ATX классификация</a>
         </li>
       </ul>
-    </div>  {{-- Products links start --}}
+    </div> {{-- Products links start --}}
 
     {{-- For patients links start --}}
     <div class="footer__block">
@@ -52,7 +52,7 @@
           <a href="{{ route('for-patients.videos') }}" class="footer__link">Видео</a>
         </li>
       </ul>
-    </div>  {{-- For patients links end --}}
+    </div> {{-- For patients links end --}}
 
     {{-- Contacts start --}}
     <div class="footer__block">
@@ -70,17 +70,20 @@
 
       <ul class="footer__socials-list">
         <li>
-          <a href="https://www.facebook.com/spey.tj" class="footer__socials-link" target="_blank"><svg><use href="#facebook-svg"></use></svg></a>
+          <a href="https://www.facebook.com/spey.tj" class="footer__socials-link" target="_blank"><svg>
+              <use href="#facebook-svg"></use>
+            </svg></a>
         </li>
 
         <li>
-          <a href="https://www.instagram.com/spey.tj" class="footer__socials-link" target="_blank"><svg><use href="#instagram-svg"></use></svg></a>
+          <a href="https://www.instagram.com/spey.tj" class="footer__socials-link" target="_blank"><svg>
+              <use href="#instagram-svg"></use>
+            </svg></a>
         </li>
       </ul>
 
-    </div>  {{-- Contacts end --}}
+    </div> {{-- Contacts end --}}
   </div>
 
   <div class="footer__copyright">Spey Healthcare © {{ date('Y') }}. Все права защищены</div>
 </footer>
-

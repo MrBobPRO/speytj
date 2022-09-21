@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AtxController;
 use App\Http\Controllers\ForPatientsController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\NosologyController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ScienceController;
@@ -33,8 +35,14 @@ Route::prefix('products')->controller(ProductController::class)->name('products.
   Route::get('/', 'index')->name('index');
   Route::get('/all', 'all')->name('all');
   Route::get('/{slug}', 'show')->name('show');
-  Route::get('/nosology/{slug}', 'nosology')->name('nosology');
-  Route::get('/atx/{slug}', 'atx')->name('atx');
+});
+
+Route::controller(NosologyController::class)->name('nosology.')->group(function () {
+  Route::get('/nosology/{slug}', 'show')->name('show');
+});
+
+Route::controller(AtxController::class)->name('atx.')->group(function () {
+  Route::get('/atx/{slug}', 'show')->name('show');
 });
 
 Route::prefix('science')->controller(ScienceController::class)->name('science.')->group(function () {
@@ -54,8 +62,5 @@ Route::prefix('posts')->controller(PostController::class)->name('posts.')->group
   Route::get('/{slug}', 'show')->name('show');
 });
 
-Route::middleware('auth')->prefix('dashboard')->group(function () {
-  Route::get('/', [MainController::class, 'dashboard'])->name('dashboard.index');
-});
-
 require __DIR__ . '/auth.php';
+require __DIR__ . '/dashboard.php';
