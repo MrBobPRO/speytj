@@ -10,6 +10,7 @@ class Category extends Model
   use HasFactory;
 
   public $timestamps = false;
+  public static $tag = 'categories';
 
   public function posts()
   {
@@ -24,5 +25,18 @@ class Category extends Model
   public function scopeForPatients()
   {
     return $this->where('for_patients', true);
+  }
+
+  /**
+   * The "booted" method of the model.
+   *
+   * @return void
+   */
+  protected static function booted()
+  {
+    // Delete model relations while removing item
+    static::deleting(function ($item) {
+      $item->posts()->detach();
+    });
   }
 }

@@ -30,6 +30,12 @@
       </li>
 
       <li class="aside__menu-item">
+        <a class="aside__menu-link @if($modelTag == 'categories')active @endif" href="{{ route('categories.dashboard.index') }}">
+          <span class="material-icons-outlined">category</span> Категории
+        </a>
+      </li>
+
+      <li class="aside__menu-item">
         <p class="aside__menu-title">Дополнительно</p>
       </li>
 

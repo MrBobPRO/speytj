@@ -9,6 +9,7 @@
 namespace App\Support;
 
 use App\Models\Atx;
+use App\Models\Category;
 use App\Models\Nosology;
 use App\Models\Post;
 use App\Models\Product;
@@ -305,6 +306,10 @@ class Helper
 
     if (strpos($route, 'posts') !== false) {
       return Post::$tag;
+    }
+
+    if (strpos($route, 'categories') !== false) {
+      return Category::$tag;
     }
 
     return $modelTag;

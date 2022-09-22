@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AtxController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NosologyController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
@@ -21,16 +22,6 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('/', 'dashboardIndex')->name('dashboard.index');
     Route::get('/create', 'create')->name('create');
     Route::get('/{id}/edit', 'edit')->name('edit');
-
-    Route::post('/store', 'store')->name('store');
-    Route::post('/update', 'update')->name('update');
-    Route::post('/destroy', 'destroy')->name('destroy');
-  });
-
-  Route::controller(CategoryController::class)->prefix('/categories')->name('categories.')->group(function () {
-    Route::get('/', 'dashboardIndex')->name('dashboard.index');
-    Route::get('/create', 'create')->name('create');
-    Route::get('/{id}', 'edit')->name('edit');
 
     Route::post('/store', 'store')->name('store');
     Route::post('/update', 'update')->name('update');
@@ -58,6 +49,16 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   });
 
   Route::controller(PostController::class)->prefix('/posts')->name('posts.')->group(function () {
+    Route::get('/', 'dashboardIndex')->name('dashboard.index');
+    Route::get('/create', 'create')->name('create');
+    Route::get('/{id}', 'edit')->name('edit');
+
+    Route::post('/store', 'store')->name('store');
+    Route::post('/update', 'update')->name('update');
+    Route::post('/destroy', 'destroy')->name('destroy');
+  });
+
+  Route::controller(CategoryController::class)->prefix('/categories')->name('categories.')->group(function () {
     Route::get('/', 'dashboardIndex')->name('dashboard.index');
     Route::get('/create', 'create')->name('create');
     Route::get('/{id}', 'edit')->name('edit');

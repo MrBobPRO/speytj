@@ -1086,6 +1086,11 @@ img {
   flex-direction: column;
 }
 
+.popup-card__image {
+  flex-grow: 1;
+  object-fit: cover;
+}
+
 .popup-card__overlay {
   position: absolute;
   width: 100%;
