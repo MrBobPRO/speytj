@@ -12,7 +12,7 @@
   </div>
 
   <div class="form-group">
-    <label class="form-label">Изображение</label>
+    <label class="form-label">Изображение. Все изображение категорий должны иметь одинаковые пропорции!</label>
 
     <input class="form-input" type="file" name="image" accept=".png, .jpg, .jpeg" data-action="display-local-image" data-target="local-image">
     <img class="form-image" data-id="local-image" src="{{ asset('img/categories/' . $item->image) }}">

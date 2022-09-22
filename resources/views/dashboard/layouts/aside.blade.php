@@ -36,6 +36,12 @@
       </li>
 
       <li class="aside__menu-item">
+        <a class="aside__menu-link @if($modelTag == 'top')active @endif" href="{{ route('top.dashboard.index') }}">
+          <span class="material-icons-outlined">star</span> Топ продукты
+        </a>
+      </li>
+
+      <li class="aside__menu-item">
         <p class="aside__menu-title">Дополнительно</p>
       </li>
 

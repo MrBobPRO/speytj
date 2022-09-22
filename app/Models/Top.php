@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Top extends Model
 {
   use HasFactory;
+  public static $tag = 'top';
 
   public $timestamps = false;
 

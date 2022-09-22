@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NosologyController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,5 +67,12 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::post('/store', 'store')->name('store');
     Route::post('/update', 'update')->name('update');
     Route::post('/destroy', 'destroy')->name('destroy');
+  });
+
+  Route::controller(TopController::class)->prefix('/top')->name('top.')->group(function () {
+    Route::get('/', 'dashboardIndex')->name('dashboard.index');
+    Route::get('/{id}', 'edit')->name('edit');
+
+    Route::post('/update', 'update')->name('update');
   });
 });

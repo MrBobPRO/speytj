@@ -17,6 +17,7 @@
           @case('atx') АТХ классификация @break
           @case('posts') Посты @break
           @case('categories') Категории @break
+          @case('top') Топ @break
         @endswitch
 
         {{-- First levels items count --}}
@@ -33,7 +34,7 @@
         @case('atx.edit')
         @case('posts.edit')
         @case('categories.edit')
-          <li>{{ $item->title }}</li>
+        <li>{{ $item->title }}</li>
           @break
       @endswitch
     </ul> {{-- Title end --}}

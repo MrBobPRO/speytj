@@ -13,6 +13,7 @@ use App\Models\Category;
 use App\Models\Nosology;
 use App\Models\Post;
 use App\Models\Product;
+use App\Models\Top;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Image;
@@ -310,6 +311,10 @@ class Helper
 
     if (strpos($route, 'categories') !== false) {
       return Category::$tag;
+    }
+
+    if (strpos($route, 'top') !== false) {
+      return Top::$tag;
     }
 
     return $modelTag;
