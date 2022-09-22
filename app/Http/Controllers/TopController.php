@@ -28,7 +28,7 @@ class TopController extends Controller
       ->paginate(30, ['*'], 'page', $activePage)
       ->appends($request->except('page'));
 
-    return view('dashboard.categories.index', compact('totalItems', 'items', 'orderBy', 'orderType', 'activePage'));
+    return view('dashboard.top.index', compact('totalItems', 'items', 'orderBy', 'orderType', 'activePage'));
   }
 
   public function edit(Request $request, $id)

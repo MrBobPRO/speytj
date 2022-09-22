@@ -14,6 +14,7 @@ use App\Models\Nosology;
 use App\Models\Post;
 use App\Models\Product;
 use App\Models\Top;
+use App\Models\Video;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use Image;
@@ -315,6 +316,10 @@ class Helper
 
     if (strpos($route, 'top') !== false) {
       return Top::$tag;
+    }
+
+    if (strpos($route, 'videos') !== false) {
+      return Video::$tag;
     }
 
     return $modelTag;

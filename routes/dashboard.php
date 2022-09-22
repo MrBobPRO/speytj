@@ -6,6 +6,7 @@ use App\Http\Controllers\NosologyController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TopController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,5 +75,15 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::get('/{id}', 'edit')->name('edit');
 
     Route::post('/update', 'update')->name('update');
+  });
+
+  Route::controller(VideoController::class)->prefix('/videos')->name('videos.')->group(function () {
+    Route::get('/', 'dashboardIndex')->name('dashboard.index');
+    Route::get('/create', 'create')->name('create');
+    Route::get('/{id}', 'edit')->name('edit');
+
+    Route::post('/store', 'store')->name('store');
+    Route::post('/update', 'update')->name('update');
+    Route::post('/destroy', 'destroy')->name('destroy');
   });
 });

@@ -15,32 +15,14 @@
           {{-- Empty space for checkbox --}}
           <th width="20"></th>
 
-          <th width="140">
-            Изображ.
-          </th>
-
-          <th width="220">
+          <th>
             <a class="{{ $orderType }} {{ $orderBy == 'title' ? 'active' : '' }}"
               href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=title&orderType={{ $reversedOrderType }}">Заголовок</a>
           </th>
 
           <th>
-            <a class="{{ $orderType }} {{ $orderBy == 'prescription' ? 'active' : '' }}"
-              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=prescription&orderType={{ $reversedOrderType }}">Рецептурность</a>
-          </th>
-
-          <th>
-            АТХ
-          </th>
-
-
-          <th>
-            Нозология
-          </th>
-
-          <th>
-            <a class="{{ $orderType }} {{ $orderBy == 'popular' ? 'active' : '' }}"
-              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=popular&orderType={{ $reversedOrderType }}">Популярный</a>
+            <a class="{{ $orderType }} {{ $orderBy == 'created_at' ? 'active' : '' }}"
+              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=created_at&orderType={{ $reversedOrderType }}">Дата добавления</a>
           </th>
 
           <th width="140">
@@ -56,25 +38,12 @@
           {{-- Checkbox for multidestroy --}}
           @include('dashboard.components.table.checkbox')
 
-          <td><img src="{{ asset('img/products/thumbs/' . $item->image) }}"></td>
           <td>{{ $item->title }}</td>
-          <td>{{ $item->prescription ? 'RX' : 'OTC' }}</td>
-          <td>
-            @foreach ($item->atx as $category)
-            {{ $category->title }} <br>
-            @endforeach
-          </td>
-          <td>
-            @foreach ($item->nosology as $category)
-            {{ $category->title }} <br>
-            @endforeach
-          </td>
-          <td>{{ $item->popular ? '+' : '' }}</td>
+          <td>{{ Carbon\Carbon::create($item->created_at)->locale('ru')->isoFormat('DD MMMM YYYY') }}</td>
 
           {{-- Actions --}}
           <td>
             <div class="table__actions">
-              @include('dashboard.components.table.view-link')
               @include('dashboard.components.table.edit-link')
               @include('dashboard.components.table.destroy-button')
             </div>

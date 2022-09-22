@@ -18,6 +18,7 @@
           @case('posts') Посты @break
           @case('categories') Категории @break
           @case('top') Топ @break
+          @case('videos') Видео @break
         @endswitch
 
         {{-- First levels items count --}}
@@ -34,6 +35,7 @@
         @case('atx.edit')
         @case('posts.edit')
         @case('categories.edit')
+        @case('videos.edit')
         <li>{{ $item->title }}</li>
           @break
       @endswitch
@@ -48,6 +50,7 @@
         @case('atx.dashboard.index')
         @case('posts.dashboard.index')
         @case('categories.dashboard.index')
+        @case('videos.dashboard.index')
         <li>
           <a href="{{ route($modelTag . '.create') }}">
             <span class="material-icons">add</span> Добавить
