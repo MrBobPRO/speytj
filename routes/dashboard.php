@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AtxController;
 use App\Http\Controllers\NosologyController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +48,16 @@ Route::middleware('auth')->prefix('dashboard')->group(function () {
   });
 
   Route::controller(AtxController::class)->prefix('/atx')->name('atx.')->group(function () {
+    Route::get('/', 'dashboardIndex')->name('dashboard.index');
+    Route::get('/create', 'create')->name('create');
+    Route::get('/{id}', 'edit')->name('edit');
+
+    Route::post('/store', 'store')->name('store');
+    Route::post('/update', 'update')->name('update');
+    Route::post('/destroy', 'destroy')->name('destroy');
+  });
+
+  Route::controller(PostController::class)->prefix('/posts')->name('posts.')->group(function () {
     Route::get('/', 'dashboardIndex')->name('dashboard.index');
     Route::get('/create', 'create')->name('create');
     Route::get('/{id}', 'edit')->name('edit');

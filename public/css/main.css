@@ -1684,8 +1684,6 @@ img {
 }
 
 .post-card__image {
-  height: 180px;
-  object-fit: cover;
   display: flex;
   transition: 0.3s;
 }

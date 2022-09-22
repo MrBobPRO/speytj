@@ -30,3 +30,5 @@ yarn-error.log
 /public/img/posts/*
 !/public/img/posts/thumbs
 /public/img/posts/thumbs/*
+!/public/img/posts/simditor
+/public/img/posts/simditor/*

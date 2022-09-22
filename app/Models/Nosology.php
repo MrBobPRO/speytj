@@ -7,13 +7,26 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nosology extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    public $timestamps = false;
-    public static $tag = 'nosology';
+  public $timestamps = false;
+  public static $tag = 'nosology';
 
-    public function products()
-    {
-      return $this->belongsToMany(Product::class);
-    }
+  public function products()
+  {
+    return $this->belongsToMany(Product::class);
+  }
+
+  /**
+   * The "booted" method of the model.
+   *
+   * @return void
+   */
+  protected static function booted()
+  {
+    // Delete model relations while removing item
+    static::deleting(function ($item) {
+      $item->products()->detach();
+    });
+  }
 }

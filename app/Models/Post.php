@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
   use HasFactory;
+  public static $tag = 'posts';
 
   public function categories()
   {
@@ -22,5 +23,18 @@ class Post extends Model
   public function scopeForPatients()
   {
     return $this->where('for_patients', true);
+  }
+
+  /**
+   * The "booted" method of the model.
+   *
+   * @return void
+   */
+  protected static function booted()
+  {
+    // Delete model relations while removing item
+    static::deleting(function ($item) {
+      $item->categories()->detach();
+    });
   }
 }

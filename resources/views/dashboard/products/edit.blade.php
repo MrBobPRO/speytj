@@ -73,9 +73,9 @@
   </div>
 
   <div class="form-group">
-    <label class="form-label required">Ссылка на приобретение препарата</label>
+    <label class="form-label">Ссылка на приобретение препарата</label>
 
-    <input class="form-input" type="text" name="external_link" value="{{ old('external_link', $item->external_link) }}" required />
+    <input class="form-input" type="text" name="external_link" value="{{ old('external_link', $item->external_link) }}" />
   </div>
 
   <div class="form-group">

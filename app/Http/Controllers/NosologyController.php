@@ -33,6 +33,7 @@ class NosologyController extends Controller
 
     // display as list in table
     $items = Nosology::orderBy($orderBy, $orderType)
+      ->withCount('products')
       ->paginate(30, ['*'], 'page', $activePage)
       ->appends($request->except('page'));
 
@@ -66,14 +67,14 @@ class NosologyController extends Controller
     $item->slug = Helper::generateUniqueSlug($item->title, Nosology::class);
     $item->save();
 
-    return redirect()->route('products.dashboard.index');
+    return redirect()->route('nosology.dashboard.index');
   }
 
   public function edit(Request $request, $id)
   {
     $item = Nosology::find($id);
 
-    return view('dashboard.products.edit', compact('item'));
+    return view('dashboard.nosology.edit', compact('item'));
   }
 
   public function update(Request $request)
@@ -96,7 +97,7 @@ class NosologyController extends Controller
 
     $fields = ['title'];
     Helper::fillModelColumns($item, $fields, $request);
-    $item->slug = Helper::generateUniqueSlug($item->title, Nosology::class);
+    $item->slug = Helper::generateUniqueSlug($item->title, Nosology::class, $item->id);
     $item->save();
 
     return redirect()->back();
@@ -115,9 +116,9 @@ class NosologyController extends Controller
     $ids = (array) $request->id;
 
     foreach ($ids as $id) {
-      Product::find($id)->delete();
+      Nosology::find($id)->delete();
     }
 
-    return redirect()->route('products.dashboard.index');
+    return redirect()->route('nosology.dashboard.index');
   }
 }

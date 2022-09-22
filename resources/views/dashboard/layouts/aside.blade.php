@@ -24,6 +24,12 @@
       </li>
 
       <li class="aside__menu-item">
+        <a class="aside__menu-link @if($modelTag == 'posts')active @endif" href="{{ route('posts.dashboard.index') }}">
+          <span class="material-icons-outlined">notes</span> Посты
+        </a>
+      </li>
+
+      <li class="aside__menu-item">
         <p class="aside__menu-title">Дополнительно</p>
       </li>
 

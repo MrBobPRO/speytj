@@ -10,6 +10,7 @@ namespace App\Support;
 
 use App\Models\Atx;
 use App\Models\Nosology;
+use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
@@ -172,6 +173,12 @@ class Helper
     // Any file input maybe nullable on model update
     $file = $request->file($column);
     if ($file) {
+      // shorten filename length
+      if(mb_strlen($name) > 60) {
+        $name = mb_substr($name, 0, 60);
+        $name = trim($name);
+      }
+
       $filename = $name . '.' . $file->getClientOriginalExtension();
       $filename = Helper::renameIfFileAlreadyExists($filename, $path);
 
@@ -294,6 +301,10 @@ class Helper
 
     if (strpos($route, 'nosology') !== false) {
       return Nosology::$tag;
+    }
+
+    if (strpos($route, 'posts') !== false) {
+      return Post::$tag;
     }
 
     return $modelTag;

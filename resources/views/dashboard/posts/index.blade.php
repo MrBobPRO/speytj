@@ -15,14 +15,27 @@
           {{-- Empty space for checkbox --}}
           <th width="20"></th>
 
-          <th>
+          <th width="140">
+            Изображ.
+          </th>
+
+          <th width="580">
             <a class="{{ $orderType }} {{ $orderBy == 'title' ? 'active' : '' }}"
               href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=title&orderType={{ $reversedOrderType }}">Заголовок</a>
           </th>
 
           <th>
-            <a class="{{ $orderType }} {{ $orderBy == 'products_count' ? 'active' : '' }}"
-              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=products_count&orderType={{ $reversedOrderType }}">Количество продуктов</a>
+            Категории
+          </th>
+
+          <th>
+            <a class="{{ $orderType }} {{ $orderBy == 'scientific' ? 'active' : '' }}"
+              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=scientific&orderType={{ $reversedOrderType }}">Наука и развитие</a>
+          </th>
+
+          <th>
+            <a class="{{ $orderType }} {{ $orderBy == 'for_patients' ? 'active' : '' }}"
+              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=for_patients&orderType={{ $reversedOrderType }}">Для пациентов</a>
           </th>
 
           <th width="140">
@@ -38,8 +51,15 @@
           {{-- Checkbox for multidestroy --}}
           @include('dashboard.components.table.checkbox')
 
+          <td><img src="{{ asset('img/posts/thumbs/' . $item->image) }}"></td>
           <td>{{ $item->title }}</td>
-          <td>{{ $item->products_count }}</td>
+          <td>
+            @foreach ($item->categories as $category)
+            {{ $category->title }} <br>
+            @endforeach
+          </td>
+          <td>{{ $item->scientific ? '+' : '' }}</td>
+          <td>{{ $item->for_patients ? '+' : '' }}</td>
 
           {{-- Actions --}}
           <td>

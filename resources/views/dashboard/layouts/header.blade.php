@@ -15,6 +15,7 @@
           @case('products') Продукты @break
           @case('nosology') Нозология @break
           @case('atx') АТХ классификация @break
+          @case('posts') Посты @break
         @endswitch
 
         {{-- First levels items count --}}
@@ -29,7 +30,8 @@
         @case('products.edit')
         @case('nosology.edit')
         @case('atx.edit')
-          <li><a href="{{ route($modelTag . '.edit', $item->id) }}">{{ $item->title }}</a></li>
+        @case('posts.edit')
+          <li>{{ $item->title }}</li>
           @break
       @endswitch
     </ul> {{-- Title end --}}
@@ -41,6 +43,7 @@
         @case('products.dashboard.index')
         @case('nosology.dashboard.index')
         @case('atx.dashboard.index')
+        @case('posts.dashboard.index')
         <li>
           <a href="{{ route($modelTag . '.create') }}">
             <span class="material-icons">add</span> Добавить
