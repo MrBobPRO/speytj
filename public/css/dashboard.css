@@ -15,7 +15,7 @@ body {
   --danger-color: #F02137;
   --title-color: #303548;
   --text-color: #404e67;
-  --theme-border-radius: 6px;
+  --theme-border-radius: 8px;
 }
 
 ::-moz-selection {
