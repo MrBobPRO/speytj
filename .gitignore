@@ -21,6 +21,7 @@ yarn-error.log
 /public/pdf/posts/*
 /public/videos/*
 /public/img/categories/*
+/public/img/simditor/posts/*
 /public/img/top-products/*
 
 /public/img/products/*
@@ -30,5 +31,3 @@ yarn-error.log
 /public/img/posts/*
 !/public/img/posts/thumbs
 /public/img/posts/thumbs/*
-!/public/img/posts/simditor
-/public/img/posts/simditor/*

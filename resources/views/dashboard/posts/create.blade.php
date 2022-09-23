@@ -36,7 +36,7 @@
   <div class="form-group">
     <label class="form-label required">Текст</label>
 
-    <textarea class="simditor-wysiwyg" name="body" required>{{ old('body') }}</textarea>
+    <textarea class="simditor-wysiwyg--imaged" name="body" required>{{ old('body') }}</textarea>
   </div>
 
   <div class="form-group">

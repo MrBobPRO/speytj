@@ -489,7 +489,7 @@ img {
   flex-direction: column;
   gap: 32px;
   width: 100%;
-  max-width: 920px;
+  max-width: 970px;
   padding: 32px;
 }
 
@@ -601,6 +601,11 @@ img {
   color: black;
 }
 
+.simditor .simditor-body img, .editor-style img {
+  max-width: 100%;
+  height: auto;
+  margin: 4px 0;
+}
 /* ------------ /end Simditor ------------ */
 
 

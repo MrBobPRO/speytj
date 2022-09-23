@@ -30,4 +30,19 @@ class MainController extends Controller
 
     return view('menu.search-results', compact('products', 'posts'));
   }
+
+  public function uploadSimditorImage(Request $request)
+  {
+    $file = $request->file('image');
+    $filename = uniqid() . '.' . $file->getClientOriginalExtension();
+
+    $path = public_path('img/simditor/' . $request->folder);
+    $file->move($path, $filename);
+
+    return [
+      "success" => true,
+      "msg" => "success",
+      "file_path" => '/img/simditor/' . $request->folder . '/' . $filename
+    ];
+  }
 }

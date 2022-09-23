@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AtxController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MainController;
 use App\Http\Controllers\NosologyController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::redirect('/dashboard', '/dashboard/products');
+Route::post('/upload-simditor-image', [MainController::class, 'uploadSimditorImage']);
 
 Route::middleware('auth')->prefix('dashboard')->group(function () {
 

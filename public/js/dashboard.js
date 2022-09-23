@@ -105,6 +105,31 @@ for (let i = 0; i < simditorTextareas.length; i++) {
 }
 
 
+let imagedWysiwygs = [];
+let simditorImagedTextareas = document.querySelectorAll('.simditor-wysiwyg--imaged');
+
+for (let i = 0; i < simditorImagedTextareas.length; i++) {
+  imagedWysiwygs.push(
+    new Simditor({
+      textarea: simditorImagedTextareas[i],
+      toolbarFloatOffset: '60px',
+      imageButton: 'upload',
+      toolbar: ['title', 'bold', 'italic', 'underline', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'hr', '|', 'indent', 'outdent', 'alignment', 'image'],
+      upload: {
+        url: '/upload-simditor-image',   // image upload url by server
+        params: { // additional parameters for request
+          folder: 'posts'
+        },
+        fileKey: 'image', // input name
+        connectionCount: 10,
+        leaveConfirm: 'Пожалуйста дождитесь окончания загрузки изображений на сервер! Вы уверены что хотите закрыть страницу?'
+      },
+      defaultImage: '/img/dashboard/default-image.png', // default image thumb while uploading
+    })
+  );
+}
+
+
 // Show image from local on image input change
 document.querySelectorAll('[data-action="display-local-image"]').forEach((input) => {
   input.addEventListener("change", (evt) => {
