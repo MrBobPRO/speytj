@@ -1,4 +1,4 @@
-<div class="tab-content-item @if(strpos($route, 'products') !== false) tab-content-item--active @endif" data-content-id="products">
+<div class="tab-content-item @if(strpos($route, 'products') !== false || strpos($route, 'nosology') !== false || strpos($route, 'atx') !== false) tab-content-item--active @endif" data-content-id="products">
   <div class="menu-tab-content__main">
     <a class="menu__tab-title-link" href="{{ route('products.index') }}">
       <h3 class="menu__tab-title">Продукты</h3>
