@@ -290,6 +290,7 @@
 
   .filter-by-letter__list {
     gap: 16px;
+    flex-wrap: wrap;
   }
 
   .nosology-section__inner,
