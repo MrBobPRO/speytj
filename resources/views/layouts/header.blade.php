@@ -17,7 +17,13 @@
     <a class="logo header__logo" href="{{ route('home') }}">
       <img class="logo__image" src="{{ asset('img/main/logo.png') }}" alt="Spey logo">
     </a>
+
+    <button class="mobile-menu-toggler" data-action="toggle-mobile-menu">
+      <span class="material-icons">menu_open</span>
+    </button>
   </div>
 
   @include('menu.collapse')
+  @include('menu.mobile')
+
 </header>

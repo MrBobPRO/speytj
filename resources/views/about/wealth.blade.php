@@ -20,7 +20,11 @@
 <div class="wealth-page">
   <div class="wealth-page__inner">
     <section class="main-banner wealth-page__banner">
-      <img class="main-banner__image" src="{{ asset('img/about/wealth-banner.png') }}" alt="Spey history">
+      <picture>
+        <source media="(max-width:991px)" srcset="{{ asset('img/about/wealth-banner-small.jpg') }}">
+        <img class="main-banner__image" src="{{ asset('img/about/wealth-banner.png') }}" alt="Spey history">
+      </picture>
+
       <div class="main-banner__txt-container">
         <h1 class="main-banner__title main-title">Наши ценности</h1>
         <p class="main-banner__txt">Представляя препараты на международном фармацевтическом рынке сотрудники компании руководствуются прежде всего такими понятиями как

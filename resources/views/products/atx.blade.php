@@ -37,6 +37,17 @@
             @endforeach
           </ul>
 
+          {{-- Mobile start --}}
+          <div class="classifications-select only-mobile">
+            <div class="selectize-singular-container">
+              <select class="selectize--linked">
+                @foreach($categories as $category)
+                  <option value="{{ route('atx.show', $category->slug) }}" @selected($category->slug == $activeCategory->slug)>{{ $category->title }}</option>
+                @endforeach
+              </select>
+            </div>
+          </div> {{-- Mobile end --}}
+
           <x-products-list class="atx-products-list" :products="$products" />
         </div>
       </div>

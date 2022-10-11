@@ -16,7 +16,11 @@
 <div class="products-page">
   <div class="products-page__inner">
     <section class="products-page__banner main-banner">
-      <img class="main-banner__image" src="{{ asset('img/products-page/banner.png') }}" alt="Spey products">
+      <picture>
+        <source media="(max-width:991px)" srcset="{{ asset('img/products-page/banner-small.jpg') }}">
+        <img class="main-banner__image" src="{{ asset('img/products-page/banner.png') }}" alt="Spey products">
+      </picture>
+
       <div class="main-banner__txt-container">
         <h1 class="main-banner__title main-title">Продукты</h1>
         <p class="main-banner__txt">Широкий спектр современных препаратов на рынке фармацевтической индустрии позволяет Spey осуществлять свою деятельность во многих странах мира.

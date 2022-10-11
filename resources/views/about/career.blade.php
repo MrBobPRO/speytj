@@ -20,7 +20,11 @@
 <div class="career-page">
   <div class="career-page__inner">
     <section class="career-page__banner main-banner">
-      <img class="main-banner__image" src="{{ asset('img/about/career-banner.jpg') }}" alt="Spey career">
+      <picture>
+        <source media="(max-width:991px)" srcset="{{ asset('img/about/career-banner-small.jpg') }}">
+        <img class="main-banner__image" src="{{ asset('img/about/career-banner.jpg') }}" alt="Spey career">
+      </picture>
+
       <div class="main-banner__txt-container">
         <h1 class="main-banner__title main-title">Карьера</h1>
         <p class="main-banner__txt">Сотрудничество с представителями мировых компаний, использование современных информационных технологий, помогает нам расти и добиваться

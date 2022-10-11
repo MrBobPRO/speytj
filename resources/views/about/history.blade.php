@@ -20,7 +20,11 @@
 <div class="history-page">
   <div class="history-page__inner">
     <section class="main-banner history-page__banner">
-      <img class="main-banner__image" src="{{ asset('img/about/history-banner.jpg') }}" alt="Spey history">
+      <picture>
+        <source media="(max-width:991px)" srcset="{{ asset('img/about/history-banner-small.jpg') }}">
+        <img class="main-banner__image" src="{{ asset('img/about/history-banner.jpg') }}" alt="Spey history">
+      </picture>
+
       <div class="main-banner__txt-container">
         <h1 class="main-banner__title main-title">История становления</h1>
         <p class="main-banner__txt">Компания <strong>Spey</strong> - это стабильная, современная, социально-ответственная компания, несущая обществу инновационные методы лечения и профилактики болезней. Деятельность нашей компании направлена на поддержание и сохранение здоровья, а также улучшение качества жизни людей.</p>

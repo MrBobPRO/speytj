@@ -19,7 +19,11 @@
 @section('main')
 <div class="all-products-page">
   <section class="all-products-page__banner main-banner">
-    <img class="main-banner__image" src="{{ asset('img/products-page/all-products-banner.png') }}" alt="Spey products">
+    <picture>
+      <source media="(max-width:991px)" srcset="{{ asset('img/products-page/all-products-banner-small.jpg') }}">
+      <img class="main-banner__image" src="{{ asset('img/products-page/all-products-banner.png') }}" alt="Spey products">
+    </picture>
+
     <div class="products-counter">
       <div class="products-counter__item counter-box">
         <div class="products-counter__number counter-number" data-speed="2500" data-stop="{{ $allProductsCount }}"></div>

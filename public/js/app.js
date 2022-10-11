@@ -1,3 +1,6 @@
+import '../css/main.css';
+import '../css/media.css';
+
 // Register Service worker for PWA
 if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
@@ -72,6 +75,14 @@ document.querySelector('.menu__search-input').addEventListener('focus', () => {
 });
 
 
+// Mobile Menu Toggler
+document.querySelectorAll('[data-action="toggle-mobile-menu"]').forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    document.querySelector('.mobile-menu').classList.toggle('mobile-menu--visible');
+  });
+});
+
+
 // Tabs
 document.querySelectorAll('.tab-button').forEach((item) => {
   item.addEventListener('click', (evt) => {
@@ -142,8 +153,15 @@ productsCarousel.owlCarousel({
   margin: 32,
   nav: true,
   navText: ['<span class="material-icons">west</span>', '<span class="material-icons">east</span>'],
-  items: 4,
   dots: false,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    991: {
+      items: 4,
+    }
+  }
 });
 
 
