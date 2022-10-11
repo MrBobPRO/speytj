@@ -227,6 +227,10 @@
     padding-bottom: 32px;
   }
 
+  .wealth__cards-list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
   .wealth__cards-inner {
     padding-top: 32px;
     padding-bottom: 20px;
@@ -250,6 +254,10 @@
   .products-page__categories-inner {
     padding-top: 32px;
     padding-bottom: 40px;
+  }
+
+  .products-page__categories-list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 
   .new-products__inner {
@@ -351,6 +359,11 @@
     padding-bottom: 40px;
   }
 
+  .science-categories__list,
+  .for-patients-categories__list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
   .category-posts__inner {
     padding-top: 20px;
     padding-bottom: 40px;
@@ -383,5 +396,9 @@
   .videos-page__inner {
     padding-top: 20px;
     padding-bottom: 40px;
+  }
+
+  .videos-list {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 }
