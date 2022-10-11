@@ -289,7 +289,7 @@
   }
 
   .filter-by-letter__list {
-    gap: 16px;
+    gap: 0 16px;
     flex-wrap: wrap;
   }
 
