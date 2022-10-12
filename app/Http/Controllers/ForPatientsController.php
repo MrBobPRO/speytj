@@ -20,7 +20,7 @@ class ForPatientsController extends Controller
 
   public function videos()
   {
-    $videos = Video::latest()->paginate(15);
+    $videos = Video::latest()->paginate(12);
 
     return view('for-patients.videos', compact('videos'));
   }
