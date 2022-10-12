@@ -43,7 +43,7 @@
 
       <li class="aside__menu-item">
         <a class="aside__menu-link @if($modelTag == 'videos')active @endif" href="{{ route('videos.dashboard.index') }}">
-          <span class="material-icons-outlined">videocam</span> Вмдео
+          <span class="material-icons-outlined">videocam</span> Видео
         </a>
       </li>
 
