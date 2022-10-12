@@ -1759,6 +1759,10 @@ picture {
   color: var(--main-color);
 }
 
+.plyr audio, .plyr iframe, .plyr video {
+  height: 220px;
+}
+
 /* ------------ /end Videos List ------------ */
 
 
