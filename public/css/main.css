@@ -1877,6 +1877,14 @@ picture {
   margin-top: 16px;
 }
 
+.post__body table {
+  margin-bottom: 12px;
+}
+
+.post__body a {
+  text-decoration: underline;
+  color: var(--main-color);
+}
 /* ------------ /end Post show page ------------ */
 
 
