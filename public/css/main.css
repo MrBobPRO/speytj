@@ -1717,7 +1717,7 @@ picture {
 .videos-page__inner {
   flex-direction: column;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 
 .vides-page__title {
@@ -1744,7 +1744,7 @@ picture {
 
 .video-card__date {
   color: var(--main-color);
-  font-size: 15px;
+  font-size: 13px;
   font-family: 'Roboto Condensed';
   font-weight: bold;
 }
