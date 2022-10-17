@@ -65,6 +65,9 @@
 
   {{-- <link rel="stylesheet" href="{{ asset('css/main.css') }}">
   <link rel="stylesheet" href="{{ asset('css/media.css') }}"> --}}
+
+  {{-- App bundled stlyes --}}
+  @vite('public/js/styles.js')
 </head>
 
 <body>
@@ -94,7 +97,7 @@
   <script src="{{ asset('plugins/plyr/plyr.polyfilled.js') }}"></script>
 
   {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
-  {{-- App bundled styles & scripts --}}
+  {{-- App bundled scripts --}}
   @vite('public/js/app.js')
 </body>
 

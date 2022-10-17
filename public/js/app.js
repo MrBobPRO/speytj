@@ -1,6 +1,3 @@
-import '../css/main.css';
-import '../css/media.css';
-
 // Register Service worker for PWA
 if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
