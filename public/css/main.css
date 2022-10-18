@@ -1779,7 +1779,7 @@ picture {
 }
 
 .video-card__title {
-  margin-bottom: 4px;
+  margin-bottom: 0;
   font-size: 16px;
   font-weight: 300;
   font-weight: 500;
