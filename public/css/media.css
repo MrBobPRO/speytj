@@ -354,15 +354,9 @@
   }
 
   /* Science & For patients pages */
-  .science-categories__inner,
-  .for-patients-categories__inner {
+  .categories-section__inner {
     padding-top: 20px;
     padding-bottom: 40px;
-  }
-
-  .science-categories__list,
-  .for-patients-categories__list {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
 
   .category-posts__inner {

@@ -14,19 +14,20 @@
 
 @section('main')
 <div class="science-page">
-  <section class="science-categories">
-    <div class="science-categories__inner main-container">
+  <section class="categories-section">
+    <div class="categories-section__inner main-container">
 
-      <h1 class="science-categories__title main-title">Категории</h1>
+      <h1 class="categories-section__title main-title">Категории</h1>
 
-      <div class="science-categories__list">
+      <div class="categories__list">
         @foreach ($categories as $cat)
-        <a class="popup-card" href="{{ route('science.categories.show', $cat->slug) }}">
-          <img class="popup-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
-          <div class="popup-card__overlay">
-            <h2 class="popup-card__title">{{ $cat->title }}</h2>
-          </div>
-        </a>
+          <a class="secondary-card" href="{{ route('science.categories.show', $cat->slug) }}">
+            <img class="secondary-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
+            <div class="secondary-card__txt">
+              <h2 class="secondary-card__title">{{ $cat->title }}</h2>
+              <p class="secondary-card__desc">{{ $cat->posts()->where('scientific', true)->count() }} постов</p>
+            </div>
+          </a>
         @endforeach
       </div>
     </div>

@@ -18,23 +18,24 @@
 
 @section('main')
 <div class="for-patients-posts-page">
-    <section class="for-patients-categories">
-      <div class="for-patients-categories__inner main-container">
+  <section class="categories-section">
+    <div class="categories-section__inner main-container">
 
-        <h1 class="for-patients-categories__title main-title">Категории</h1>
+      <h1 class="categories-section__title main-title">Категории</h1>
 
-        <div class="for-patients-categories__list">
-          @foreach ($categories as $cat)
-          <a class="popup-card" href="{{ route('for-patients.categories.show', $cat->slug) }}">
-            <img class="popup-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
-            <div class="popup-card__overlay">
-              <h2 class="popup-card__title">{{ $cat->title }}</h2>
+      <div class="categories__list">
+        @foreach ($categories as $cat)
+          <a class="secondary-card" href="{{ route('for-patients.categories.show', $cat->slug) }}">
+            <img class="secondary-card__image" src="{{ asset('img/categories/' . $cat->image) }}" alt="{{ $cat->title }}">
+            <div class="secondary-card__txt">
+              <h2 class="secondary-card__title">{{ $cat->title }}</h2>
+              <p class="secondary-card__desc">{{ $cat->posts()->where('for_patients', true)->count() }} постов</p>
             </div>
           </a>
-          @endforeach
-        </div>
+        @endforeach
       </div>
-    </section>
+    </div>
+  </section>
 
     <section class="latest-posts latest-for-patients-posts">
       <div class="latest-posts__inner main-container">
