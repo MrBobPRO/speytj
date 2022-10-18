@@ -28,41 +28,39 @@
       </div>
     </section>
 
-    <section class="products-page__categories">
-      <div class="products-page__categories-inner main-container">
-        <div class="products-page__categories-list">
-          <a class="popup-card" href="{{ route('products.all') }}">
-            <img class="popup-card__image" src="{{ asset('img/products-page/all-products.png') }}" alt="All products">
-            <div class="popup-card__overlay">
-              <h2 class="popup-card__title">Все продукты</h2>
-              <p class="popup-card__txt">
-                Портфолио наших препаратов включает в себе {{ $productsCount }} препаратов
-              </p>
+    <section class="products-boxes">
+      <div class="products-boxes__inner main-container">
+        <div class="products-page__box-list">
+          <a class="iconed-box" href="{{ route('products.all') }}">
+            <img class="iconed-box__image" src="{{ asset('img/products-page/all-products-icon.png') }}" alt="All products">
+
+            <div class="iconed-box__text-container">
+              <h2 class="iconed-box__title">Все продукты</h2>
+              <p class="iconed-box__desc">Широкий спектр современных препаратов для различных отраслей медицины</p>
             </div>
           </a>
 
-          <a class="popup-card" href="{{ route('nosology.show', $defaultNosology) }}">
-            <img class="popup-card__image" src="{{ asset('img/products-page/nosology.png') }}" alt="Nosology">
-            <div class="popup-card__overlay">
-              <h2 class="popup-card__title">Нозология</h2>
-              <p class="popup-card__txt">
-                Все наши препараты отсортированные по Нозологию
-              </p>
+          <a class="iconed-box" href="{{ route('nosology.show', $defaultNosology) }}">
+            <img class="iconed-box__image" src="{{ asset('img/products-page/nosology-icon.png') }}" alt="Nosology">
+
+            <div class="iconed-box__text-container">
+              <h2 class="iconed-box__title">Нозология</h2>
+              <p class="iconed-box__desc">Все наши препараты отсортированные по Нозологию</p>
             </div>
           </a>
 
-          <a class="popup-card" href="{{ route('atx.show', $defaultAtx) }}">
-            <img class="popup-card__image" src="{{ asset('img/products-page/atx.png') }}" alt="ATX">
-            <div class="popup-card__overlay">
-              <h2 class="popup-card__title">АТХ классификация</h2>
-              <p class="popup-card__txt">
-                Все наши препараты отсортированные по АТХ классификации
-              </p>
+          <a class="iconed-box" href="{{ route('atx.show', $defaultAtx) }}">
+            <img class="iconed-box__image" src="{{ asset('img/products-page/atx-icon.png') }}" alt="Atx">
+
+            <div class="iconed-box__text-container">
+              <h2 class="iconed-box__title">АТХ классификация</h2>
+              <p class="iconed-box__desc">Все наши препараты отсортированные по АТХ классификации</p>
             </div>
           </a>
         </div>
       </div>
     </section>
+
 
     <section class="new-products">
       <div class="new-products__inner main-container">

@@ -251,13 +251,13 @@
   }
 
   /* Products pages */
-  .products-page__categories-inner {
+  .products-boxes__inner {
     padding-top: 32px;
     padding-bottom: 40px;
   }
 
-  .products-page__categories-list {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  .products-page__box-list {
+    flex-direction: column;
   }
 
   .new-products__inner {
