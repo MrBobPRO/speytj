@@ -1775,14 +1775,15 @@ picture {
 .video-card__date {
   color: var(--main-color);
   font-size: 13px;
-  font-family: 'Roboto Condensed';
-  font-weight: bold;
+  font-family: Roboto Condensed;
 }
 
 .video-card__title {
-  margin: 4px 0 0;
+  margin-bottom: 4px;
   font-size: 16px;
   font-weight: 300;
+  font-weight: 500;
+  color: black;
 }
 
 .plyr__control--overlaid svg {
