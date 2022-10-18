@@ -4,16 +4,16 @@
     "src": "public/js/styles.js",
     "isEntry": true,
     "css": [
-      "assets/styles.de4c50fa.css"
+      "assets/styles.bcb6cb68.css"
     ]
   },
   "public/js/app.js": {
-    "file": "assets/app.c224e1c3.js",
+    "file": "assets/app.e24fbc3e.js",
     "src": "public/js/app.js",
     "isEntry": true
   },
   "public/js/styles.css": {
-    "file": "assets/styles.de4c50fa.css",
+    "file": "assets/styles.bcb6cb68.css",
     "src": "public/js/styles.css"
   }
 }

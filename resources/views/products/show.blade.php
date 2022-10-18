@@ -36,7 +36,11 @@
     <section class="product-section">
       <div class="product-section__inner main-container">
         <div class="product-section__left">
-          <img class="product-section__image" src="{{ asset('img/products/' . $product->image) }}" alt="{{ $product->title}}">
+          <div class="product-section__image-container">
+            <div class="img-magnifier-container">
+              <img class="product-section__image" id="magnifier-image" src="{{ asset('img/products/' . $product->image) }}" alt="{{ $product->title}}">
+            </div>
+          </div>
 
           <div class="product-properties">
             <div class="product-properties__item">
