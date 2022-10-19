@@ -31,32 +31,44 @@
     <section class="products-boxes">
       <div class="products-boxes__inner main-container">
         <div class="products-page__box-list">
-          <a class="iconed-box" href="{{ route('products.all') }}">
+          <div class="iconed-box">
             <img class="iconed-box__image" src="{{ asset('img/products-page/all-products-icon.png') }}" alt="All products">
 
             <div class="iconed-box__text-container">
               <h2 class="iconed-box__title">Все продукты</h2>
               <p class="iconed-box__desc">Широкий спектр современных препаратов для различных отраслей медицины</p>
-            </div>
-          </a>
 
-          <a class="iconed-box" href="{{ route('nosology.show', $defaultNosology) }}">
+              <a href="{{ route('products.all') }}" class="iconed-box__button button button--more">
+                <i>Перейти</i> <span class="material-icons">east</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="iconed-box">
             <img class="iconed-box__image" src="{{ asset('img/products-page/nosology-icon.png') }}" alt="Nosology">
 
             <div class="iconed-box__text-container">
               <h2 class="iconed-box__title">Нозология</h2>
               <p class="iconed-box__desc">Все наши препараты отсортированные по Нозологию</p>
-            </div>
-          </a>
 
-          <a class="iconed-box" href="{{ route('atx.show', $defaultAtx) }}">
+              <a href="{{ route('nosology.show', $defaultNosology) }}" class="iconed-box__button button button--more">
+                <i>Перейти</i> <span class="material-icons">east</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="iconed-box">
             <img class="iconed-box__image" src="{{ asset('img/products-page/atx-icon.png') }}" alt="Atx">
 
             <div class="iconed-box__text-container">
               <h2 class="iconed-box__title">АТХ классификация</h2>
               <p class="iconed-box__desc">Все наши препараты отсортированные по АТХ классификации</p>
+
+              <a href="{{ route('atx.show', $defaultAtx) }}" class="iconed-box__button button button--more">
+                <i>Перейти</i> <span class="material-icons">east</span>
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </section>
