@@ -34,7 +34,7 @@
   @case('for-patients.posts')
   @case('for-patients.categories.show')
     <li>
-      <a href="{{ route('for-patients.index') }}">Для пациентов</a>
+      <a href="{{ route('for-patients.index') }}">Это интересно</a>
     </li>
     @break
 @endswitch

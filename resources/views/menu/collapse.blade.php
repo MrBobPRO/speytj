@@ -26,8 +26,7 @@
             data-link="{{ route('products.index') }}">Продукты</button>
           <button class="tab-button @if(strpos($route, 'science') !== false) tab-button--active @endif" data-target-id="science" data-link="{{ route('science.index') }}">Наука и
             развитие</button>
-          <button class="tab-button @if(strpos($route, 'for-patients') !== false) tab-button--active @endif" data-target-id="for-patients" data-link="{{ route('for-patients.index') }}">Для
-            пациентов</button>
+          <button class="tab-button @if(strpos($route, 'for-patients') !== false) tab-button--active @endif" data-target-id="for-patients" data-link="{{ route('for-patients.index') }}">Это интересно</button>
         </div>
       </div>
 

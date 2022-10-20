@@ -1809,6 +1809,7 @@ picture {
 /* ------------ Category Page ------------ */
 .category-page {
   background-color: var(--bg-color);
+  flex-grow: 1;
 }
 
 .category-posts__inner {
@@ -1907,6 +1908,8 @@ picture {
 
 .post__body {
   font-weight: 300;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .post__body th,
@@ -1923,6 +1926,8 @@ picture {
 
 .post__body table {
   margin-bottom: 12px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .post__body a {

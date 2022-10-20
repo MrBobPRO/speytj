@@ -17,7 +17,7 @@
 
   <ul class="menu-tab-content__sublinks-container">
     <li>
-      <a class="menu-tab-content__sublink" href="{{ route('for-patients.posts') }}">Посты</a>
+      <a class="menu-tab-content__sublink" href="{{ route('for-patients.posts') }}">Научно-популярные статьи</a>
     </li>
 
     <li>

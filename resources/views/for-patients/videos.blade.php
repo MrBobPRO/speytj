@@ -8,7 +8,7 @@
 </li>
 
 <li>
-  <a href="{{ route('for-patients.index') }}">Для пациентов</a>
+  <a href="{{ route('for-patients.index') }}">Это интересно</a>
 </li>
 
 <li>
