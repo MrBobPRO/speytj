@@ -1889,6 +1889,11 @@ picture {
   padding-bottom: 60px;
 }
 
+.post-page__inner .post {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .post__desc {
   border-left: 4px solid var(--secondary-color);
   padding-left: 32px;
