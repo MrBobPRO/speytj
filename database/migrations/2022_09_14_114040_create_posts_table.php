@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('pdf')->nullable();
             $table->boolean('scientific');
-            $table->boolean('for_patients');
+            $table->boolean('interesting');
             $table->timestamps();
         });
     }

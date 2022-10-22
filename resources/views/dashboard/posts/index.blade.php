@@ -34,8 +34,8 @@
           </th>
 
           <th>
-            <a class="{{ $orderType }} {{ $orderBy == 'for_patients' ? 'active' : '' }}"
-              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=for_patients&orderType={{ $reversedOrderType }}">Для пациентов</a>
+            <a class="{{ $orderType }} {{ $orderBy == 'interesting' ? 'active' : '' }}"
+              href="{{ route($modelTag . '.dashboard.index') }}?page={{ $activePage }}&orderBy=interesting&orderType={{ $reversedOrderType }}">Это интересно</a>
           </th>
 
           <th width="140">
@@ -59,7 +59,7 @@
             @endforeach
           </td>
           <td>{{ $item->scientific ? '+' : '' }}</td>
-          <td>{{ $item->for_patients ? '+' : '' }}</td>
+          <td>{{ $item->interesting ? '+' : '' }}</td>
 
           {{-- Actions --}}
           <td>

@@ -23,11 +23,11 @@ class DatabaseSeeder extends Seeder
     $user->save();
 
     $this->call([
-      // NosologySeeder::class,
-      // AtxSeeder::class,
-      // ProductSeeder::class,
+      NosologySeeder::class,
+      AtxSeeder::class,
+      ProductSeeder::class,
       CategorySeeder::class,
-      // PostSeeder::class,
+      PostSeeder::class,
       VideoSeeder::class,
     ]);
   }

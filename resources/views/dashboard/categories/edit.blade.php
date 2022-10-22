@@ -28,11 +28,11 @@
   </div>
 
   <div class="form-group">
-    <label class="form-label required">Отображать в разделе Для пациентов?</label>
+    <label class="form-label required">Отображать в разделе Это интересно?</label>
 
-    <select class="selectize-singular" name="for_patients" required>
-      <option value="0" @selected(!$item->for_patients)>Нет</option>
-      <option value="1" @selected($item->for_patients)>Да</option>
+    <select class="selectize-singular" name="interesting" required>
+      <option value="0" @selected(!$item->interesting)>Нет</option>
+      <option value="1" @selected($item->interesting)>Да</option>
     </select>
   </div>
 

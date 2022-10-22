@@ -41,15 +41,15 @@
 
     {{-- For patients links start --}}
     <div class="footer__block">
-      <h5 class="footer__title"><a href="{{ route('for-patients.index') }}">Для пациентов</a></h5>
+      <h5 class="footer__title"><a href="{{ route('interesting.index') }}">Это интересно</a></h5>
 
       <ul class="footer__list">
         <li>
-          <a href="{{ route('for-patients.posts') }}" class="footer__link">Статьи</a>
+          <a href="{{ route('interesting.posts') }}" class="footer__link">Статьи</a>
         </li>
 
         <li>
-          <a href="{{ route('for-patients.videos') }}" class="footer__link">Видео</a>
+          <a href="{{ route('interesting.videos') }}" class="footer__link">Видео</a>
         </li>
       </ul>
     </div> {{-- For patients links end --}}

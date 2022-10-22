@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->boolean('scientific');
-            $table->boolean('for_patients');
+            $table->boolean('interesting');
         });
     }
 

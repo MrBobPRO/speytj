@@ -20,13 +20,15 @@
     <div class="menu__tab">
       <div class="tab-buttons-container">
         <div class="tab-buttons-container__inner main-container">
-          <button class="tab-button @if($route == 'home' || $route == ('posts.show')) tab-button--active @endif" data-target-id="main" data-link="{{ route('home') }}">Главная</button>
+          <button class="tab-button @if($route == 'home' || $route == ('posts.show')) tab-button--active @endif" data-target-id="main"
+            data-link="{{ route('home') }}">Главная</button>
           <button class="tab-button @if(strpos($route, 'about') !== false) tab-button--active @endif" data-target-id="about" data-link="{{ route('about.index') }}">О Нас</button>
-          <button class="tab-button @if(strpos($route, 'products') !== false || strpos($route, 'nosology') !== false || strpos($route, 'atx') !== false) tab-button--active @endif" data-target-id="products"
-            data-link="{{ route('products.index') }}">Продукты</button>
+          <button class="tab-button @if(strpos($route, 'products') !== false || strpos($route, 'nosology') !== false || strpos($route, 'atx') !== false) tab-button--active @endif"
+            data-target-id="products" data-link="{{ route('products.index') }}">Продукты</button>
           <button class="tab-button @if(strpos($route, 'science') !== false) tab-button--active @endif" data-target-id="science" data-link="{{ route('science.index') }}">Наука и
             развитие</button>
-          <button class="tab-button @if(strpos($route, 'for-patients') !== false) tab-button--active @endif" data-target-id="for-patients" data-link="{{ route('for-patients.index') }}">Это интересно</button>
+          <button class="tab-button @if(strpos($route, 'interesting') !== false) tab-button--active @endif" data-target-id="interesting"
+            data-link="{{ route('interesting.index') }}">Это интересно</button>
         </div>
       </div>
 
@@ -36,7 +38,7 @@
           @include('menu.content-about')
           @include('menu.content-products')
           @include('menu.content-science')
-          @include('menu.content-for-patients')
+          @include('menu.content-interesting')
         </div>
       </div>
     </div>

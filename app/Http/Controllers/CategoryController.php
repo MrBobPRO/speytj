@@ -63,7 +63,7 @@ class CategoryController extends Controller
     Validator::make($request->all(), $validationRules, $validationMessages)->validate();
 
     $item = new Category();
-    $fields = ['title', 'scientific', 'for_patients'];
+    $fields = ['title', 'scientific', 'interesting'];
     Helper::fillModelColumns($item, $fields, $request);
     $item->slug = Helper::generateUniqueSlug($item->title, Category::class);
 
@@ -100,7 +100,7 @@ class CategoryController extends Controller
 
     Validator::make($request->all(), $validationRules, $validationMessages)->validate();
 
-    $fields = ['title', 'scientific', 'for_patients'];
+    $fields = ['title', 'scientific', 'interesting'];
     Helper::fillModelColumns($item, $fields, $request);
     $item->slug = Helper::generateUniqueSlug($item->title, Category::class, $item->id);
 

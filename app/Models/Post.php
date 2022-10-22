@@ -20,9 +20,9 @@ class Post extends Model
     return $this->where('scientific', true);
   }
 
-  public function scopeForPatients()
+  public function scopeInteresting()
   {
-    return $this->where('for_patients', true);
+    return $this->where('interesting', true);
   }
 
   /**

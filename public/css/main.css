@@ -285,6 +285,7 @@ picture {
   font-weight: 400;
   margin: 8px 0 0 auto;
 }
+
 /* ------------ /end Iconed Box ------------ */
 
 
@@ -1677,11 +1678,36 @@ picture {
 /* ------------ /end Products Page ------------ */
 
 
-/* ------------ Science & For Patients Page ------------ */
-/* Science index page & For patients posts page */
+/* ------------ Science & For Interesting Pages ------------ */
+.science-banner {
+  background-color: var(--bg-color);
+  position: relative;
+}
+.science-banner__txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.science-banner__txt-inner {
+  flex-direction: column;
+}
+.science-banner__title {
+  margin-bottom: 20px;
+}
+.science-banner__desc {
+  font-size: 18px;
+  line-height: 2;
+  max-width: 680px;
+}
+
+/* Science index page & Interesting posts page */
 .categories-section__inner {
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 80px;
   z-index: 2;
   text-align: center;
@@ -1700,7 +1726,7 @@ picture {
 
 
 .latest-scientific-posts,
-.latest-for-patients-posts {
+.latest-interesting-posts {
   background-color: var(--bg-color);
 }
 
@@ -1715,35 +1741,66 @@ picture {
   margin-bottom: 40px;
 }
 
-/* For patients index page */
-.for-patients-page__videos {
+/* Interesting index page */
+.interesting-about__inner {
+  padding-top: 60px;
+  padding-bottom: 68px;
+  justify-content: space-between;
+  align-items: center;
+}
+.interesting-about__txt {
+  max-width: 640px;
+}
+.interesting-about__title {
+  margin-bottom: 20px;
+}
+.interesting-about__desc {
+  font-size: 18px;
+  line-height: 2;
+}
+.interesting-about__img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 440px;
+}
+.interesting-about__img {
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.interesting-about__img:hover {
+  box-shadow: 0 0 28px 5px #afafaf;
+  filter: contrast(1.3);
+}
+
+.interesting-page__videos {
   background-color: var(--bg-color);
 }
 
-.for-patients-page__videos-inner,
-.for-patients-page__posts-inner {
-  padding-top: 40px;
+.interesting-page__videos-inner,
+.interesting-page__posts-inner {
+  padding-top: 60px;
   padding-bottom: 60px;
   flex-direction: column;
 }
 
-.for-patients-page__videos-title,
-.for-patients-page__posts-title {
+.interesting-page__videos-title,
+.interesting-page__posts-title {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.for-patients-page__posts .post-card {
+.interesting-page__posts .post-card {
   box-shadow: 0px 0px 30px 0px rgb(0 0 0 / 8%);
 }
 
-.for-patients-page__videos-more,
-.for-patients-page__posts-more {
+.interesting-page__videos-more,
+.interesting-page__posts-more {
   margin: 40px 0 0 auto;
   color: black;
 }
 
-/* ------------ /end Science & For Patients posts Page ------------ */
+/* ------------ /end Science & Interesting posts Page ------------ */
 
 
 /* ------------ Videos List ------------ */

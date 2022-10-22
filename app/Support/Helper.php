@@ -366,7 +366,7 @@ class Helper
 
       $new->body = $old->text;
       $new->scientific = true;
-      $new->for_patients = rand(0, 1);
+      $new->interesting = rand(0, 1);
 
       $new->save();
     });

@@ -377,14 +377,14 @@
     margin-bottom: 4px;
   }
 
-  .for-patients-page__videos-inner,
-  .for-patients-page__posts-inner {
+  .interesting-page__videos-inner,
+  .interesting-page__posts-inner {
     padding-top: 20px;
     padding-bottom: 40px;
   }
 
-  .for-patients-page__videos-more,
-  .for-patients-page__posts-more {
+  .interesting-page__videos-more,
+  .interesting-page__posts-more {
     margin-top: 20px;
   }
 

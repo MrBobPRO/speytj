@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AtxController;
-use App\Http\Controllers\ForPatientsController;
+use App\Http\Controllers\InterestingController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\NosologyController;
 use App\Http\Controllers\PostController;
@@ -50,7 +50,7 @@ Route::prefix('science')->controller(ScienceController::class)->name('science.')
   Route::get('/categories/{slug}', 'showCategory')->name('categories.show');
 });
 
-Route::prefix('for-patients')->controller(ForPatientsController::class)->name('for-patients.')->group(function () {
+Route::prefix('interesting')->controller(InterestingController::class)->name('interesting.')->group(function () {
   Route::get('/', 'index')->name('index');
   Route::get('/videos', 'videos')->name('videos');
 

@@ -67,7 +67,7 @@ class PostController extends Controller
     Validator::make($request->all(), $validationRules, $validationMessages)->validate();
 
     $item = new Post();
-    $fields = ['title', 'body', 'scientific', 'for_patients'];
+    $fields = ['title', 'body', 'scientific', 'interesting'];
     Helper::fillModelColumns($item, $fields, $request);
     $item->slug = Helper::generateUniqueSlug($item->title, Post::class);
 
@@ -110,7 +110,7 @@ class PostController extends Controller
 
     Validator::make($request->all(), $validationRules, $validationMessages)->validate();
 
-    $fields = ['title', 'body', 'scientific', 'for_patients'];
+    $fields = ['title', 'body', 'scientific', 'interesting'];
     Helper::fillModelColumns($item, $fields, $request);
     $item->slug = Helper::generateUniqueSlug($item->title, Post::class, $item->id);
 

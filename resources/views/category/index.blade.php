@@ -10,8 +10,8 @@
 <li>
   @if($route == 'science.categories.show')
     <a href="{{ route('science.index') }}">Наука и развитие</a>
-  @elseif($route == 'for-patients.categories.show')
-    <a href="{{ route('for-patients.index') }}">Это интересно</a>
+  @elseif($route == 'interesting.categories.show')
+    <a href="{{ route('interesting.index') }}">Это интересно</a>
   @endif
 </li>
 

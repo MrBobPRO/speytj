@@ -14,10 +14,21 @@
 
 @section('main')
 <div class="science-page">
+  <section class="science-banner">
+    <img src="{{ asset('img/science/banner.png') }}" alt="doctor">
+
+    <div class="science-banner__txt">
+      <div class="science-banner__txt-inner main-container">
+        <h1 class="science-banner__title main-title">Наука и развитие</h1>
+        <p class="science-banner__desc">В этом разделе предоставлены научные посты и какойто другой текст. В этом разделе предоставлены научные посты и какойто другой текст. В этом разделе предоставлены научные посты и какойто другой текст. В этом разделе предоставлены научные посты и какойто другой текст.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="categories-section">
     <div class="categories-section__inner main-container">
 
-      <h1 class="categories-section__title main-title">Категории</h1>
+      <h2 class="categories-section__title main-title">Категории</h2>
 
       <div class="categories__list">
         @foreach ($categories as $cat)

@@ -17,26 +17,26 @@
 </li>
 
 @switch($previousRoute)
-  @case('home')
-    <li>
-      Новые посты
-    </li>
-    @break
+@case('home')
+<li>
+  Новые посты
+</li>
+@break
 
-  @case('science.index')
-  @case('science.categories.show')
-    <li>
-      <a href="{{ route('science.index') }}">Наука и развитие</a>
-    </li>
-    @break
+@case('science.index')
+@case('science.categories.show')
+<li>
+  <a href="{{ route('science.index') }}">Наука и развитие</a>
+</li>
+@break
 
-  @case('for-patients.index')
-  @case('for-patients.posts')
-  @case('for-patients.categories.show')
-    <li>
-      <a href="{{ route('for-patients.index') }}">Это интересно</a>
-    </li>
-    @break
+@case('interesting.index')
+@case('interesting.posts')
+@case('interesting.categories.show')
+<li>
+  <a href="{{ route('interesting.index') }}">Это интересно</a>
+</li>
+@break
 @endswitch
 
 <li>
@@ -56,7 +56,7 @@
         <h1 class="post__title main-title">{{ $post->title }}</h1>
 
         @if($post->pdf)
-          <a class="post__pdf" href="/pdf/posts/{{ $post->pdf }}" target="_blank">Скачать PDF</a>
+        <a class="post__pdf" href="/pdf/posts/{{ $post->pdf }}" target="_blank">Скачать PDF</a>
         @endif
 
         <div class="ya-share2" data-curtain data-services="vkontakte,telegram,twitter,viber,whatsapp"></div>

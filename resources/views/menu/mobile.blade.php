@@ -59,15 +59,15 @@
       </li>
 
       <li class="mobile-menu__li">
-        <a class="mobile-menu__link" href="{{ route('for-patients.index') }}">Для пациентов</a>
+        <a class="mobile-menu__link" href="{{ route('interesting.index') }}">Это интересно</a>
 
         <ul class="mobile-submenu">
           <li class="mobile-submenu__li">
-            <a class="mobile-submenu__link" href="{{ route('for-patients.posts') }}">Посты</a>
+            <a class="mobile-submenu__link" href="{{ route('interesting.posts') }}">Посты</a>
           </li>
 
           <li class="mobile-submenu__li">
-            <a class="mobile-submenu__link" href="{{ route('for-patients.videos') }}">Видео</a>
+            <a class="mobile-submenu__link" href="{{ route('interesting.videos') }}">Видео</a>
           </li>
         </ul>
       </li>
