@@ -72,7 +72,7 @@
 
 <body>
   @include('layouts.header')
-  <main class="main">
+  <main class="main @isset($pageClass){{ $pageClass }}@endisset">
     @yield('main')
   </main>
   @include('layouts.footer')

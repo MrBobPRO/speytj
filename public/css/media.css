@@ -203,7 +203,7 @@
   }
 
   /* About pages */
-  .about-index-page__inner {
+  .about-page__section-inner {
     padding-top: 20px;
     padding-bottom: 40px;
   }
@@ -353,7 +353,7 @@
     padding: 16px;
   }
 
-  /* Science & For patients pages */
+  /* Category page */
   .categories-section__inner {
     padding-top: 20px;
     padding-bottom: 40px;
@@ -364,7 +364,30 @@
     padding-bottom: 40px;
   }
 
-  .post-page__inner {
+  /* Science pages */
+  .science-banner {
+    background-color: transparent;
+  }
+
+  .science-banner__txt {
+    position: relative;
+    background-color: var(--bg-color);
+    padding: 20px;
+    margin: -32px 16px 0;
+    width: calc(100% - 32px);
+  }
+
+  .science-banner__title {
+    margin-bottom: 8px
+  }
+
+  .science-banner__desc {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  /* Post show page */
+  .post-page__section-inner {
     padding-bottom: 32px;
   }
 
@@ -375,6 +398,33 @@
 
   .post__title {
     margin-bottom: 4px;
+  }
+
+  /* Interesting pages */
+  .interesting-about__inner {
+    flex-direction: column-reverse;
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .interesting-about__txt {
+    background-color: var(--bg-color);
+    padding: 20px;
+    margin: -32px 16px 0;
+    width: calc(100% - 32px);
+  }
+
+  .interesting-about__title {
+    margin-bottom: 8px;
+  }
+
+  .interesting-about__desc {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .interesting-about__img-container {
+    gap: 12px;
   }
 
   .interesting-page__videos-inner,
@@ -388,7 +438,7 @@
     margin-top: 20px;
   }
 
-  .videos-page__inner {
+  .videos-page__section-inner {
     padding-top: 20px;
     padding-bottom: 40px;
   }

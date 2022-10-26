@@ -63,7 +63,7 @@
 
         <ul class="mobile-submenu">
           <li class="mobile-submenu__li">
-            <a class="mobile-submenu__link" href="{{ route('interesting.posts') }}">Посты</a>
+            <a class="mobile-submenu__link" href="{{ route('interesting.posts') }}">Научно-популярные статьи</a>
           </li>
 
           <li class="mobile-submenu__li">

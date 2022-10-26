@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageClass' => 'about-page'])
 
 @section('title', 'О Нас')
 
@@ -13,12 +13,12 @@
 @endsection
 
 @section('main')
-<div class="about-index-page">
-  <div class="about-index-page__inner main-container">
-    <h1 class="about-index-page__title main-title">О компании</h1>
+<section class="about-page__section">
+  <div class="about-page__section-inner main-container">
+    <h1 class="about-page__section-title main-title">О компании</h1>
 
     @include('components.about-cards-list')
   </div>
-</div>
+</section>
 
 @endsection

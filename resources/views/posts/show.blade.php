@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageClass' => 'post-page'])
 
 @section('title', $post->title)
 
@@ -46,8 +46,8 @@
 
 
 @section('main')
-<div class="post-page">
-  <div class="post-page__inner main-container">
+<section class="post-page__section">
+  <div class="post-page__section-inner main-container">
     <div class="post">
       <img class="post__banner" src="{{ asset('img/posts/' . $post->image) }}" alt="{{ $post->title }}">
 
@@ -65,5 +65,5 @@
       <div class="post__body">{!! $post->body !!}</div>
     </div>
   </div>
-</div>
+</section>
 @endsection

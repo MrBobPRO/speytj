@@ -1,8 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageClass' => 'home-page'])
 
 @section('main')
 <section class="home-banner">
-
   <picture>
     <source media="(max-width:991px)" srcset="{{ asset('img/home/banner-small.jpg') }}">
     <img class="home-banner__image" src="{{ asset('img/home/banner.png') }}" alt="spey banner">
@@ -24,7 +23,7 @@
   </div>
 </section>
 
-<section class="about-cards-section home-about-cards-section">
+<section class="about-cards-section">
   <div class="about-cards-section__inner main-container">
     <h2 class="about-cards-title main-title">О компании</h2>
 

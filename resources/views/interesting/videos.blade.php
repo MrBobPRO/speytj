@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['pageClass' => 'videos-page'])
 
 @section('title', 'Видео')
 
@@ -16,13 +16,12 @@
 </li>
 @endsection
 
-
 @section('main')
-<div class="videos-page">
-  <div class="videos-page__inner main-container">
-    <h1 class="vides-page__title main-title">Видео</h1>
+<section class="videos-page__section">
+  <div class="videos-page__section-inner main-container">
+    <h1 class="videos-page__section-title main-title">Видео</h1>
 
     <x-videos-list :videos="$videos" />
   </div>
-</div>
+</section>
 @endsection

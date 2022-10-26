@@ -1173,22 +1173,18 @@ picture {
 
 /* ------------ About pages ------------ */
 /* Index page */
-.about-index-page__inner {
+.about-page__section-inner {
   padding-top: 60px;
   padding-bottom: 72px;
   flex-direction: column;
 }
 
-.about-index-page__title {
+.about-page__section-title {
   margin-bottom: 40px;
   text-align: center;
 }
 
 /* History page */
-.history-page__inner {
-  flex-direction: column;
-}
-
 .history-page__divider-inner {
   position: relative;
 }
@@ -1678,33 +1674,7 @@ picture {
 /* ------------ /end Products Page ------------ */
 
 
-/* ------------ Science & For Interesting Pages ------------ */
-.science-banner {
-  background-color: var(--bg-color);
-  position: relative;
-}
-.science-banner__txt {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.science-banner__txt-inner {
-  flex-direction: column;
-}
-.science-banner__title {
-  margin-bottom: 20px;
-}
-.science-banner__desc {
-  font-size: 18px;
-  line-height: 2;
-  max-width: 680px;
-}
-
-/* Science index page & Interesting posts page */
+/* ------------ Posts categories ------------ */
 .categories-section__inner {
   flex-direction: column;
   padding-top: 60px;
@@ -1724,9 +1694,15 @@ picture {
   gap: 32px;
 }
 
+/* ------------ /end Posts categories ------------ */
 
-.latest-scientific-posts,
+
+/* ------------ Latest Posts ------------ */
 .latest-interesting-posts {
+  background-color: var(--bg-color);
+}
+
+.latest-scientific-posts {
   background-color: var(--bg-color);
 }
 
@@ -1741,33 +1717,81 @@ picture {
   margin-bottom: 40px;
 }
 
-/* Interesting index page */
+/* ------------ /end Latest Posts ------------ */
+
+
+/* ------------ Science Pages ------------ */
+/* index page */
+.science-banner {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.science-banner__image {
+  display: flex;
+}
+
+.science-banner__txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.science-banner__txt-inner {
+  flex-direction: column;
+}
+
+.science-banner__title {
+  margin-bottom: 20px;
+}
+
+.science-banner__desc {
+  font-size: 18px;
+  line-height: 2;
+  max-width: 680px;
+}
+
+/* ------------ /end Science Page ------------ */
+
+
+/* ------------ Interesting pages ------------ */
+/* index page */
 .interesting-about__inner {
   padding-top: 60px;
   padding-bottom: 68px;
   justify-content: space-between;
   align-items: center;
 }
+
 .interesting-about__txt {
   max-width: 640px;
 }
+
 .interesting-about__title {
   margin-bottom: 20px;
 }
+
 .interesting-about__desc {
   font-size: 18px;
   line-height: 2;
 }
+
 .interesting-about__img-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   max-width: 440px;
 }
+
 .interesting-about__img {
   border-radius: 6px;
   transition: 0.3s;
 }
+
 .interesting-about__img:hover {
   box-shadow: 0 0 28px 5px #afafaf;
   filter: contrast(1.3);
@@ -1800,7 +1824,7 @@ picture {
   color: black;
 }
 
-/* ------------ /end Science & Interesting posts Page ------------ */
+/* ------------ /end Interesting Page ------------ */
 
 
 /* ------------ Videos List ------------ */
@@ -1808,13 +1832,13 @@ picture {
   background-color: var(--bg-color);
 }
 
-.videos-page__inner {
+.videos-page__section-inner {
   flex-direction: column;
   padding-top: 40px;
   padding-bottom: 60px;
 }
 
-.vides-page__title {
+.videos-page__section-title {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -1866,7 +1890,6 @@ picture {
 /* ------------ Category Page ------------ */
 .category-page {
   background-color: var(--bg-color);
-  flex-grow: 1;
 }
 
 .category-posts__inner {
@@ -1942,11 +1965,11 @@ picture {
 
 
 /* ------------ Post show page ------------ */
-.post-page__inner {
+.post-page__section-inner {
   padding-bottom: 60px;
 }
 
-.post-page__inner .post {
+.post-page__section .post {
   max-width: 100%;
   overflow: hidden;
 }
