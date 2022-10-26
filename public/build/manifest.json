@@ -4,7 +4,7 @@
     "src": "public/js/styles.js",
     "isEntry": true,
     "css": [
-      "assets/styles.b15b2131.css"
+      "assets/styles.e5e3393d.css"
     ]
   },
   "public/js/app.js": {
@@ -13,7 +13,7 @@
     "isEntry": true
   },
   "public/js/styles.css": {
-    "file": "assets/styles.b15b2131.css",
+    "file": "assets/styles.e5e3393d.css",
     "src": "public/js/styles.css"
   }
 }
