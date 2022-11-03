@@ -377,6 +377,10 @@
     width: calc(100% - 32px);
   }
 
+  .science-banner__txt-inner {
+    padding: 0;
+  }
+
   .science-banner__title {
     margin-bottom: 8px
   }
