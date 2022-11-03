@@ -225,6 +225,45 @@ if ($('.counter-box').length) {
 }
 
 
+// Font switcher
+document.querySelectorAll('.font-controller__radio').forEach((item) => {
+  item.addEventListener('change', (evt) => {
+    let target = evt.target;
+    let postBody = document.querySelector('.post__body');
+
+    if (target.checked == true) {
+      let smallClass = 'post__body--small-font';
+      let mediumClass = 'post__body--medium-font';
+      let largeClass = 'post__body--large-font';
+
+      switch (target.value) {
+        case 'small':
+          postBody.classList.remove(largeClass);
+          postBody.classList.remove(mediumClass);
+          postBody.classList.add(smallClass);
+          document.cookie = "fontSize=small";
+          break;
+
+        case 'medium':
+          postBody.classList.remove(smallClass);
+          postBody.classList.remove(largeClass);
+          postBody.classList.add(mediumClass);
+          document.cookie = "fontSize=medium";
+          break;
+
+        case 'large':
+          postBody.classList.remove(smallClass);
+          postBody.classList.remove(mediumClass);
+          postBody.classList.add(largeClass);
+          document.cookie = "fontSize=large";
+          break;
+      }
+    }
+  });
+});
+
+
+
 // Plyr
 let videos = document.querySelectorAll('.plyr');
 

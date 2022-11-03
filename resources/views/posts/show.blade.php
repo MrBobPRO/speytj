@@ -62,7 +62,22 @@
         <div class="ya-share2" data-curtain data-services="vkontakte,telegram,twitter,viber,whatsapp"></div>
       </div>
 
-      <div class="post__body">{!! $post->body !!}</div>
+      <div class="font-controller">
+        <p class="font-controller__desc">Настройте шрифт под себя:</p>
+
+        <div class="font-controller__btns-container">
+          <input class="font-controller__radio" type="radio" name="font_size" id="small-font" value="small" @checked($fontSize == 'small')>
+          <label class="font-controller__label" for="small-font">A</label>
+
+          <input class="font-controller__radio" type="radio" name="font_size" id="medium-font" value="medium" @checked($fontSize == 'medium')>
+          <label class="font-controller__label" for="medium-font">AA</label>
+
+          <input class="font-controller__radio" type="radio" name="font_size" id="large-font" value="large" @checked($fontSize == 'large')>
+          <label class="font-controller__label" for="large-font">AAA</label>
+        </div>
+      </div>
+
+      <div class="post__body {{ 'post__body--' . $fontSize . '-font' }}">{!! $post->body !!}</div>
     </div>
   </div>
 </section>

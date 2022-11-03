@@ -384,6 +384,7 @@
   .science-banner__desc {
     margin: 0;
     font-size: 15px;
+    line-height: 1.5;
   }
 
   /* Post show page */
@@ -422,6 +423,7 @@
   .interesting-about__desc {
     margin: 0;
     font-size: 15px;
+    line-height: 1.5;
   }
 
   .interesting-about__img-container {

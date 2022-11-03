@@ -1991,10 +1991,33 @@ picture {
   font-family: 'Roboto Condensed';
 }
 
+.post__desc>.ya-share2 {
+  margin-top: 16px;
+}
+
 .post__body {
-  font-weight: 300;
   max-width: 100%;
   overflow: hidden;
+}
+
+.post__body p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.post__body--small-font {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.post__body--medium-font {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.post__body--large-font {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .post__body th,
@@ -2005,9 +2028,6 @@ picture {
   padding: 4px 8px;
 }
 
-.post__desc>.ya-share2 {
-  margin-top: 16px;
-}
 
 .post__body table {
   margin-bottom: 12px;
@@ -2021,6 +2041,42 @@ picture {
 }
 
 /* ------------ /end Post show page ------------ */
+
+
+/* ------------ Font switcher ------------ */
+.font-controller {
+  display: flex;
+  gap: 24px;
+  background-color: var(--bg-color);
+  padding: 14px 20px;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.font-controller__desc {
+  margin: 0;
+  font-weight: bold;
+}
+.font-controller__btns-container {
+  display: flex;
+  gap: 8px;
+}
+.font-controller__label {
+  border: none;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.font-controller__radio:checked + .font-controller__label {
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  cursor: default;
+}
+
+.font-controller__radio {
+  display: none;
+}
+/* ------------ /end Font switcher ------------ */
 
 
 /* ------------ Pagination ------------ */

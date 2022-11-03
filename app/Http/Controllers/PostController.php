@@ -17,10 +17,11 @@ class PostController extends Controller
   public function show($slug)
   {
     $post = Post::where('slug', $slug)->firstOrFail();
+    $fontSize = isset($_COOKIE['fontSize']) ? $_COOKIE['fontSize'] : 'medium';
 
     $previousRoute = Helper::getPreviousRouteName();
 
-    return view('posts.show', compact('post', 'previousRoute'));
+    return view('posts.show', compact('post', 'fontSize', 'previousRoute'));
   }
 
   public function dashboardIndex(Request $request)
