@@ -35,7 +35,7 @@ class InterestingController extends Controller
   public function showCategory($slug)
   {
     $category = Category::where('slug', $slug)->firstOrFail();
-    $posts = $category->posts()->where('interesting', true)->get();
+    $posts = $category->posts()->where('interesting', true)->latest()->get();
 
     return view('category.index', compact('category', 'posts'));
   }

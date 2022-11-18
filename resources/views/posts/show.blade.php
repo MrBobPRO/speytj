@@ -63,7 +63,7 @@
       </div>
 
       <div class="font-controller">
-        <p class="font-controller__desc">Настройте шрифт под себя:</p>
+        <p class="font-controller__desc">Выберите размер шрифта:</p>
 
         <div class="font-controller__btns-container">
           <input class="font-controller__radio" type="radio" name="font_size" id="small-font" value="small" @checked($fontSize == 'small')>
@@ -74,6 +74,9 @@
 
           <input class="font-controller__radio" type="radio" name="font_size" id="large-font" value="large" @checked($fontSize == 'large')>
           <label class="font-controller__label" for="large-font">AAA</label>
+
+          <input class="font-controller__radio" type="radio" name="font_size" id="giant-font" value="giant" @checked($fontSize == 'giant')>
+          <label class="font-controller__label" for="giant-font">AAAA</label>
         </div>
       </div>
 

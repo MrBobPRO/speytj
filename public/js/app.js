@@ -235,11 +235,13 @@ document.querySelectorAll('.font-controller__radio').forEach((item) => {
       let smallClass = 'post__body--small-font';
       let mediumClass = 'post__body--medium-font';
       let largeClass = 'post__body--large-font';
+      let giantClass = 'post__body--giant-font';
 
       switch (target.value) {
         case 'small':
           postBody.classList.remove(largeClass);
           postBody.classList.remove(mediumClass);
+          postBody.classList.remove(giantClass);
           postBody.classList.add(smallClass);
           document.cookie = "fontSize=small";
           break;
@@ -247,6 +249,7 @@ document.querySelectorAll('.font-controller__radio').forEach((item) => {
         case 'medium':
           postBody.classList.remove(smallClass);
           postBody.classList.remove(largeClass);
+          postBody.classList.remove(giantClass);
           postBody.classList.add(mediumClass);
           document.cookie = "fontSize=medium";
           break;
@@ -254,8 +257,17 @@ document.querySelectorAll('.font-controller__radio').forEach((item) => {
         case 'large':
           postBody.classList.remove(smallClass);
           postBody.classList.remove(mediumClass);
+          postBody.classList.remove(giantClass);
           postBody.classList.add(largeClass);
           document.cookie = "fontSize=large";
+          break;
+
+        case 'giant':
+          postBody.classList.remove(smallClass);
+          postBody.classList.remove(mediumClass);
+          postBody.classList.remove(largeClass);
+          postBody.classList.add(giantClass);
+          document.cookie = "fontSize=giant";
           break;
       }
     }
