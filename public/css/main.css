@@ -2008,6 +2008,11 @@ picture {
   font-weight: inherit;
 }
 
+.post__body hr {
+  border-color: #ffffff5c;
+  margin: 16px 0;
+}
+
 .post__body--small-font {
   font-size: 16px;
   font-weight: 300;
