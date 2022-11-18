@@ -3,9 +3,10 @@
 @section('title', $post->title)
 
 @section('meta-tags')
+@php $shareText = App\Support\Helper::generateShareText($post->body); @endphp
 
-<meta name="description" content="{{ $post->title }}">
-<meta property="og:description" content="{{ $post->title }}">
+<meta name="description" content="{{ $shareText }}">
+<meta property="og:description" content="{{ $shareText }}">
 <meta property="og:title" content="{{ $post->title }}" />
 <meta property="og:image" content="{{ asset('img/posts/thumbs/' . $post->image) }}">
 <meta property="og:image:alt" content="{{ $post->title }}">
