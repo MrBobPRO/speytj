@@ -2013,6 +2013,10 @@ picture {
   margin: 16px 0;
 }
 
+.post__body ol li, .post__body ul li {
+  margin-bottom: 4px;
+}
+
 .post__body--small-font {
   font-size: 16px;
   font-weight: 300;
