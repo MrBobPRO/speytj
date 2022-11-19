@@ -19,8 +19,8 @@ class ScienceController extends Controller
   public function showCategory($slug)
   {
     $category = Category::where('slug', $slug)->firstOrFail();
-    $posts = $category->posts()->where('scientific', true)->latest()->get();
+    $posts = $category->posts()->where('scientific', true)->latest()->paginate(8);
 
-    return view('category.index', compact('category', 'posts'));
+    return view('categories.show', compact('category', 'posts'));
   }
 }

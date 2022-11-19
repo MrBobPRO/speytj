@@ -25,7 +25,7 @@
   <div class="category-posts__inner main-container">
     <h2 class="category-posts__title main-title">{{ $category->title }}</h2>
 
-    <x-posts-list class="category-posts-list" :posts="$posts" />
+    <x-posts-list class="category-posts-list" :posts="$posts" paginate="1" />
   </div>
 </section>
 

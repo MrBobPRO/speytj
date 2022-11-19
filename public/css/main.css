@@ -1974,6 +1974,10 @@ picture {
   overflow: hidden;
 }
 
+.post__banner {
+  display: flex;
+}
+
 .post__desc {
   border-left: 4px solid var(--secondary-color);
   padding-left: 32px;

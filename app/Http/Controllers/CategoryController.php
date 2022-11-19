@@ -12,15 +12,6 @@ class CategoryController extends Controller
 {
   const IMAGE_PATH = 'img/categories';
 
-  public function show($slug)
-  {
-    $post = Post::where('slug', $slug)->firstOrFail();
-
-    $previousRoute = Helper::getPreviousRouteName();
-
-    return view('posts.show', compact('post', 'previousRoute'));
-  }
-
   public function dashboardIndex(Request $request)
   {
     // Default parameters for ordering
