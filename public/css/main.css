@@ -860,7 +860,7 @@ picture {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .secondary-card__txt {
