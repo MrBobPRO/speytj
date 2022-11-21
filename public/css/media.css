@@ -405,6 +405,17 @@
     margin-bottom: 4px;
   }
 
+  .font-controller {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 20px;
+  }
+
+  .post__body {
+    padding: 20px;
+  }
+
   /* Interesting pages */
   .interesting-about__inner {
     flex-direction: column-reverse;

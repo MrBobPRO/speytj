@@ -48,7 +48,7 @@
     <x-posts-list :posts="$latestPosts" />
 
     <a class="button button--more interesting-page__posts-more" href="{{ route('interesting.posts') }}">
-      <i>Посмотреть все посты</i>
+      <i>Посмотреть все статьи</i>
       <span class="material-icons">east</span>
     </a>
   </div>
