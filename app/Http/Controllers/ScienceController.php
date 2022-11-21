@@ -10,7 +10,7 @@ class ScienceController extends Controller
 {
   public function index()
   {
-    $categories = Category::scientific()->latest()->get();
+    $categories = Category::scientific()->get();
     $latestPosts = Post::scientific()->latest()->take(4)->get();
 
     return view('science.index', compact('categories', 'latestPosts'));
