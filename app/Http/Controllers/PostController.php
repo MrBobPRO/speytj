@@ -46,7 +46,7 @@ class PostController extends Controller
 
   public function create()
   {
-    $categories = Category::scientific()->orderBy('title')->get();
+    $categories = Category::orderBy('title')->get();
 
     return view('dashboard.posts.create', compact('categories'));
   }
@@ -88,7 +88,7 @@ class PostController extends Controller
   {
     $item = Post::find($id);
 
-    $categories = Category::scientific()->orderBy('title')->get();
+    $categories = Category::orderBy('title')->get();
 
     return view('dashboard.posts.edit', compact('item', 'categories'));
   }
