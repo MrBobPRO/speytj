@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+require __DIR__ . '/redirects.php';
+
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::post('/search', [MainController::class, 'search'])->name('search');
 
