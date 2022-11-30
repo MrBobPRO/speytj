@@ -1752,7 +1752,7 @@ picture {
 .science-banner__desc {
   font-size: 18px;
   line-height: 2;
-  max-width: 680px;
+  max-width: 700px;
 }
 
 /* ------------ /end Science Page ------------ */
@@ -1783,8 +1783,8 @@ picture {
 .interesting-about__img-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 440px;
+  gap: 16px;
+  max-width: 420px;
 }
 
 .interesting-about__img {

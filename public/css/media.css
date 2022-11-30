@@ -443,6 +443,7 @@
 
   .interesting-about__img-container {
     gap: 12px;
+    max-width: 100%;
   }
 
   .interesting-page__videos-inner,
