@@ -12,7 +12,7 @@
 </li>
 
 <li>
-  ATX классификация
+  <a href="{{ route('atx.index') }}">ATX классификация</a>
 </li>
 
 <li>

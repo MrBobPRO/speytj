@@ -12,7 +12,7 @@
 </li>
 
 <li>
-  Нозология
+  <a href="{{ route('nosology.index') }}">Нозология</a>
 </li>
 
 <li>
