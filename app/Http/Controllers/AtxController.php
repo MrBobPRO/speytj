@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Atx;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
@@ -10,14 +11,24 @@ use App\Support\Helper;
 
 class AtxController extends Controller
 {
+  public function index()
+  {
+    $activeCategory = null;
+    $pageTitle = 'Все продукты';
+    $products = Product::orderBy('title')->paginate(15);
+    $categories = Atx::orderBy('title')->get();
+
+    return view('products.atx', compact('activeCategory', 'pageTitle', 'products','categories'));
+  }
+
   public function show($slug)
   {
     $activeCategory = Atx::where('slug', $slug)->firstOrFail();
-    $products = $activeCategory->products()->paginate(15);
-
+    $pageTitle = $activeCategory->title;
+    $products = $activeCategory->products()->orderBy('title')->paginate(15);
     $categories = Atx::orderBy('title')->get();
 
-    return view('products.atx', compact('activeCategory', 'products', 'categories'));
+    return view('products.atx', compact('activeCategory', 'pageTitle', 'products', 'categories'));
   }
 
   public function dashboardIndex(Request $request)

@@ -21,11 +21,11 @@
     </li>
 
     <li>
-      <a class="menu-tab-content__sublink" href="{{ route('nosology.show', $defaultNosology) }}">Нозология</a>
+      <a class="menu-tab-content__sublink" href="{{ route('nosology.index') }}">Нозология</a>
     </li>
 
     <li>
-      <a class="menu-tab-content__sublink" href="{{ route('atx.show', $defaultAtx) }}">ATX классификация</a>
+      <a class="menu-tab-content__sublink" href="{{ route('atx.index') }}">ATX классификация</a>
     </li>
   </ul>
 </div>

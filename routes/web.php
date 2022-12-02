@@ -40,10 +40,12 @@ Route::prefix('products')->controller(ProductController::class)->name('products.
 });
 
 Route::controller(NosologyController::class)->name('nosology.')->group(function () {
+  Route::get('/nosology', 'index')->name('index');
   Route::get('/nosology/{slug}', 'show')->name('show');
 });
 
 Route::controller(AtxController::class)->name('atx.')->group(function () {
+  Route::get('/atx', 'index')->name('index');
   Route::get('/atx/{slug}', 'show')->name('show');
 });
 

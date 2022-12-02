@@ -1,6 +1,6 @@
 @extends('layouts.app', ['pageClass' => 'nosology-page'])
 
-@section('title', $activeCategory->title)
+@section('title', $pageTitle)
 
 @section('breadcrumbs')
 <li>
@@ -16,20 +16,25 @@
 </li>
 
 <li>
-  {{ $activeCategory->title }}
+  {{ $pageTitle }}
 </li>
 @endsection
 
 @section('main')
 <section class="nosology-section">
   <div class="nosology-section__inner main-container">
-    <h1 class="nosology-title main-title">{{ $activeCategory->title }}</h1>
+    <h1 class="nosology-title main-title">{{ $pageTitle }}</h1>
 
     <div class="nosology-section__divider">
       <ul class="classifications-list">
+        <li>
+          <a class="classifications-list__link @if(!$activeCategory) classifications-list__link--active @endif"
+            href="{{ route('nosology.index') }}">Все продукты</a>
+        </li>
+
         @foreach ($categories as $category)
         <li>
-          <a class="classifications-list__link @if($category->slug == $activeCategory->slug) classifications-list__link--active @endif"
+          <a class="classifications-list__link @if($activeCategory && $category->slug == $activeCategory->slug) classifications-list__link--active @endif"
             href="{{ route('nosology.show', $category->slug) }}">{{ $category->title }}</a>
         </li>
         @endforeach
@@ -39,8 +44,9 @@
       <div class="classifications-select only-mobile">
         <div class="selectize-singular-container">
           <select class="selectize--linked">
+            <option value="{{ route('nosology.index') }}" @selected(!$activeCategory)>Все продукты</option>
             @foreach($categories as $category)
-            <option value="{{ route('nosology.show', $category->slug) }}" @selected($category->slug == $activeCategory->slug)>{{ $category->title }}</option>
+              <option value="{{ route('nosology.show', $category->slug) }}" @selected($activeCategory && $category->slug == $activeCategory->slug)>{{ $category->title }}</option>
             @endforeach
           </select>
         </div>

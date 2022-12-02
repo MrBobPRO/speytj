@@ -16,9 +16,7 @@ Route::redirect('/about_us/development', '/about/career');
 Route::redirect('/career', '/about/career');
 Route::redirect('/contacts', '/');
 
-Route::redirect('/nosology', '/nosology/algologiya');
 Route::redirect('/nosology/{category}', '/nosology/algologiya')->whereNumber('category');
-Route::redirect('/atx', '/atx/aminokisloti');
 Route::redirect('/atx/{category}', '/atx/aminokisloti')->whereNumber('category');
 
 Route::redirect('/products/d3_spey', '/products/d3-spey');

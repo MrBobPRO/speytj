@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Nosology;
+use App\Models\Product;
 use App\Support\Helper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -10,14 +11,24 @@ use Illuminate\Validation\Rule;
 
 class NosologyController extends Controller
 {
+  public function index()
+  {
+    $activeCategory = null;
+    $pageTitle = 'Все продукты';
+    $products = Product::orderBy('title')->paginate(15);
+    $categories = Nosology::orderBy('title')->get();
+
+    return view('products.nosology', compact('activeCategory', 'pageTitle', 'products','categories'));
+  }
+
   public function show($slug)
   {
     $activeCategory = Nosology::where('slug', $slug)->firstOrFail();
-    $products = $activeCategory->products()->paginate(15);
-
+    $pageTitle = $activeCategory->title;
+    $products = $activeCategory->products()->orderBy('title')->paginate(15);
     $categories = Nosology::orderBy('title')->get();
 
-    return view('products.nosology', compact('activeCategory', 'products', 'categories'));
+    return view('products.nosology', compact('activeCategory', 'pageTitle', 'products', 'categories'));
   }
 
   public function dashboardIndex(Request $request)

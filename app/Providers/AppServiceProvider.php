@@ -33,14 +33,6 @@ class AppServiceProvider extends ServiceProvider
         $view->with('route', Route::currentRouteName());
       });
 
-      View::composer(['layouts.header', 'layouts.footer', 'products.index'], function ($view) {
-        $defaultNosology = Nosology::orderBy('title')->first()->slug;
-        $defaultAtx = Atx::orderBy('title')->first()->slug;
-
-        $view->with('defaultNosology', $defaultNosology)
-          ->with('defaultAtx', $defaultAtx);
-      });
-
       View::composer('menu.top-products', function ($view) {
         $view->with('topProducts', Top::where('product_id', '!=', null)->get());
       });

@@ -30,11 +30,11 @@
         </li>
 
         <li>
-          <a href="{{ route('nosology.show', $defaultNosology) }}" class="footer__link">Нозология</a>
+          <a href="{{ route('nosology.index') }}" class="footer__link">Нозология</a>
         </li>
 
         <li>
-          <a href="{{ route('atx.show', $defaultAtx) }}" class="footer__link">ATX классификация</a>
+          <a href="{{ route('atx.index') }}" class="footer__link">ATX классификация</a>
         </li>
       </ul>
     </div> {{-- Products links start --}}

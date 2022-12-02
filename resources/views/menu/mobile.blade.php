@@ -45,11 +45,11 @@
           </li>
 
           <li class="mobile-submenu__li">
-            <a class="mobile-submenu__link" href="{{ route('nosology.show', $defaultNosology) }}">Нозология</a>
+            <a class="mobile-submenu__link" href="{{ route('nosology.index') }}">Нозология</a>
           </li>
 
           <li class="mobile-submenu__li">
-            <a class="mobile-submenu__link" href="{{ route('atx.show', $defaultAtx) }}">ATX классификация</a>
+            <a class="mobile-submenu__link" href="{{ route('atx.index') }}">ATX классификация</a>
           </li>
         </ul>
       </li>
