@@ -96,6 +96,10 @@
   {{-- Plyr --}}
   <script src="{{ asset('plugins/plyr/plyr.polyfilled.js') }}"></script>
 
+  @production
+    @include('layouts.analytics')
+  @endproduction
+
   {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
   {{-- App bundled scripts --}}
   @vite('public/js/app.js')
