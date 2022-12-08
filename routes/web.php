@@ -24,7 +24,6 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . '/redirects.php';
 
 Route::get('/', [MainController::class, 'home'])->name('home');
-Route::get('/test', [MainController::class, 'test'])->name('test');
 Route::post('/search', [MainController::class, 'search'])->name('search');
 
 Route::prefix('about')->controller(AboutController::class)->name('about.')->group(function () {

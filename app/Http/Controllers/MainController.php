@@ -8,45 +8,6 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-  public function test()
-  {
-    $serverDate = date('d:m:Y H:i:s');
-    $localDate = gmdate('d:m:Y H:i:s');
-
-    return 'Server date: ' . $serverDate . '<br>' . 'Local date:' . $localDate;
-  }
-
-  // Вычисляет timestamp в Гринвиче, который соответствует
-  // локальному timestamp-формату
-  private function local2gm($localStamp = false)
-  {
-    if ($localStamp === false) {
-      $localStamp = time();
-    }
-
-    // Получаем смещение часовой зоны в секундах
-    $tzOffset = date("Z", $localStamp);
-    // Вычитаем разницу - получаем время по GMT
-    return $localStamp - $tzOffset;
-  }
-
-  // Вычисляет локальный timestamp в Гринвиче, который
-  // соответствует timestamp-формату по GMT. Можно указать
-  // смещение локальной зоны относительно GMT (в часах),
-  // тогда будет осуществлен перевод в эту зону
-  // (а не в текущую локальную).
-  private function gm2local($gmStamp = false, $tzOffset = false)
-  {
-    if ($gmStamp === false) return time();
-    // Получаем смещение часовой зоны в секундах
-    if ($tzOffset === false)
-      $tzOffset = date("Z", $gmStamp);
-    else
-      $tzOffset *= 60 * 60;
-    // Вычитаем разницу - получаем время по GMT
-    return $gmStamp + $tzOffset;
-  }
-
   public function home()
   {
     $popularProducts = Product::where('popular', true)->inRandomOrder()->take(8)->get();
