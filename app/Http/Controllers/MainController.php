@@ -11,7 +11,7 @@ class MainController extends Controller
   public function test()
   {
     $serverDate = date('d:m:Y H:i:s');
-    $localDate = date('d:m:Y H:i:s', $this->local2gm());
+    $localDate = gmdate('d:m:Y H:i:s');
 
     return 'Server date: ' . $serverDate . '<br>' . 'Local date:' . $localDate;
   }
